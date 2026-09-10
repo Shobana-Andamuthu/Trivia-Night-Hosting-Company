@@ -128,7 +128,7 @@ button {
   .bento-exp-card,
   .bento-kit-card,
   .studio-card {
-    padding: 1.75rem 1.25rem;
+    padding: 1.75rem 1.15rem;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -138,16 +138,28 @@ button {
     flex: 1 1 auto !important;
     display: flex !important;
     flex-direction: column !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .bento-round-title {
+    font-size: 1.2rem !important;
+    min-height: 3.2rem !important;
   }
 
   .bento-round-desc {
     flex: 1 1 auto !important;
-    min-height: 5.5rem !important;
+    min-height: 6rem !important;
+    font-size: 0.88rem !important;
   }
 
   .bento-round-footer {
     margin-top: auto !important;
     flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    font-size: 0.78rem !important;
+    min-height: 2.75rem !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   .emcee-card {
@@ -244,6 +256,48 @@ button {
 
   .spotlight-card-media {
     height: 320px !important;
+  }
+
+  /* Section 4: Bento Game Experience at 1024px (iPad Pro) */
+  .bento-experience-grid {
+    gap: 1.15rem !important;
+  }
+
+  .bento-exp-card {
+    padding: 1.5rem 0.95rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+  }
+
+  .bento-round-body {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .bento-round-title {
+    font-size: 1.15rem !important;
+    min-height: 3.2rem !important;
+  }
+
+  .bento-round-desc {
+    font-size: 0.85rem !important;
+    min-height: 6rem !important;
+    flex: 1 1 auto !important;
+  }
+
+  .bento-round-footer {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    font-size: 0.74rem !important;
+    min-height: 2.75rem !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 0.9rem !important;
   }
 
   /* Section 5: Emcee Roster Grid at 1024px (iPad Pro) */
@@ -393,15 +447,26 @@ button {
     flex: 1 1 auto !important;
     display: flex !important;
     flex-direction: column !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .bento-round-title {
+    min-height: 3.2rem !important;
   }
 
   .bento-round-desc {
     flex: 1 1 auto !important;
+    min-height: 5.5rem !important;
   }
 
   .bento-round-footer {
     margin-top: auto !important;
     flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    font-size: 0.82rem !important;
+    min-height: 2.75rem !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   /* Specialty Theme Flip Grid */

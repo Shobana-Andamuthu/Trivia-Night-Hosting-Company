@@ -2194,6 +2194,11 @@ p {
   margin-top: auto;
   flex-shrink: 0;
   box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.bento-round-footer svg {
+  flex-shrink: 0;
 }
 
 /* Section 5: Modern 3D Flip Clue Cards */
