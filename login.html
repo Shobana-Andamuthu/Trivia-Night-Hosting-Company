@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captain &amp; Host Login — Brainwave Trivia</title>
+  <meta name="description" content="Log in to your Brainwave Trivia dashboard to manage team rosters, enter live pub buzzers, check weekly standings, and track your season streak.">
+
+  <!-- Favicon -->
+  <link rel="icon" id="siteFavicon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="auth-page-body">
+
+  <!-- Attractive Site Preloader -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo-ring">
+        <div class="preloader-pulse-glow"></div>
+        <svg class="preloader-svg" width="54" height="54" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="2"/>
+          <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+        </svg>
+      </div>
+      <div class="preloader-text-wrap">
+        <span class="preloader-brand">BRAIN<span class="preloader-accent">WAVE</span></span>
+        <span class="preloader-status">SYNCHRONIZING TRIVIA CIRCUIT...</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Global SVG Gradients for Brand Identity -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D946EF" />
+        <stop offset="50%" stop-color="#A855F7" />
+        <stop offset="100%" stop-color="#9333EA" />
+      </linearGradient>
+      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2E93" />
+        <stop offset="50%" stop-color="#D946EF" />
+        <stop offset="100%" stop-color="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Auth Split Layout Container -->
+  <div class="auth-split-wrapper">
+
+    <!-- Left Column: Visual Showcase Pane -->
+    <div class="auth-visual-pane">
+      <div class="auth-visual-bg">
+        <img src="assets/images/auth/hero-portal-captain-badge.webp" alt="Brainwave Trivia team captain in live pub battle" class="auth-hero-img">
+        <div class="auth-visual-overlay"></div>
+      </div>
+
+      <!-- Top Left Brand Header -->
+      <div class="auth-visual-top">
+        <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+          <div class="brand-logo-badge">
+            <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+              <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+            </svg>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+            <span class="brand-tagline">LIVE TRIVIA</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Bottom Left Caption & Stats Badge -->
+      <div class="auth-visual-bottom">
+        <div class="auth-stat-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>1,900+ STREAK-DAYS LOGGED</span>
+        </div>
+        <h2 class="auth-visual-heading">
+          Your dashboard is exactly where you left it.
+        </h2>
+      </div>
+    </div>
+
+    <!-- Right Column: Interactive Form Pane -->
+    <div class="auth-form-pane">
+      
+      <!-- Top Action Controls (Theme Toggle & RTL) -->
+      <div class="auth-top-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn auth-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button type="button" class="rtl-toggle-btn auth-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
+          <span style="font-size:0.75rem; font-weight:800;">RTL</span>
+        </button>
+      </div>
+
+      <!-- Centered Form Container -->
+      <div class="auth-form-card">
+        
+        <div class="auth-form-header">
+          <span class="auth-subtag">— MEMBER &amp; HOST LOGIN</span>
+          <h1 class="auth-main-title">Welcome back.</h1>
+          <p class="auth-main-subtext">
+            Log in to enter live table buzzers, check your renewal date, and track your team streak.
+          </p>
+        </div>
+
+        <!-- Role Selector Tab Strip -->
+        <div class="auth-role-tabs" role="tablist">
+          <button type="button" class="auth-role-tab active" data-role="captain" role="tab" aria-selected="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>Team Captain</span>
+          </button>
+          <button type="button" class="auth-role-tab" data-role="host" role="tab" aria-selected="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+            <span>Host Emcee</span>
+          </button>
+        </div>
+
+        <!-- Login Form -->
+        <form class="auth-main-form" id="mainLoginForm">
+          
+          <!-- Email / Team ID Input -->
+          <div class="auth-field-group">
+            <label for="loginEmail" class="auth-field-label" id="loginIdLabel">Email</label>
+            <div class="auth-input-wrapper">
+              <input type="email" id="loginEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+            </div>
+          </div>
+
+          <!-- Password Input with Toggle Eye Icon -->
+          <div class="auth-field-group">
+            <label for="loginPassword" class="auth-field-label">Password</label>
+            <div class="auth-input-wrapper password-wrapper">
+              <input type="password" id="loginPassword" name="password" placeholder="••••••••" required autocomplete="current-password">
+              <button type="button" class="password-toggle-btn" id="togglePasswordBtn" aria-label="Show password">
+                <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Options Row: Remember Me & Forgot Password -->
+          <div class="auth-options-row">
+            <label class="auth-checkbox-label">
+              <input type="checkbox" id="rememberMe" name="rememberMe" checked>
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="auth-forgot-link" id="forgotPasswordLink">Forgot password?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-brand-auth btn-lime-auth btn-block" id="loginSubmitBtn">
+            <span>Log In</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+        </form>
+
+        <!-- Switch Link to Register -->
+        <div class="auth-switch-footer">
+          <span>New to Brainwave?</span>
+          <a href="register.html" class="auth-switch-link">Create a free account</a>
+        </div>
+
+        <!-- Quick Table PIN Join Box -->
+        <div class="auth-quick-pin-box">
+          <div class="quick-pin-divider">
+            <span>OR JOIN A LIVE TABLE NOW</span>
+          </div>
+          <form class="quick-pin-mini-form" id="tablePinForm">
+            <input type="text" id="tablePinInput" placeholder="ENTER 6-DIGIT PIN" maxlength="6" aria-label="Enter live table buzzer PIN">
+            <button type="submit" class="btn btn-primary btn-sm">Join Table</button>
+          </form>
+          <div class="join-feedback-msg" id="joinFeedback"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

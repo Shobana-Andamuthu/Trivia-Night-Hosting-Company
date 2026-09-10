@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Free Team Account — Brainwave Trivia</title>
+  <meta name="description" content="Create a free Brainwave Trivia team captain account. Track weekly standings, speed buzzer scores, and qualify for the Las Vegas National Championship.">
+
+  <!-- Favicon -->
+  <link rel="icon" id="siteFavicon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="auth-page-body">
+
+  <!-- Attractive Site Preloader -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo-ring">
+        <div class="preloader-pulse-glow"></div>
+        <svg class="preloader-svg" width="54" height="54" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="2"/>
+          <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+        </svg>
+      </div>
+      <div class="preloader-text-wrap">
+        <span class="preloader-brand">BRAIN<span class="preloader-accent">WAVE</span></span>
+        <span class="preloader-status">SYNCHRONIZING TRIVIA CIRCUIT...</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Global SVG Gradients for Brand Identity -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D946EF" />
+        <stop offset="50%" stop-color="#A855F7" />
+        <stop offset="100%" stop-color="#9333EA" />
+      </linearGradient>
+      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2E93" />
+        <stop offset="50%" stop-color="#D946EF" />
+        <stop offset="100%" stop-color="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Auth Split Layout Container (Form Left, Visual Right matching screenshot 2) -->
+  <div class="auth-split-wrapper register-layout">
+
+    <!-- Left Column: Interactive Form Pane -->
+    <div class="auth-form-pane">
+      
+      <!-- Top Brand Header -->
+      <div class="auth-form-top-brand">
+        <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+          <div class="brand-logo-badge">
+            <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+              <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+            </svg>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+            <span class="brand-tagline">LIVE TRIVIA</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Centered Form Container -->
+      <div class="auth-form-card">
+        
+        <div class="auth-form-header">
+          <span class="auth-subtag">— CREATE ACCOUNT</span>
+          <h1 class="auth-main-title">Start your streak today.</h1>
+          <p class="auth-main-subtext">
+            Free to create. Your dashboard tracks bookings, renewal date, and check-ins from day one.
+          </p>
+        </div>
+
+        <!-- Registration Form -->
+        <form class="auth-main-form" id="mainRegisterForm">
+          
+          <!-- Full Name -->
+          <div class="auth-field-group">
+            <label for="regFullName" class="auth-field-label">Full Name</label>
+            <div class="auth-input-wrapper">
+              <input type="text" id="regFullName" name="fullName" placeholder="Maya Lin" required autocomplete="name">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="auth-field-group">
+            <label for="regEmail" class="auth-field-label">Email</label>
+            <div class="auth-input-wrapper">
+              <input type="email" id="regEmail" name="email" placeholder="captain@team.com" required autocomplete="email">
+            </div>
+          </div>
+
+          <!-- Password with Toggle Eye Icon -->
+          <div class="auth-field-group">
+            <label for="regPassword" class="auth-field-label">Password</label>
+            <div class="auth-input-wrapper password-wrapper">
+              <input type="password" id="regPassword" name="password" placeholder="••••••••" required autocomplete="new-password">
+              <button type="button" class="password-toggle-btn" id="toggleRegPasswordBtn" aria-label="Show password">
+                <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Membership / League Plan Select -->
+          <div class="auth-field-group">
+            <label for="regPlanSelect" class="auth-field-label">Membership Plan</label>
+            <div class="auth-input-wrapper">
+              <select id="regPlanSelect" name="plan" class="auth-select-field">
+                <option value="premium">Premium — $59/mo (All Access Pub Pass)</option>
+                <option value="d1">Division I Masters — $39/mo (Championship Seed)</option>
+                <option value="d2">Division II Challengers — $19/mo (Metro League)</option>
+                <option value="free" selected>Free Captain Pass — $0/mo (Standard Play)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Agreement Checkbox -->
+          <div class="auth-options-row">
+            <label class="auth-checkbox-label">
+              <input type="checkbox" id="agreeTerms" name="agreeTerms" required checked>
+              <span>I agree to the membership terms and cancellation policy.</span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-brand-auth btn-lime-auth btn-block" id="registerSubmitBtn">
+            <span>Create Free Account</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+        </form>
+
+        <!-- Switch Link to Login -->
+        <div class="auth-switch-footer">
+          <span>Already have an account?</span>
+          <a href="login.html" class="auth-switch-link">Log In</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Right Column: Visual Showcase Pane -->
+    <div class="auth-visual-pane">
+      <div class="auth-visual-bg">
+        <img src="assets/images/auth/portal-team-celebrate.webp" alt="Brainwave Trivia pub crowd cheering victory" class="auth-hero-img">
+        <div class="auth-visual-overlay"></div>
+      </div>
+
+      <!-- Top Right Controls -->
+      <div class="auth-top-actions visual-top-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn auth-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button type="button" class="rtl-toggle-btn auth-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
+          <span style="font-size:0.75rem; font-weight:800;">RTL</span>
+        </button>
+      </div>
+
+      <!-- Bottom Right Caption & Badge -->
+      <div class="auth-visual-bottom">
+        <div class="auth-stat-chip lime-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span>FREE 3-ROUND TRIAL INCLUDED</span>
+        </div>
+        <h2 class="auth-visual-heading">
+          Book your first live trivia table before you even arrive at the pub.
+        </h2>
+      </div>
+
+      <!-- Floating verified badge in bottom right -->
+      <div class="auth-floating-badge">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="rgba(217, 70, 239, 0.2)" stroke="#D946EF" stroke-width="2"/>
+          <path d="M12 20L18 26L28 14" stroke="#D946EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1754 @@
+/* ==========================================================================
+   BRAINWAVE TRIVIA — MASTER RESPONSIVE STYLESHEET
+   Comprehensive Cross-Device Optimization (320px to 1920px+)
+   All Pages, All Components, All Viewports, Dark Mode & RTL
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. Global Responsive Base & Box-Sizing Guard
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure flex and grid items never burst out of parent containers */
+.container,
+.container-narrow,
+.row,
+.col,
+.grid,
+.card,
+.trivia-card,
+.section-py,
+.form-field {
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   1. Ultra Large Desktop & 4K Displays (1440px - 1920px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  .container,
+  .site-header .container {
+    max-width: 1200px;
+  }
+
+  .navbar-inner {
+    gap: 0.85rem;
+  }
+
+  .nav-menu {
+    gap: 0.4rem;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .navbar-actions {
+    gap: 0.45rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Desktop & Standard Laptop (1025px - 1439px) — Includes iPad Pro Landscape
+   -------------------------------------------------------------------------- */
+@media (max-width: 1439px) and (min-width: 1025px) {
+  .container,
+  .site-header .container {
+    max-width: 1140px;
+    padding-inline: 1rem;
+  }
+
+  .navbar-inner {
+    gap: 0.65rem;
+  }
+
+  .nav-menu {
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.825rem;
+    padding: 0.3rem 0.35rem;
+  }
+
+  .btn-sm {
+    padding: 0.42rem 0.85rem;
+    font-size: 0.8125rem;
+  }
+
+  .navbar-actions {
+    gap: 0.35rem;
+  }
+
+  .theme-toggle-btn,
+  .rtl-toggle-btn,
+  .mobile-nav-toggle {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: var(--radius-full);
+  }
+
+  .bento-experience-grid,
+  .turnkey-bento-grid,
+  .emcee-roster-grid,
+  .studios-grid {
+    gap: 1.25rem;
+  }
+
+  .bento-exp-card,
+  .bento-kit-card,
+  .studio-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .emcee-card {
+    padding: 1.75rem 1rem;
+  }
+
+  .contact-channels-grid {
+    gap: 1.15rem;
+  }
+
+  .channel-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .footer-grid {
+    gap: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Tablet Landscape / Small Laptop (992px - 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navbar-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-menu,
+  #navLoginBtn,
+  .navbar-actions #navLoginBtn,
+  .navbar-actions .btn-primary,
+  .navbar-actions .btn-accent {
+    display: none !important;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex !important;
+  }
+
+  .card-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-channels-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Home 2 Section 2 App Bento Grid */
+  .app-bento-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .spotlight-card-media {
+    height: 320px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Tablet Portrait & iPad Dimensions (768px - 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  /* Global Header & Nav on Tablet */
+  .site-header {
+    height: var(--header-height);
+  }
+
+  /* Hero Section (Home 1) */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-stats-row {
+    justify-content: center;
+  }
+
+  .hero-showcase-stage {
+    height: auto;
+    perspective: none;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .floating-quiz-main-screen {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    transform: none !important;
+  }
+
+  .card-slide-bg,
+  .card-about-host {
+    display: none !important;
+  }
+
+  /* Grids */
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  /* City Showcase Grid Tablet */
+  .city-showcase-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 2.25rem 1.75rem !important;
+  }
+
+  .city-showcase-media {
+    width: 100%;
+    max-height: 320px;
+  }
+
+  .city-showcase-media img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  /* 4-Round Experience Bento Grid: 2-column equal-height layout */
+  .bento-experience-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    align-items: stretch !important;
+  }
+
+  .bento-exp-card {
+    height: 100% !important;
+    min-height: 400px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .bento-round-body {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .bento-round-desc {
+    flex: 1 1 auto !important;
+  }
+
+  .bento-round-footer {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Specialty Theme Flip Grid */
+  .theme-flip-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Featured Partner Venue Story Grid */
+  .venue-story-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Champions Wall Grid */
+  .champions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Final CTA Grid */
+  .final-cta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .final-cta-image-card img {
+    height: 240px;
+  }
+
+  .final-cta-search-bar {
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-radius: var(--radius-xl);
+    padding: 0.5rem;
+  }
+
+  .final-cta-search-bar input {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .final-cta-search-bar button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Spotlight section */
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .spotlight-radar-list {
+    height: auto;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Home 2 Festival Edition Tablet */
+  .hero-stats-banner {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .stat-cell-divider {
+    display: none;
+  }
+
+  .hero-stat-cell {
+    flex: 1 1 40%;
+  }
+
+  .flightboard-row {
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+  }
+
+  .flightboard-prize,
+  .flightboard-capacity,
+  .flightboard-action {
+    grid-column: span 2;
+  }
+
+  .tournament-circuit-track {
+    flex-direction: column;
+    gap: 1.75rem;
+    align-items: center;
+  }
+
+  .circuit-connector-line {
+    display: none;
+  }
+
+  .circuit-step-item {
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .vault-split-showcase {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* home-2.html: vault stage header pills row - fix wrapping on mobile */
+  .vault-stage-header {
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    align-items: flex-start;
+  }
+
+  .vault-stage-header .category-pill {
+    flex-shrink: 0;
+  }
+
+  .vault-bonus-badge {
+    flex-shrink: 0;
+  }
+
+  /* venues.html: calculator breakdown items - fix label + value alignment on mobile */
+  .breakdown-item {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  .breakdown-item span {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .breakdown-item strong {
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .vault-selector-list {
+    justify-content: flex-start;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .stadium-podium-stage {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .emcee-spotlight-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .emcee-roster-column {
+    justify-content: flex-start;
+    height: auto;
+    gap: 1.25rem;
+  }
+
+  .arena-pass-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .standings-row-item {
+    grid-template-columns: 40px 1fr 100px;
+    gap: 0.75rem;
+  }
+
+  .standings-streak,
+  .standings-status {
+    display: none;
+  }
+
+  /* Schedule Page Tablet */
+  .schedule-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .filter-controls-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .theme-specials-grid,
+  .prizes-vault-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .schedule-split-faq {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Venues & Cities Tablet */
+  .venues-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .venues-hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .venues-hero-highlights {
+    justify-content: center;
+  }
+
+  .venue-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .venue-search-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .venue-search-strip .btn {
+    grid-column: span 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .amenity-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .partner-spotlight-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.25rem 1.75rem;
+  }
+
+  .calc-interactive-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .transit-table-header {
+    display: none;
+  }
+
+  .transit-row {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    gap: 0.65rem;
+    padding: 1.25rem;
+    border-bottom: 1.5px solid rgba(217, 70, 239, 0.2);
+  }
+
+  /* Events Page Tablet */
+  .events-metric-banner {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    padding: 2rem 1.5rem !important;
+  }
+
+  .events-metric-banner .metric-divider {
+    display: none !important;
+  }
+
+  .format-showcase-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .events-package-matrix {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .custom-engine-showcase {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .client-testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  .quote-master-card {
+    padding: 2rem 1.75rem;
+  }
+
+  /* Host Page Tablet */
+  .host-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .host-hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .host-hero-highlights {
+    justify-content: center;
+  }
+
+  .host-metric-banner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .host-metric-banner .metric-divider:nth-child(4) {
+    display: none;
+  }
+
+  .comparison-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .turnkey-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .bento-kit-wide {
+    grid-column: span 2;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .bento-kit-media {
+    height: 240px;
+  }
+
+  .onboarding-stepper-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .partner-case-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .partner-case-card {
+    padding: 2rem 1.75rem;
+  }
+
+  .pricing-models-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 520px;
+  }
+
+  .partner-form-card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  /* About Page Tablet */
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .about-hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-hero-highlights {
+    justify-content: center;
+  }
+
+  .about-metric-banner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .about-metric-banner .metric-divider:nth-child(4) {
+    display: none;
+  }
+
+  .philosophy-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .writers-room-showcase {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .emcee-roster-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .charity-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .conduct-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .audition-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .audition-master-box {
+    padding: 2.5rem 1.75rem;
+  }
+
+  /* Contact Page Tablet */
+  .contact-channels-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+
+  .contact-form-master-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .studios-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Login / Portal Tablet */
+  .quick-join-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .perks-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .perk-card-wide {
+    grid-column: span 2;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .perk-media {
+    height: 220px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Large Mobile & Phablet (576px - 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 70px;
+    --header-height-scrolled: 70px;
+  }
+
+  .container,
+  .container-narrow {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .theme-toggle-btn,
+  .rtl-toggle-btn,
+  .mobile-nav-toggle {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: var(--radius-full);
+  }
+
+  /* Hero Showcase Stage (Home 1) */
+  .hero-showcase-stage {
+    height: auto;
+    perspective: none;
+    padding-top: 1rem;
+  }
+
+  .card-about-host,
+  .card-slide-bg {
+    display: none !important;
+  }
+
+  .floating-quiz-main-screen {
+    transform: none !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .quiz-screen-body {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .quiz-bee-img {
+    height: 120px;
+  }
+
+  /* City Showcase Grid Mobile */
+  .city-showcase-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  .city-showcase-media {
+    width: 100%;
+    max-height: 240px;
+  }
+
+  .city-showcase-media img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .city-stat-pills {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.65rem !important;
+    width: 100%;
+  }
+
+  .city-stat-pill {
+    padding: 0.65rem 0.5rem !important;
+    text-align: center;
+    align-items: center;
+  }
+
+  .city-stat-pill strong {
+    font-size: 1.2rem !important;
+  }
+
+  .city-stat-pill span {
+    font-size: 0.7rem !important;
+  }
+
+  /* Single Column Stacking on Mobile */
+  .bento-experience-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .bento-exp-card {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 1.75rem 1.35rem !important;
+  }
+
+  .theme-flip-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .card-grid-3,
+  .card-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Radar Item Mobile Adjustments */
+  .radar-item {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    padding: 1rem 1.15rem;
+  }
+
+  .radar-item-date {
+    min-width: 58px;
+    padding: 0.45rem 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .radar-item-day {
+    font-size: 0.65rem;
+    white-space: nowrap;
+  }
+
+  .radar-item-num {
+    font-size: 1.15rem;
+  }
+
+  .radar-item-info {
+    min-width: 0;
+    flex: 1 1 180px;
+  }
+
+  .radar-item-title {
+    font-size: 1rem;
+  }
+
+  .radar-item-meta {
+    font-size: 0.78rem;
+    gap: 0.4rem;
+  }
+
+  /* Footer Mobile */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    z-index: 90;
+  }
+
+  [dir="rtl"] .back-to-top {
+    right: auto;
+    left: 1rem;
+  }
+
+  /* --------------------------------------------------------------------------
+     HERO FLOATING BADGES FIX (venues.html, host.html, about.html)
+     Dock badges safely under the card on mobile to prevent overlapping/clipping
+     -------------------------------------------------------------------------- */
+  .venues-visual-card,
+  .host-visual-card,
+  .about-visual-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .venues-float-badge,
+  .host-float-badge,
+  .about-float-badge,
+  .venues-float-badge.float-badge-top,
+  .venues-float-badge.float-badge-bottom,
+  .host-float-badge.float-badge-top,
+  .host-float-badge.float-badge-bottom,
+  .float-badge-top,
+  .float-badge-bottom {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 0.75rem !important;
+    transform: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+    display: flex !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     HOME 2 SECTION 2: APP BENTO GRID & FEATURE CARDS FIX (home-2.html)
+     -------------------------------------------------------------------------- */
+  .app-bento-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .spotlight-card-media {
+    height: 220px !important;
+  }
+
+  .app-feature-list {
+    gap: 1rem !important;
+  }
+
+  .app-feature-card {
+    padding: 1.15rem 1.25rem !important;
+    gap: 0.9rem !important;
+  }
+
+  .app-feature-title {
+    font-size: 1.05rem !important;
+  }
+
+  .app-feature-desc {
+    font-size: 0.85rem !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     CALLOUTS & HIRING BANNERS FIX (No button overlapping text)
+     -------------------------------------------------------------------------- */
+  .emcee-audition-callout {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    padding: 1.25rem !important;
+  }
+
+  .emcee-audition-callout .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .venue-prize-callout {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     SCHEDULE 7-DAY DATE RIBBON STRIP TOUCH CAROUSEL (schedule.html)
+     -------------------------------------------------------------------------- */
+  .week-days-strip {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    justify-content: flex-start !important;
+    padding-bottom: 0.65rem !important;
+    gap: 0.5rem !important;
+    scrollbar-width: thin !important;
+  }
+
+  .day-strip-btn {
+    flex: 0 0 96px !important;
+    min-width: 96px !important;
+    padding: 0.65rem 0.4rem !important;
+  }
+
+  /* Home 2 Mobile Sections */
+  .flightboard-filter-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .vault-perks-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .headliner-stats-strip {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .emcee-strip-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .arena-cta-master-box {
+    padding: 2rem 1.25rem;
+  }
+
+  /* Venues & Cities Mobile */
+  .venue-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .venue-search-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-search-strip .btn {
+    grid-column: span 1;
+  }
+
+  .metro-chips-row {
+    gap: 0.4rem;
+  }
+
+  .metro-chip {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .calculator-master-card {
+    padding: 2rem 1.25rem;
+  }
+
+  /* venues.html: hero highlight badges stack full-width on mobile */
+  .venues-hero-highlights {
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .venue-highlight-badge {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.75rem 1.1rem;
+    border-radius: var(--radius-xl);
+    font-size: 0.875rem;
+  }
+
+  .spotlight-stats-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Events Page Mobile */
+  .events-hero-title {
+    font-size: clamp(1.75rem, 5vw, 2.2rem);
+  }
+
+  .events-metric-banner {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem 0.85rem !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  .events-metric-banner .metric-divider {
+    display: none !important;
+  }
+
+  .event-metric-item {
+    text-align: center;
+    padding: 0.25rem;
+  }
+
+  .event-metric-item .metric-num {
+    font-size: clamp(1.5rem, 4vw, 1.9rem);
+  }
+
+  .event-metric-item .metric-label {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .format-tabs-strip {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+    gap: 0.65rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .format-tab-btn {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    padding: 0.9rem 1.25rem !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .format-showcase-display {
+    padding: 1.5rem 1.15rem !important;
+    border-radius: var(--radius-xl) !important;
+  }
+
+  .format-showcase-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .format-showcase-media {
+    height: 220px !important;
+    width: 100% !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .format-showcase-media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .format-showcase-title {
+    font-size: 1.35rem;
+  }
+
+  .format-features-checklist li {
+    font-size: 0.875rem;
+  }
+
+  /* Custom Question Preview Screen Header & Grid */
+  .preview-display-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .preview-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  .preview-opt-card {
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Events Quote Proposal Form */
+  .quote-master-card {
+    padding: 1.75rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .quote-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+
+  .form-field {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .form-field input,
+  .form-field select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .quote-estimate-summary {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    padding: 1.25rem 1rem !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .quote-estimate-summary .estimate-price-val {
+    font-size: 2.2rem !important;
+    margin: 0.25rem 0 !important;
+  }
+
+  .quote-estimate-summary .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Host Page Mobile */
+  .host-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .host-metric-banner {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .host-metric-banner .metric-divider {
+    display: none;
+  }
+
+  .turnkey-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .bento-kit-wide {
+    grid-column: span 1;
+  }
+
+  .onboarding-stepper-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .partner-case-card {
+    padding: 1.5rem 1.15rem !important;
+  }
+
+  .case-stats-strip {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    padding: 0.85rem 0.5rem !important;
+  }
+
+  .case-stat-col .stat-big {
+    font-size: 1.25rem !important;
+  }
+
+  .case-stat-col .stat-sub {
+    font-size: 0.7rem !important;
+  }
+
+  .partner-form-card {
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  .partner-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* About Page Mobile */
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .about-metric-banner {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .about-metric-banner .metric-divider {
+    display: none;
+  }
+
+  .philosophy-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .timeline-stepper-wrap::before {
+    left: 20px;
+  }
+
+  .timeline-step-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-left: 2.5rem;
+  }
+
+  .timeline-year-badge {
+    width: auto;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .emcee-roster-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .charity-stats-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .conduct-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Contact Page Mobile */
+  .contact-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-channels-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .channel-card {
+    height: auto !important;
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  .contact-form-pane,
+  .contact-info-pane {
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  .studios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Login / Portal Mobile */
+  .portal-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .portal-role-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .portal-role-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .portal-terminal-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .portal-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pin-input-group {
+    flex-direction: column;
+  }
+
+  .pin-input-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .perks-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .perk-card-wide {
+    grid-column: span 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Small Mobile (320px - 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container,
+  .container-narrow {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .brand-logo-badge {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-logo-text .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-logo-text .brand-tagline {
+    font-size: 0.525rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-lg {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .trivia-card {
+    padding: 1.25rem;
+  }
+
+  .city-stat-pills {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  .city-stat-pill {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.65rem 1rem !important;
+  }
+
+  .trivia-card-image {
+    height: 180px;
+  }
+
+  .mobile-nav-drawer {
+    width: 88vw;
+    max-width: 340px;
+  }
+
+  .footer-newsletter-form,
+  .newsletter-input-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .footer-newsletter-form .btn,
+  .newsletter-input-group .btn {
+    width: 100%;
+  }
+
+  .case-stats-strip {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  .estimate-price-val {
+    font-size: 2rem !important;
+  }
+
+  .hero-stats-banner {
+    padding: 1rem !important;
+    gap: 1rem !important;
+  }
+
+  .hero-stat-cell {
+    flex: 1 1 100% !important;
+    text-align: center !important;
+  }
+
+  .quote-master-card,
+  .partner-form-card {
+    padding: 1.25rem 0.85rem !important;
+  }
+
+  /* host.html: prevent long button text from overflowing on small screens */
+  .partner-form-actions .btn,
+  .partner-form-actions .btn span {
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    height: auto !important;
+    min-height: 52px !important;
+    padding: 0.85rem 1rem !important;
+  }
+
+  /* Fix vault-stage-header pills on small mobile */
+  .vault-stage-header {
+    gap: 0.5rem !important;
+  }
+
+  .vault-bonus-badge {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.6rem !important;
+  }
+
+  /* Fix results breakdown items alignment on very small screens */
+  .breakdown-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.15rem !important;
+  }
+
+  .breakdown-item strong {
+    text-align: left !important;
+    font-size: 0.875rem !important;
+  }
+
+  .calc-big-num {
+    font-size: 2.4rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Ultra Small Mobile (320px - 360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 360px) {
+  .brand-logo span.brand-text-long {
+    display: none;
+  }
+
+  .navbar-actions {
+    gap: 0.35rem;
+  }
+
+  .theme-toggle-btn,
+  .rtl-toggle-btn {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+  }
+
+  .mobile-nav-toggle {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+  }
+}
+
+/* ==========================================================================
+   8. Split-Screen Auth Responsive Styles (login.html & register.html)
+   Fixes the blank right-side empty space and ensures 100% full-width layout
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .auth-page-body {
+    width: 100% !important;
+    min-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .auth-split-wrapper,
+  .auth-split-wrapper.register-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .auth-visual-pane {
+    width: 100% !important;
+    min-height: 360px !important;
+    padding: 2.5rem 1.75rem !important;
+    flex: 0 0 auto !important;
+  }
+
+  .auth-form-pane {
+    width: 100% !important;
+    padding: 2.5rem 1.75rem !important;
+    flex: 1 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .auth-form-card {
+    width: 100% !important;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+  }
+
+  .auth-form-top-brand {
+    position: static !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .auth-top-actions,
+  .visual-top-actions {
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+  }
+
+  [dir="rtl"] .auth-top-actions,
+  [dir="rtl"] .visual-top-actions {
+    right: auto !important;
+    left: 1.25rem !important;
+  }
+
+  .auth-visual-heading {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-visual-pane {
+    min-height: 260px !important;
+    padding: 2rem 1.25rem !important;
+  }
+
+  .auth-form-pane {
+    padding: 2rem 1.25rem !important;
+  }
+
+  .auth-main-title {
+    font-size: 2.1rem !important;
+  }
+
+  .auth-visual-heading {
+    font-size: 1.65rem !important;
+  }
+
+  .auth-top-actions,
+  .visual-top-actions {
+    top: 1rem !important;
+    right: 1rem !important;
+  }
+
+  [dir="rtl"] .auth-top-actions,
+  [dir="rtl"] .visual-top-actions {
+    right: auto !important;
+    left: 1rem !important;
+  }
+
+  .auth-role-tabs {
+    width: 100% !important;
+  }
+
+  .auth-role-tab {
+    flex: 1 !important;
+    justify-content: center !important;
+    padding: 0.6rem 0.5rem !important;
+    font-size: 0.825rem !important;
+  }
+
+  .auth-options-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  .quick-pin-mini-form {
+    flex-direction: column !important;
+  }
+
+  .quick-pin-mini-form .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}

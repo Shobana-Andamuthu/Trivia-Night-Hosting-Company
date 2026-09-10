@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Our Story, Writers Room &amp; Emcee Roster — Brainwave Trivia</title>
+  <meta name="description" content="Learn how two standup comedians transformed weekly pub trivia into an electric social game show experience across 50+ craft taprooms nationwide.">
+
+  <!-- Favicon -->
+  <link rel="icon" id="siteFavicon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Attractive Site Preloader -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo-ring">
+        <div class="preloader-pulse-glow"></div>
+        <svg class="preloader-svg" width="54" height="54" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="2"/>
+          <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+        </svg>
+      </div>
+      <div class="preloader-text-wrap">
+        <span class="preloader-brand">BRAIN<span class="preloader-accent">WAVE</span></span>
+        <span class="preloader-status">SYNCHRONIZING TRIVIA CIRCUIT...</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Global SVG Gradients for Brand Identity -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D946EF" />
+        <stop offset="50%" stop-color="#A855F7" />
+        <stop offset="100%" stop-color="#9333EA" />
+      </linearGradient>
+      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2E93" />
+        <stop offset="50%" stop-color="#D946EF" />
+        <stop offset="100%" stop-color="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Header / Navbar (7 Main Pages) -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <div class="navbar-inner">
+        
+        <!-- Redesigned Attractive Brand Logo (Brainwave + Quiz Lightning) -->
+        <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+          <div class="brand-logo-badge">
+            <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+              <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+            </svg>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+            <span class="brand-tagline">LIVE TRIVIA</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (7 Main Pages) -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          
+          <!-- 1. Home Dropdown (Home 1 & Home 2) -->
+          <div class="nav-item dropdown">
+            <a href="index.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">
+                <span>Home 1 (Pub Classic)</span>
+                <span class="dropdown-badge">Popular</span>
+              </a>
+              <a href="home-2.html" class="dropdown-link">
+                <span>Home 2 (Festival Live)</span>
+                <span class="dropdown-badge">New</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. About (ACTIVE) -->
+          <div class="nav-item active">
+            <a href="about.html" class="nav-link">About</a>
+          </div>
+
+          <!-- 3. Schedule -->
+          <div class="nav-item">
+            <a href="schedule.html" class="nav-link">Schedule</a>
+          </div>
+
+          <!-- 4. Venues & Cities -->
+          <div class="nav-item">
+            <a href="venues.html" class="nav-link">Venues &amp; Cities</a>
+          </div>
+
+          <!-- 5. Corporate & Private Events -->
+          <div class="nav-item">
+            <a href="events.html" class="nav-link">Corporate &amp; Private</a>
+          </div>
+
+          <!-- 6. Host a Trivia Night -->
+          <div class="nav-item">
+            <a href="host.html" class="nav-link">Host a Trivia Night</a>
+          </div>
+
+          <!-- 7. Contact -->
+          <div class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+        </nav>
+
+        <!-- Navbar Actions -->
+        <div class="navbar-actions">
+          
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
+            <span style="font-size:0.75rem; font-weight:800;">RTL</span>
+          </button>
+
+          <!-- CTA Login Button -->
+          <a href="login.html" class="btn btn-primary btn-sm" id="navLoginBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+        <div class="brand-logo-badge">
+          <svg class="brand-logo-svg" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+            <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+          <span class="brand-tagline">LIVE TRIVIA</span>
+        </div>
+      </a>
+      <button type="button" class="mobile-drawer-close" aria-label="Close Mobile Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <div class="mobile-nav-list">
+      <!-- Home Accordion -->
+      <div class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link mobile-dropdown-btn" aria-expanded="false">
+          <span>Home</span>
+          <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="index.html" class="mobile-dropdown-link">
+            <span>Home 1 (Pub Classic)</span>
+            <span class="dropdown-badge">Popular</span>
+          </a>
+          <a href="home-2.html" class="mobile-dropdown-link">
+            <span>Home 2 (Festival Live)</span>
+            <span class="dropdown-badge">New</span>
+          </a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link active">About</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="schedule.html" class="mobile-nav-link">Schedule</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="venues.html" class="mobile-nav-link">Venues &amp; Cities</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="events.html" class="mobile-nav-link">Corporate &amp; Private</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="host.html" class="mobile-nav-link">Host a Trivia Night</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content: About Us -->
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         SECTION 1: HERO STORYTELLING BANNER WITH 2-COLUMN SHOWCASE & MILESTONE RIBBON
+         ========================================================================= -->
+    <section class="about-hero-section" id="aboutHero">
+      <div class="hero-ambient-orb about-orb-1" aria-hidden="true"></div>
+      <div class="hero-ambient-orb about-orb-2" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="about-hero-grid reveal-on-scroll">
+          
+          <!-- Left Column: Story & Hero Typography -->
+          <div class="about-hero-left">
+            <div class="section-tag tag-magenta" style="margin-bottom:1.25rem;">
+              <span class="pulse-dot"></span>
+              <span>The Brainwave Story &bull; Redefining Social Live Entertainment</span>
+            </div>
+
+            <h1 class="about-hero-title">
+              Born on a Napkin in an Austin Dive Bar. Now <span class="text-gradient-brand">Electrifying 50+ Taprooms</span> Nationwide.
+            </h1>
+
+            <p class="about-hero-subtitle">
+              In 2018, two touring standup comedians got fed up with dry, robotic pub trivia filled with crumpled paper slips and 20-minute grading delays. We built Brainwave to combine comedy club crowd work, television game show pacing, and instant smartphone buzzers into the ultimate weekly social ritual.
+            </p>
+
+            <div class="hero-actions" style="margin-bottom:2.25rem;">
+              <a href="#emceeRoster" class="btn btn-primary btn-lg glow-btn">
+                <span>Meet Our Comedy Emcees</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#writersRoom" class="btn btn-outline btn-lg">
+                <span>Inside The Writers Room</span>
+              </a>
+            </div>
+
+            <div class="about-hero-highlights">
+              <div class="about-highlight-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>50+ Partner Taprooms</span>
+              </div>
+              <div class="about-highlight-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>0.3s Cloud Buzzers</span>
+              </div>
+              <div class="about-highlight-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>$420K+ Prizes Awarded</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Stage Showcase Card -->
+          <div class="about-hero-right">
+            <div class="about-visual-card">
+              <div class="about-visual-media">
+                <img src="assets/images/about/hero-about-founders-stage.webp" alt="Brainwave live comedy trivia showdown on stage" width="560" height="420" loading="lazy">
+                <div class="about-visual-overlay"></div>
+                <div class="about-visual-badge">
+                  <span class="pulse-dot"></span>
+                  <span>FOUNDED BY COMEDIANS &amp; QUIZMASTERS</span>
+                </div>
+              </div>
+              
+              <!-- Floating Glass Badge 1: Top Right -->
+              <div class="about-float-badge float-badge-top">
+                <div class="float-badge-icon" style="background:linear-gradient(135deg,#D946EF,#9333EA);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div>
+                  <strong>Austin &bull; 2018</strong>
+                  <span>Born in a local craft tavern</span>
+                </div>
+              </div>
+
+              <!-- Floating Glass Badge 2: Bottom Left -->
+              <div class="about-float-badge float-badge-bottom">
+                <div class="float-badge-icon" style="background:linear-gradient(135deg,#06D6A0,#0284C7);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <div>
+                  <strong>100% Smartphone Powered</strong>
+                  <span>Zero paper &bull; Zero delay</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4-Item Milestone Proof Ribbon -->
+        <div class="about-metric-banner reveal-on-scroll">
+          <div class="about-metric-item">
+            <span class="metric-num text-gradient-brand">2018</span>
+            <span class="metric-label">Founded in Austin, TX</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="about-metric-item">
+            <span class="metric-num text-mint">52+</span>
+            <span class="metric-label">Partner Cities Nationwide</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="about-metric-item">
+            <span class="metric-num text-yellow">1.4M+</span>
+            <span class="metric-label">Quiz Questions Answered</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="about-metric-item">
+            <span class="metric-num text-coral">$420K+</span>
+            <span class="metric-label">Cash &amp; Bar Tabs Awarded</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: THE 4 PILLARS OF BRAINWAVE (PHILOSOPHY BENTO MATRIX)
+         ========================================================================= -->
+    <section class="section-py" id="philosophyPillars" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-cyan">
+            <span>Our Core Philosophy</span>
+          </div>
+          <h2 class="section-title">The 4 Pillars of Brainwave Entertainment</h2>
+          <p class="section-desc">
+            We believe pub trivia is not an academic exam—it is a communal celebration of laughter, friendly rivalry, and great craft beer.
+          </p>
+        </div>
+
+        <div class="philosophy-bento-grid reveal-on-scroll">
+          
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
+            <span class="pillar-tag">PILLAR 01</span>
+            <h3 class="pillar-title">Laughter Over Memorization</h3>
+            <p class="pillar-desc">
+              Every round is written with comedic twists, clever wordplay, and multimedia sound clips. If your team does not know the answer, you will still laugh at the clue options.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <span class="pillar-tag">PILLAR 02</span>
+            <h3 class="pillar-title">Zero Paper, Zero Waiting</h3>
+            <p class="pillar-desc">
+              Our cloud smartphone buzzers provide instant automated grading and live big-screen leaderboards. No walking crumpled paper slips up to the bar or 20-minute scoring delays.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            </div>
+            <span class="pillar-tag">PILLAR 03</span>
+            <h3 class="pillar-title">The Anti-Googling Guarantee</h3>
+            <p class="pillar-desc">
+              We design visual anagrams, rapid-fire speed audio clips, and 25-second response timers that make smartphone cheating mathematically impossible and entirely pointless.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <span class="pillar-tag">PILLAR 04</span>
+            <h3 class="pillar-title">Supporting Local Taprooms</h3>
+            <p class="pillar-desc">
+              We partner exclusively with independent craft breweries, neighborhood taverns, and local community spaces, packing their slowest weeknights with loyal recurring players.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: INTERACTIVE MILESTONE TIMELINE (2018 - 2026)
+         ========================================================================= -->
+    <section class="section-py" id="milestoneTimeline">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-yellow">
+            <span>Our Journey</span>
+          </div>
+          <h2 class="section-title">From One Dive Bar to a National League</h2>
+          <p class="section-desc">
+            How a grassroots Tuesday night experiment evolved into a premier national live trivia organization.
+          </p>
+        </div>
+
+        <div class="timeline-stepper-wrap reveal-on-scroll">
+          
+          <div class="timeline-step-row">
+            <div class="timeline-year-badge">2018</div>
+            <div class="timeline-step-card">
+              <span class="category-pill pill-cyan">THE ORIGIN</span>
+              <h4>The First Tuesday Experiment</h4>
+              <p>Two Austin standup comedians host the very first Brainwave game at an East Austin taproom. 18 players show up—by week 4, the bar is at 100% capacity.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step-row">
+            <div class="timeline-year-badge">2020</div>
+            <div class="timeline-step-card">
+              <span class="category-pill pill-magenta">DIGITAL BUZZER LAUNCH</span>
+              <h4>The Cloud Buzzer Revolution</h4>
+              <p>We retire paper score sheets forever and build our proprietary zero-app smartphone buzzer engine, allowing instant scoring and nationwide live Zoom tournaments.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step-row">
+            <div class="timeline-year-badge">2022</div>
+            <div class="timeline-step-card">
+              <span class="category-pill pill-mint">NATIONAL EXPANSION</span>
+              <h4>Denver, Seattle &amp; Chicago Expansion</h4>
+              <p>Brainwave expands into Denver, Seattle, Nashville, and Chicago craft brewery networks, recruiting top local standup comedic talent as regional emcees.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step-row">
+            <div class="timeline-year-badge">2024</div>
+            <div class="timeline-step-card">
+              <span class="category-pill pill-yellow">CORPORATE DIVISION</span>
+              <h4>Corporate All-Hands &amp; Charity Series</h4>
+              <p>Launched our dedicated corporate team battle division, hosting custom all-hands game shows for Google, Stripe, and over 450 tech companies.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step-row">
+            <div class="timeline-year-badge">2026</div>
+            <div class="timeline-step-card">
+              <span class="category-pill pill-magenta">THE NATIONAL STAGE</span>
+              <h4>50+ Taprooms &amp; Annual Championship Series</h4>
+              <p>Over 12,000 players battle weekly across 50+ partner taprooms, competing for the annual $10,000 Brainwave National Trophy Tournament.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: INSIDE THE WRITERS ROOM (HOW WE WRITE QUESTIONS)
+         ========================================================================= -->
+    <section class="section-py" id="writersRoom" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="writers-room-showcase reveal-on-scroll">
+          
+          <div class="writers-room-media">
+            <img src="assets/images/about/about-writers-room.webp" alt="Brainwave comedy writing staff brainstorming weekly quiz decks" width="580" height="420" loading="lazy">
+            <div class="writers-quote-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#06D6A0"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              <p>"A great trivia question isn't trivia you know—it's trivia you almost know that makes your entire table erupt when you guess it."</p>
+              <span>— Lead Quiz Architect, Brainwave Writers Room</span>
+            </div>
+          </div>
+
+          <div class="writers-room-info">
+            <div class="section-tag tag-mint">
+              <span>The Science of Fun</span>
+            </div>
+            <h2 class="section-title">Inside The Brainwave Writers Room</h2>
+            <p class="section-desc" style="margin-bottom:1.5rem;">
+              Every Tuesday quiz deck undergoes a rigorous 4-step creative process by our staff of TV comedy writers, crossword constructors, and music historians.
+            </p>
+
+            <div class="writer-steps-list">
+              <div class="writer-step-item">
+                <span class="writer-step-num">01</span>
+                <div>
+                  <h4>Pop Culture &amp; Deep Cut Radar</h4>
+                  <p>Tracking trending internet lore, nostalgic 90s TV drops, and clever historical coincidences.</p>
+                </div>
+              </div>
+
+              <div class="writer-step-item">
+                <span class="writer-step-num">02</span>
+                <div>
+                  <h4>Triple Fact-Checking &amp; Ambiguity Scrub</h4>
+                  <p>Every clue is scrutinized against 3 authoritative encyclopedic sources to eliminate technicalities.</p>
+                </div>
+              </div>
+
+              <div class="writer-step-item">
+                <span class="writer-step-num">03</span>
+                <div>
+                  <h4>The "Aha!" Table Balance Ratio</h4>
+                  <p>Calibrated so the pop music fan, history nerd, movie buff, and sports enthusiast all have their hero moment.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: MEET THE MASTER EMCEES (FEATURED TALENT GRID)
+         ========================================================================= -->
+    <section class="section-py" id="emceeRoster">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-magenta">
+            <span>The Masters of Ceremonies</span>
+          </div>
+          <h2 class="section-title">Meet Our Touring Comedy Hosts</h2>
+          <p class="section-desc">
+            Every Brainwave game is hosted by an experienced entertainer who knows how to read the room, roast the leaderboard, and keep the energy soaring.
+          </p>
+        </div>
+
+        <div class="emcee-roster-grid reveal-on-scroll">
+          
+          <!-- Emcee 1 -->
+          <div class="emcee-card">
+            <div class="emcee-avatar-wrap">
+              <div class="emcee-avatar">
+                <span class="emcee-initials">MC</span>
+              </div>
+              <span class="emcee-live-status">★ AUSTIN LEAD</span>
+            </div>
+            <h3 class="emcee-name">Marcus "The Maestro" Cole</h3>
+            <span class="emcee-role">Touring Standup Comedian &bull; 6 Yrs With Brainwave</span>
+            <p class="emcee-bio">
+              Austin comedy festival regular with lightning-fast crowd banter and an encyclopedic knowledge of 90s hip hop and obscure movie trailers.
+            </p>
+            <div class="emcee-specialties">
+              <span>Pop Culture</span>
+              <span>Audio Rounds</span>
+              <span>Crowd Banter</span>
+            </div>
+          </div>
+
+          <!-- Emcee 2 -->
+          <div class="emcee-card">
+            <div class="emcee-avatar-wrap">
+              <div class="emcee-avatar" style="background:linear-gradient(135deg, #06D6A0, #0284C7);">
+                <span class="emcee-initials">ER</span>
+              </div>
+              <span class="emcee-live-status">★ DENVER LEAD</span>
+            </div>
+            <h3 class="emcee-name">Elena Rostova</h3>
+            <span class="emcee-role">Improv Actor &amp; Podcast Host &bull; 4 Yrs With Brainwave</span>
+            <p class="emcee-bio">
+              Former Chicago improv company performer who brings theatrical flair, voice impressions, and sci-fi lore battles to every Denver taproom.
+            </p>
+            <div class="emcee-specialties">
+              <span>Sci-Fi Lore</span>
+              <span>Voice Acting</span>
+              <span>Visual Blitz</span>
+            </div>
+          </div>
+
+          <!-- Emcee 3 -->
+          <div class="emcee-card">
+            <div class="emcee-avatar-wrap">
+              <div class="emcee-avatar" style="background:linear-gradient(135deg, #FACC15, #F97316);">
+                <span class="emcee-initials">DW</span>
+              </div>
+              <span class="emcee-live-status">★ SEATTLE LEAD</span>
+            </div>
+            <h3 class="emcee-name">Devon "Buzz" Washington</h3>
+            <span class="emcee-role">Theater Producer &amp; DJ &bull; 5 Yrs With Brainwave</span>
+            <p class="emcee-bio">
+              Brings high-voltage musical energy, live beat drops, and hilarious team roast commentary to our Pacific Northwest brewery partners.
+            </p>
+            <div class="emcee-specialties">
+              <span>Music Bingo</span>
+              <span>Sitcom Lore</span>
+              <span>Live Sound FX</span>
+            </div>
+          </div>
+
+          <!-- Emcee 4 -->
+          <div class="emcee-card">
+            <div class="emcee-avatar-wrap">
+              <div class="emcee-avatar" style="background:linear-gradient(135deg, #EF4444, #D946EF);">
+                <span class="emcee-initials">CS</span>
+              </div>
+              <span class="emcee-live-status">★ CHICAGO LEAD</span>
+            </div>
+            <h3 class="emcee-name">Chloe Sterling</h3>
+            <span class="emcee-role">Comedy Writer &amp; Crossword Editor &bull; 3 Yrs With Brainwave</span>
+            <p class="emcee-bio">
+              Crossword puzzle creator with a razor-sharp wit and unmatched ability to turn tricky wordplay clues into room-roaring comedic moments.
+            </p>
+            <div class="emcee-specialties">
+              <span>Wordplay</span>
+              <span>Speed Rounds</span>
+              <span>Science Lore</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: BRAINWAVE FOR GOOD (CHARITY & FUNDRAISING NIGHTS)
+         ========================================================================= -->
+    <section class="section-py" id="charitySection" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="charity-showcase-box reveal-on-scroll">
+          <div class="charity-grid">
+            
+            <div class="charity-media">
+              <img src="assets/images/about/about-charity-fundraiser.webp" alt="Charity fundraising trivia night giant check presentation" width="560" height="380" loading="lazy">
+              <span class="charity-metric-chip">$180,000+ RAISED TO DATE</span>
+            </div>
+
+            <div class="charity-content">
+              <div class="section-tag tag-coral">
+                <span>Community Impact</span>
+              </div>
+              <h2 class="section-title" style="font-size:2rem; margin-bottom:1rem;">
+                Brainwave For Good &bull; <span class="text-gradient-brand">Charity Tournaments</span>
+              </h2>
+              <p class="section-desc" style="margin-bottom:1.5rem;">
+                We partner with animal rescue shelters, food banks, public school foundations, and cancer research charities. We donate 100% of our hosting equipment, quiz writing, and emcee talent to produce unforgettable charity game night galas.
+              </p>
+
+              <div class="charity-stats-row">
+                <div>
+                  <span class="charity-num text-mint">64+</span>
+                  <span class="charity-label">Charity Galas Hosted</span>
+                </div>
+                <div>
+                  <span class="charity-num text-yellow">$180K+</span>
+                  <span class="charity-label">Donations Generated</span>
+                </div>
+                <div>
+                  <span class="charity-num text-gradient-brand">100%</span>
+                  <span class="charity-label">Turnkey Donation</span>
+                </div>
+              </div>
+
+              <div style="margin-top:1.5rem;">
+                <a href="contact.html" class="btn btn-outline btn-md">Inquire About Charity Hosting</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: COMMUNITY CODE OF CONDUCT (FAIR PLAY & GOOD VIBES)
+         ========================================================================= -->
+    <section class="section-py" id="codeOfConduct">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-cyan">
+            <span>Fair Play &amp; Community</span>
+          </div>
+          <h2 class="section-title">The Brainwave Player Code of Conduct</h2>
+          <p class="section-desc">
+            Four simple rules that ensure every player, host, and bartender enjoys a safe, fair, and exhilarating night.
+          </p>
+        </div>
+
+        <div class="conduct-grid reveal-on-scroll">
+          
+          <div class="conduct-card">
+            <div class="conduct-num">01</div>
+            <h4>The Anti-Googling Pact</h4>
+            <p>Phones are for submitting buzzer answers only. Shouting answers or searching Google ruins the magic for everyone.</p>
+          </div>
+
+          <div class="conduct-card">
+            <div class="conduct-num">02</div>
+            <h4>Tip Your Bartenders &amp; Servers</h4>
+            <p>Our venue partners provide free table space. Support their staff generously with food and drink orders.</p>
+          </div>
+
+          <div class="conduct-card">
+            <div class="conduct-num">03</div>
+            <h4>Friendly Rivalry Only</h4>
+            <p>Cheer on your neighboring tables, celebrate close buzzer battles, and keep banter playful and inclusive.</p>
+          </div>
+
+          <div class="conduct-card">
+            <div class="conduct-num">04</div>
+            <h4>The Emcee's Ruling Is Final</h4>
+            <p>Our comedy hosts make calls in good faith. If you have a legitimate scoring question, approach politely during intermission.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 8: EMCEE AUDITIONS & CALL FOR TALENT CTA
+         ========================================================================= -->
+    <section class="about-audition-section" id="auditionCTA">
+      <div class="container">
+        <div class="audition-master-box reveal-on-scroll">
+          <div class="audition-grid">
+            
+            <div class="audition-content">
+              <span class="category-pill pill-magenta" style="margin-bottom:0.75rem;">NOW AUDITIONING IN 4 CITIES</span>
+              <h2 class="audition-title">Think You Have The Wit To Command A Room?</h2>
+              <p class="audition-desc">
+                We are actively hiring standup comedians, improv performers, and charismatic entertainers in Austin, Denver, Seattle, and Chicago. Enjoy competitive hourly pay, flexible weeknight schedules, paid professional sound training, and craft brewery perks.
+              </p>
+              
+              <div class="audition-perks-row">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line></svg> $75 - $125 / Night</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg> Full Sound Kit Provided</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> Venue Perks Included</span>
+              </div>
+
+              <div style="margin-top:2rem;">
+                <a href="contact.html?type=audition" class="btn btn-primary btn-lg glow-btn">
+                  <span>Apply For Host Auditions</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="audition-media">
+              <img src="assets/images/about/about-cta-audition-mic.webp" alt="Studio microphone spotlight for host auditions" width="500" height="340" loading="lazy">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer (4-Column Balanced) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+            <div class="brand-logo-badge">
+              <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+                <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+              </svg>
+            </div>
+            <div class="brand-logo-text">
+              <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+              <span class="brand-tagline">LIVE TRIVIA</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Electrifying weekly pub trivia, themed quiz nights, and corporate team battles across 50+ premier taprooms and venues nationwide.
+          </p>
+          <div class="footer-social-links">
+            <a href="javascript:void(0)" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Live Experiences</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home 1 (Pub Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Festival Live)</a></li>
+            <li><a href="schedule.html" class="footer-link">Weekly Game Schedule</a></li>
+            <li><a href="venues.html" class="footer-link">Partner Venues &amp; Cities</a></li>
+            <li><a href="events.html" class="footer-link">Corporate Team Battles</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Host & Community -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Host &amp; Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="host.html" class="footer-link">Partner As A Taproom Venue</a></li>
+            <li><a href="about.html" class="footer-link active">Our Emcees &amp; Writers</a></li>
+            <li><a href="about.html#charitySection" class="footer-link">Fundraising Trivia Nights</a></li>
+            <li><a href="contact.html" class="footer-link">Support &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & League Alerts -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Weekly Clue Dispatch</h4>
+          <p class="footer-subtext">Get Tuesday hint drop alerts, secret cosplay theme announcements, and partner discounts.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Brainwave Trivia Alerts!');">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Enter your email..." required aria-label="Email for clue dispatch">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+          <div class="footer-trust-badge">
+            <span>Anti-spam guaranteed &bull; 100% Free</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brainwave Trivia Co. All rights reserved. The ultimate live pub trivia tournament experience.</p>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+          <a href="javascript:void(0)">Player Code of Conduct</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to Top" title="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

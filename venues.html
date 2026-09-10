@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Taprooms &amp; Cities — Brainwave Trivia</title>
+  <meta name="description" content="Explore 50+ premier craft breweries, taprooms, and pub venues hosting Brainwave Trivia across Austin, Denver, Seattle, Nashville, and beyond.">
+
+  <!-- Favicon -->
+  <link rel="icon" id="siteFavicon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Attractive Site Preloader -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo-ring">
+        <div class="preloader-pulse-glow"></div>
+        <svg class="preloader-svg" width="54" height="54" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="2"/>
+          <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+        </svg>
+      </div>
+      <div class="preloader-text-wrap">
+        <span class="preloader-brand">BRAIN<span class="preloader-accent">WAVE</span></span>
+        <span class="preloader-status">SYNCHRONIZING TRIVIA CIRCUIT...</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Global SVG Gradients for Brand Identity -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D946EF" />
+        <stop offset="50%" stop-color="#A855F7" />
+        <stop offset="100%" stop-color="#9333EA" />
+      </linearGradient>
+      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2E93" />
+        <stop offset="50%" stop-color="#D946EF" />
+        <stop offset="100%" stop-color="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Header / Navbar (7 Main Pages) -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <div class="navbar-inner">
+        
+        <!-- Redesigned Attractive Brand Logo (Brainwave + Quiz Lightning) -->
+        <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+          <div class="brand-logo-badge">
+            <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+              <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+            </svg>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+            <span class="brand-tagline">LIVE TRIVIA</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (7 Main Pages) -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          
+          <!-- 1. Home Dropdown (Home 1 & Home 2) -->
+          <div class="nav-item dropdown">
+            <a href="index.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">
+                <span>Home 1 (Pub Classic)</span>
+                <span class="dropdown-badge">Popular</span>
+              </a>
+              <a href="home-2.html" class="dropdown-link">
+                <span>Home 2 (Festival Live)</span>
+                <span class="dropdown-badge">New</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. About -->
+          <div class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </div>
+
+          <!-- 3. Schedule -->
+          <div class="nav-item">
+            <a href="schedule.html" class="nav-link">Schedule</a>
+          </div>
+
+          <!-- 4. Venues & Cities (ACTIVE) -->
+          <div class="nav-item active">
+            <a href="venues.html" class="nav-link">Venues &amp; Cities</a>
+          </div>
+
+          <!-- 5. Corporate & Private Events -->
+          <div class="nav-item">
+            <a href="events.html" class="nav-link">Corporate &amp; Private</a>
+          </div>
+
+          <!-- 6. Host a Trivia Night -->
+          <div class="nav-item">
+            <a href="host.html" class="nav-link">Host a Trivia Night</a>
+          </div>
+
+          <!-- 7. Contact -->
+          <div class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+        </nav>
+
+        <!-- Navbar Actions -->
+        <div class="navbar-actions">
+          
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
+            <span style="font-size:0.75rem; font-weight:800;">RTL</span>
+          </button>
+
+          <!-- CTA Login Button -->
+          <a href="login.html" class="btn btn-primary btn-sm" id="navLoginBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+        <div class="brand-logo-badge">
+          <svg class="brand-logo-svg" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+            <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+          <span class="brand-tagline">LIVE TRIVIA</span>
+        </div>
+      </a>
+      <button type="button" class="mobile-drawer-close" aria-label="Close Mobile Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <div class="mobile-nav-list">
+      <!-- Home Accordion -->
+      <div class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link mobile-dropdown-btn" aria-expanded="false">
+          <span>Home</span>
+          <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="index.html" class="mobile-dropdown-link">
+            <span>Home 1 (Pub Classic)</span>
+            <span class="dropdown-badge">Popular</span>
+          </a>
+          <a href="home-2.html" class="mobile-dropdown-link">
+            <span>Home 2 (Festival Live)</span>
+            <span class="dropdown-badge">New</span>
+          </a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="schedule.html" class="mobile-nav-link">Schedule</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="venues.html" class="mobile-nav-link active">Venues &amp; Cities</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="events.html" class="mobile-nav-link">Corporate &amp; Private</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="host.html" class="mobile-nav-link">Host a Trivia Night</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content: Venues & Cities Showcase -->
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         SECTION 1: HERO WITH 2-COLUMN SHOWCASE & TAPROOM EXPERIENCE
+         ========================================================================= -->
+    <section class="venues-hero-section" id="venuesHero">
+      <div class="hero-ambient-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-ambient-orb hero-orb-2" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="venues-hero-grid reveal-on-scroll">
+          
+          <!-- Left Column: Copy, CTAs & Key Badges -->
+          <div class="venues-hero-left">
+            <div class="section-tag tag-magenta" style="margin-bottom: 1.25rem;">
+              <span class="pulse-dot"></span>
+              <span>50+ Partner Taprooms &bull; 8 Major Metro Hubs</span>
+            </div>
+
+            <h1 class="venues-hero-title">
+              Discover Premier <span class="text-gradient-brand">Craft Taprooms &amp; Pub Venues</span>.
+            </h1>
+
+            <p class="venues-hero-subtitle">
+              From breezy downtown rooftop patios to cavernous industrial warehouse breweries, experience high-energy pub trivia with synchronized big screens, crystal audio, and 30+ craft taps on pour.
+            </p>
+
+            <!-- Hero CTA Actions -->
+            <div class="hero-actions" style="margin-bottom:2.25rem;">
+              <a href="#venuesGrid" class="btn btn-primary btn-lg glow-btn">
+                <span>Explore 50+ Taprooms</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#transitMatrix" class="btn btn-outline btn-lg">
+                <span>Transit &amp; Parking Matrix</span>
+              </a>
+            </div>
+
+            <!-- Feature Highlight Badges -->
+            <div class="venues-hero-highlights">
+              <div class="venue-highlight-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>50+ Partner Taprooms</span>
+              </div>
+              <div class="venue-highlight-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>8 Major Metro Hubs</span>
+              </div>
+              <div class="venue-highlight-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>100% Free Table RSVPs</span>
+              </div>
+              <div class="venue-highlight-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dog &amp; Minor Friendly Patios</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Taproom Showcase Card -->
+          <div class="venues-hero-right">
+            <div class="venues-visual-card">
+              <div class="venues-visual-media">
+                <img src="assets/images/venues/hero-venues-taproom-live-showcase.webp" alt="Vibrant craft brewery taproom hosting Brainwave trivia night" width="560" height="420" loading="eager">
+                <div class="venues-visual-overlay"></div>
+                <div class="venues-visual-badge">
+                  <span class="pulse-dot"></span>
+                  <span>PREMIER TAPROOM EXPERIENCE</span>
+                </div>
+              </div>
+
+              <!-- Floating Glass Badge 1: Top Right -->
+              <div class="venues-float-badge float-badge-top">
+                <div class="float-badge-icon" style="background:linear-gradient(135deg,#D946EF,#9333EA);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div>
+                  <strong>4.95 ★ Average Rating</strong>
+                  <span>Across 50+ partner venues</span>
+                </div>
+              </div>
+
+              <!-- Floating Glass Badge 2: Bottom Left -->
+              <div class="venues-float-badge float-badge-bottom">
+                <div class="float-badge-icon" style="background:linear-gradient(135deg,#06D6A0,#0284C7);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <div>
+                  <strong>$250+ Nightly Prize Pools</strong>
+                  <span>Gift tabs &bull; Craft merch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: INTERACTIVE VENUE PROFILE MATRIX WITH LIVE SPECS & AMENITIES
+         ========================================================================= -->
+    <section class="section-py" id="venuesGrid">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-cyan">
+            <span>Taproom Directory</span>
+          </div>
+          <h2 class="section-title">Partner Breweries &amp; Featured Venues</h2>
+          <p class="section-desc">
+            Each Brainwave venue is hand-selected for exceptional craft beer, vibrant food menus, dog-friendly outdoor spaces, and professional audio-visual fidelity.
+          </p>
+        </div>
+
+        <!-- Venue Cards Grid -->
+        <div class="venue-cards-grid" id="venueCardsContainer">
+          
+          <!-- Venue 1: Austin Rooftop -->
+          <div class="venue-card reveal-on-scroll" data-city="austin" data-name="Austin Craft Brewery & Beer Garden">
+            <div class="venue-card-media">
+              <img src="assets/images/venues/venue-austin-rooftop-garden.webp" alt="Austin Craft Brewery & Beer Garden outdoor patio" width="550" height="320" loading="lazy">
+              <span class="venue-city-badge">Austin, TX</span>
+              <span class="venue-day-badge">Tuesdays &bull; 7:30 PM</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-meta-top">
+                <span class="venue-rating">★ 4.95 (340 Reviews)</span>
+                <span class="venue-capacity">180 Capacity</span>
+              </div>
+              <h3 class="venue-title">Austin Craft Brewery &amp; Beer Garden</h3>
+              <p class="venue-address">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>1420 S Lamar Blvd, South Austin, TX 78704</span>
+              </p>
+              <div class="venue-amenity-pills">
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> 28 Draft Taps</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a4 4 0 0 0-4 4v4H5a2 2 0 0 0-2 2v6a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-6a2 2 0 0 0-2-2h-3V6a4 4 0 0 0-4-4z"></path></svg> Dog Friendly Patio</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg> 12 HD TV Walls</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg> Food Truck Court</span>
+              </div>
+              <div class="venue-card-footer">
+                <div class="venue-prize-callout">
+                  <span class="prize-tag">Prize Pool</span>
+                  <strong>$250 Cash + Tab</strong>
+                </div>
+                <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">RSVP Table</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Venue 2: Denver Industrial Taphouse -->
+          <div class="venue-card reveal-on-scroll" data-city="denver" data-name="Mile High Industrial Taphouse & Stage">
+            <div class="venue-card-media">
+              <img src="assets/images/venues/venue-denver-industrial-taphouse.webp" alt="Mile High Industrial Taphouse brewery warehouse" width="550" height="320" loading="lazy">
+              <span class="venue-city-badge">Denver, CO</span>
+              <span class="venue-day-badge">Wednesdays &bull; 7:00 PM</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-meta-top">
+                <span class="venue-rating">★ 4.98 (410 Reviews)</span>
+                <span class="venue-capacity">240 Capacity</span>
+              </div>
+              <h3 class="venue-title">Mile High Industrial Taphouse &amp; Stage</h3>
+              <p class="venue-address">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>2845 Larimer St, RiNo Arts District, Denver, CO 80205</span>
+              </p>
+              <div class="venue-amenity-pills">
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg> Studio Bose AV</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 22h20L12 2z"></path></svg> Woodfired Pizzas</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> Barrel-Aged Stouts</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg> Free Parking Lot</span>
+              </div>
+              <div class="venue-card-footer">
+                <div class="venue-prize-callout">
+                  <span class="prize-tag">Prize Pool</span>
+                  <strong>$300 Cash + Growlers</strong>
+                </div>
+                <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">RSVP Table</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Venue 3: Seattle Waterfront Patio -->
+          <div class="venue-card reveal-on-scroll" data-city="seattle" data-name="Pike Sound Waterfront Taproom">
+            <div class="venue-card-media">
+              <img src="assets/images/venues/venue-seattle-waterfront-patio.webp" alt="Pike Sound Waterfront Taproom patio view" width="550" height="320" loading="lazy">
+              <span class="venue-city-badge">Seattle, WA</span>
+              <span class="venue-day-badge">Thursdays &bull; 7:30 PM</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-meta-top">
+                <span class="venue-rating">★ 4.92 (290 Reviews)</span>
+                <span class="venue-capacity">160 Capacity</span>
+              </div>
+              <h3 class="venue-title">Pike Sound Waterfront Taproom</h3>
+              <p class="venue-address">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>1901 Alaskan Way, Pier 57, Seattle, WA 98101</span>
+              </p>
+              <div class="venue-amenity-pills">
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12c3-4 6-4 9 0s6 4 9 0"></path><path d="M2 17c3-4 6-4 9 0s6 4 9 0"></path></svg> Puget Sound Views</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> Hazy Pacific IPAs</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg> Heated Outdoor Patio</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg> Fresh Clam Chowder</span>
+              </div>
+              <div class="venue-card-footer">
+                <div class="venue-prize-callout">
+                  <span class="prize-tag">Prize Pool</span>
+                  <strong>$250 Cash + Merch</strong>
+                </div>
+                <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">RSVP Table</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Venue 4: Nashville Music Taproom -->
+          <div class="venue-card reveal-on-scroll" data-city="nashville" data-name="Broadway Riff & Draft Stage">
+            <div class="venue-card-media">
+              <img src="assets/images/venues/venue-nashville-music-taproom.webp" alt="Broadway Riff & Draft Stage Nashville music venue" width="550" height="320" loading="lazy">
+              <span class="venue-city-badge">Nashville, TN</span>
+              <span class="venue-day-badge">Mondays &bull; 8:00 PM</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-meta-top">
+                <span class="venue-rating">★ 4.96 (520 Reviews)</span>
+                <span class="venue-capacity">280 Capacity</span>
+              </div>
+              <h3 class="venue-title">Broadway Riff &amp; Draft Stage</h3>
+              <p class="venue-address">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>410 Broadway Ave, Downtown Nashville, TN 37203</span>
+              </p>
+              <div class="venue-amenity-pills">
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg> Live Pro Sound Rig</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg> Nashville Hot Chicken</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> 32 Craft Taps</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg> Standup Comic Host</span>
+              </div>
+              <div class="venue-card-footer">
+                <div class="venue-prize-callout">
+                  <span class="prize-tag">Prize Pool</span>
+                  <strong>$400 Cash Jackpot</strong>
+                </div>
+                <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">RSVP Table</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Venue 5: Chicago Brick & Barrel (Austin/Denver/Chicago multi) -->
+          <div class="venue-card reveal-on-scroll" data-city="chicago" data-name="Windy City Brick & Barrel Brewery">
+            <div class="venue-card-media">
+              <img src="assets/images/venues/hero-venues-craft-brewery-hall.webp" alt="Windy City Brick & Barrel Brewery hall" width="550" height="320" loading="lazy">
+              <span class="venue-city-badge">Chicago, IL</span>
+              <span class="venue-day-badge">Thursdays &bull; 7:30 PM</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-meta-top">
+                <span class="venue-rating">★ 4.94 (380 Reviews)</span>
+                <span class="venue-capacity">220 Capacity</span>
+              </div>
+              <h3 class="venue-title">Windy City Brick &amp; Barrel Brewery</h3>
+              <p class="venue-address">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>1134 W Randolph St, West Loop, Chicago, IL 60607</span>
+              </p>
+              <div class="venue-amenity-pills">
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 22h20L12 2z"></path></svg> Deep Dish Kitchen</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> German Lagers on Tap</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg> 16 Synced HDTVs</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="3" width="16" height="16" rx="2"></rect><path d="M4 11h16"></path><path d="M12 3v8"></path><path d="m8 19-2 3"></path><path d="m16 19 2 3"></path></svg> 2 Min from Metro</span>
+              </div>
+              <div class="venue-card-footer">
+                <div class="venue-prize-callout">
+                  <span class="prize-tag">Prize Pool</span>
+                  <strong>$350 Cash + Tab</strong>
+                </div>
+                <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">RSVP Table</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Venue 6: Austin Eastside Warehouse -->
+          <div class="venue-card reveal-on-scroll" data-city="austin" data-name="Eastside Distilling & Taphouse">
+            <div class="venue-card-media">
+              <img src="assets/images/venues/venue-owner-handshake-revenue.webp" alt="Eastside Distilling & Taphouse bar area" width="550" height="320" loading="lazy">
+              <span class="venue-city-badge">Austin, TX</span>
+              <span class="venue-day-badge">Wednesdays &bull; 8:00 PM</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-meta-top">
+                <span class="venue-rating">★ 4.97 (460 Reviews)</span>
+                <span class="venue-capacity">190 Capacity</span>
+              </div>
+              <h3 class="venue-title">Eastside Distilling &amp; Taphouse</h3>
+              <p class="venue-address">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>2200 E 7th St, East Austin, TX 78702</span>
+              </p>
+              <div class="venue-amenity-pills">
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 22h8"></path><path d="M12 11v11"></path><path d="m19 3-7 8-7-8Z"></path></svg> Agave Craft Cocktails</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg> Smoked Brisket Tacos</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a4 4 0 0 0-4 4v4H5a2 2 0 0 0-2 2v6a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-6a2 2 0 0 0-2-2h-3V6a4 4 0 0 0-4-4z"></path></svg> Leashed Dog Garden</span>
+                <span class="amenity-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Rapid Cloud Buzzers</span>
+              </div>
+              <div class="venue-card-footer">
+                <div class="venue-prize-callout">
+                  <span class="prize-tag">Prize Pool</span>
+                  <strong>$300 Cash + Spirits</strong>
+                </div>
+                <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">RSVP Table</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: VENUE AV & TECH SPECIFICATIONS BENTO (THE 4 PILLARS)
+         ========================================================================= -->
+    <section class="section-py" id="venueSpecs" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-magenta">
+            <span>The Gold Standard</span>
+          </div>
+          <h2 class="section-title">What Makes a Brainwave Partner Venue Elite</h2>
+          <p class="section-desc">
+            We partner exclusively with venues that meet strict standards for player comfort, crystal-clear acoustics, and mouthwatering culinary offerings.
+          </p>
+        </div>
+
+        <!-- 4-Card Bento Grid -->
+        <div class="amenity-bento-grid">
+          
+          <div class="amenity-bento-card bento-card-highlight reveal-on-scroll">
+            <div class="bento-icon-circle">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            </div>
+            <span class="category-pill pill-cyan">AUDIO FIDELITY</span>
+            <h3 class="bento-title">Zero Echo, Studio-Grade Acoustic Tuning</h3>
+            <p class="bento-desc">
+              No muffled microphones or straining to hear questions. Every venue undergoes acoustic zone calibration with balanced wireless mics and subwoofer sound stings.
+            </p>
+            <div class="bento-spec-tag">Bose Professional &bull; EV Live Sound Certified</div>
+          </div>
+
+          <div class="amenity-bento-card reveal-on-scroll">
+            <div class="bento-icon-circle" style="background:rgba(6,214,160,0.18); color:var(--brand-cyan); border-color:rgba(6,214,160,0.4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <span class="category-pill pill-mint">MULTI-SCREEN SYNC</span>
+            <h3 class="bento-title">4K Big Screen Visual Multicast</h3>
+            <p class="bento-desc">
+              Live scoreboards, photo clues, and music video puzzles are broadcast simultaneously across 10 to 25 HD taproom displays with zero latency.
+            </p>
+            <div class="bento-spec-tag">1080p / 4K Wireless Clue Wall Casting</div>
+          </div>
+
+          <div class="amenity-bento-card reveal-on-scroll">
+            <div class="bento-icon-circle" style="background:rgba(217,70,239,0.15); color:var(--brand-yellow); border-color:rgba(217,70,239,0.4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <span class="category-pill pill-yellow">CRAFT FOOD &amp; DRINK</span>
+            <h3 class="bento-title">Curated Draft Specials &amp; Trivia Menus</h3>
+            <p class="bento-desc">
+              Enjoy exclusive weeknight $5 beer pitcher specials, loaded nacho platters, artisan flatbreads, and custom trivia night cocktail pairings.
+            </p>
+            <div class="bento-spec-tag">Happy Hour Pricing Active 6PM - 10PM</div>
+          </div>
+
+          <div class="amenity-bento-card reveal-on-scroll">
+            <div class="bento-icon-circle" style="background:rgba(255,46,147,0.18); color:var(--brand-coral); border-color:rgba(255,46,147,0.4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <span class="category-pill pill-coral">COMEDY HOSTS</span>
+            <h3 class="bento-title">Dedicated Emcees &amp; Standup Comedians</h3>
+            <p class="bento-desc">
+              Every show is anchored by vetted, charismatic performers who keep the pace brisk, humorous, and captivating for two full hours of entertainment.
+            </p>
+            <div class="bento-spec-tag">100% Guaranteed 2-Hour High-Paced Flow</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: NEIGHBORHOOD TRANSIT & PARKING MATRIX
+         ========================================================================= -->
+    <section class="section-py" id="transitMatrix">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-mint">
+            <span>Seamless Arrival</span>
+          </div>
+          <h2 class="section-title">Neighborhood Transit &amp; Parking Guide</h2>
+          <p class="section-desc">
+            All partner taprooms offer convenient access via light rail, bus rapid transit, designated ride-share dropoff zones, and dedicated parking lots.
+          </p>
+        </div>
+
+        <div class="transit-matrix-table reveal-on-scroll">
+          <div class="transit-table-header">
+            <div>Venue Name</div>
+            <div>Metro District</div>
+            <div>Nearest Transit Hub</div>
+            <div>Parking Availability</div>
+            <div>Rideshare Zone</div>
+          </div>
+
+          <div class="transit-table-body">
+            
+            <div class="transit-row">
+              <div class="transit-col-venue">
+                <strong>Austin Craft Brewery &amp; Beer Garden</strong>
+                <span>South Austin, TX</span>
+              </div>
+              <div class="transit-col-dist">South Lamar Arts District</div>
+              <div class="transit-col-transit">
+                <span class="transit-tag metro-bus">CapMetro Bus #803 (1 Min Walk)</span>
+              </div>
+              <div class="transit-col-parking">
+                <span class="parking-status lot-free">Free 80-Car Onsite Lot</span>
+              </div>
+              <div class="transit-col-ride">Designated Lamar Entrance Bay</div>
+            </div>
+
+            <div class="transit-row">
+              <div class="transit-col-venue">
+                <strong>Mile High Industrial Taphouse</strong>
+                <span>Denver, CO</span>
+              </div>
+              <div class="transit-col-dist">RiNo Arts District</div>
+              <div class="transit-col-transit">
+                <span class="transit-tag metro-rail">38th &amp; Blake Station (4 Min Walk)</span>
+              </div>
+              <div class="transit-col-parking">
+                <span class="parking-status lot-free">Spacious Warehouse Yard</span>
+              </div>
+              <div class="transit-col-ride">Larimer St Loading Zone</div>
+            </div>
+
+            <div class="transit-row">
+              <div class="transit-col-venue">
+                <strong>Pike Sound Waterfront Taproom</strong>
+                <span>Seattle, WA</span>
+              </div>
+              <div class="transit-col-dist">Downtown Waterfront / Pier 57</div>
+              <div class="transit-col-transit">
+                <span class="transit-tag metro-rail">University St Light Rail (6 Min Walk)</span>
+              </div>
+              <div class="transit-col-parking">
+                <span class="parking-status lot-validated">Validated Pier 56 Garage ($5)</span>
+              </div>
+              <div class="transit-col-ride">Alaskan Way Pull-Off Circle</div>
+            </div>
+
+            <div class="transit-row">
+              <div class="transit-col-venue">
+                <strong>Broadway Riff &amp; Draft Stage</strong>
+                <span>Nashville, TN</span>
+              </div>
+              <div class="transit-col-dist">Lower Broadway Historic District</div>
+              <div class="transit-col-transit">
+                <span class="transit-tag metro-bus">Music City Transit Hub (3 Min Walk)</span>
+              </div>
+              <div class="transit-col-parking">
+                <span class="parking-status lot-validated">4th Ave Surface Lots ($8 Evening)</span>
+              </div>
+              <div class="transit-col-ride">Broadway &amp; 4th St Taxi Bay</div>
+            </div>
+
+            <div class="transit-row">
+              <div class="transit-col-venue">
+                <strong>Windy City Brick &amp; Barrel</strong>
+                <span>Chicago, IL</span>
+              </div>
+              <div class="transit-col-dist">West Loop Restaurant Corridor</div>
+              <div class="transit-col-transit">
+                <span class="transit-tag metro-rail">Morgan CTA Station (2 Min Walk)</span>
+              </div>
+              <div class="transit-col-parking">
+                <span class="parking-status lot-valet">Valet Available + Metered Randolph</span>
+              </div>
+              <div class="transit-col-ride">Randolph St Protected Drop Zone</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: VENUE PARTNER REVENUE SURGE CASE STUDY & TESTIMONIAL
+         ========================================================================= -->
+    <section class="section-py" id="partnerCaseStudy" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="partner-spotlight-box reveal-on-scroll">
+          <div class="spotlight-media">
+            <img src="assets/images/venues/venue-owner-handshake-revenue.webp" alt="Brewery general manager shaking hands with Brainwave entertainment lead" width="600" height="420" loading="lazy">
+            <div class="spotlight-badge-corner">
+              <span class="pulse-dot"></span>
+              <span>VERIFIED CASE STUDY</span>
+            </div>
+          </div>
+
+          <div class="spotlight-content">
+            <div class="section-tag tag-yellow" style="margin-bottom:1rem;">
+              <span>Taproom Partner ROI</span>
+            </div>
+            
+            <h2 class="spotlight-title">How Austin Beer Garden Grew Tuesday Draft Sales by +46%</h2>
+            
+            <blockquote class="spotlight-quote">
+              "Tuesdays used to be our slowest night of the week with barely 20 patrons. Partnering with Brainwave Trivia turned our taproom into a packed house of 180 loyal trivia regulars ordering dinner and craft pints every single week."
+            </blockquote>
+
+            <div class="spotlight-author">
+              <strong>Marcus Vance</strong>
+              <span>General Manager &bull; Austin Craft Beer Garden</span>
+            </div>
+
+            <!-- 3-Metric Proof Ribbon -->
+            <div class="spotlight-stats-row">
+              <div class="spotlight-stat-item">
+                <strong class="stat-highlight text-gradient-brand">+46%</strong>
+                <span>Tuesday Revenue Surge</span>
+              </div>
+              <div class="spotlight-stat-item">
+                <strong class="stat-highlight text-mint">180+</strong>
+                <span>Weekly Regular Diners</span>
+              </div>
+              <div class="spotlight-stat-item">
+                <strong class="stat-highlight text-yellow">$0</strong>
+                <span>Upfront Equipment Cost</span>
+              </div>
+            </div>
+
+            <div class="spotlight-cta">
+              <a href="host.html" class="btn btn-primary btn-md glow-btn">
+                <span>Partner As A Taproom</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+              <span style="font-size:0.8rem; color:var(--text-muted); font-weight:700;">Zero risk &bull; 30-day trial rollout</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: INTERACTIVE VENUE REVENUE ESTIMATOR CALCULATOR
+         ========================================================================= -->
+    <section class="section-py" id="revenueCalculator">
+      <div class="container">
+        
+        <div class="calculator-master-card reveal-on-scroll">
+          <div class="calculator-header">
+            <span class="category-pill pill-cyan" style="margin-bottom:0.75rem;">TAPROOM REVENUE CALCULATOR</span>
+            <h2 style="font-size:2.3rem; font-weight:900; margin-bottom:0.75rem;">
+              Estimate Your Venue's <span class="text-gradient-brand">Monthly Revenue Boost</span>
+            </h2>
+            <p style="font-size:1rem; color:var(--text-secondary); max-width:640px; margin:0 auto 2.5rem;">
+              Adjust your taproom seating capacity below to calculate estimated food, beverage, and craft draft incremental sales generated by Brainwave Trivia nights.
+            </p>
+          </div>
+
+          <div class="calc-interactive-grid">
+            
+            <!-- Controls Column -->
+            <div class="calc-controls-col">
+              <div class="calc-slider-group">
+                <div class="slider-header">
+                  <label for="capacitySlider" class="slider-label">Taproom Seating Capacity:</label>
+                  <span class="slider-val" id="capacityValDisplay">150 Seats</span>
+                </div>
+                <input type="range" min="50" max="400" step="25" value="150" class="calc-slider" id="capacitySlider" aria-label="Seating capacity slider">
+                <div class="slider-ticks">
+                  <span>50 Seats</span>
+                  <span>200 Seats</span>
+                  <span>400 Seats</span>
+                </div>
+              </div>
+
+              <div class="calc-select-group" style="margin-top:1.75rem;">
+                <label for="nightsSelect" class="slider-label">Trivia Nights Per Week:</label>
+                <select id="nightsSelect" class="form-select-custom" aria-label="Nights per week">
+                  <option value="1">1 Night / Week (e.g. Tuesdays)</option>
+                  <option value="2">2 Nights / Week (e.g. Tuesdays &amp; Thursdays)</option>
+                </select>
+              </div>
+
+              <div class="calc-perks-checklist">
+                <div class="calc-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Professional Emcee Included Every Show</span>
+                </div>
+                <div class="calc-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Social Media &amp; Neighborhood Tour Promotion</span>
+                </div>
+                <div class="calc-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Smartphone Buzzer Cloud Platform Access</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Estimated Results Card -->
+            <div class="calc-results-card">
+              <span class="results-badge">PROJECTED MONTHLY REVENUE BOOST</span>
+              <div class="calc-big-num" id="projectedMonthlyRev">+$3,450</div>
+              <span class="calc-sub-num" id="projectedAnnualRev">Estimated <strong>+$41,400</strong> Annual Draft &amp; Food Sales</span>
+              
+              <div class="results-breakdown-list">
+                <div class="breakdown-item">
+                  <span>Average Trivia Night Attendance:</span>
+                  <strong id="calcAttendanceEst">112 Players</strong>
+                </div>
+                <div class="breakdown-item">
+                  <span>Estimated Drink &amp; Food Tab / Player:</span>
+                  <strong>$22.50 Avg</strong>
+                </div>
+                <div class="breakdown-item">
+                  <span>Weekly Host Turnkey Fee:</span>
+                  <strong style="color:var(--brand-cyan);">Flat Fee ($150 / Night)</strong>
+                </div>
+              </div>
+
+              <a href="host.html" class="btn btn-primary btn-md glow-btn" style="width:100%; justify-content:center; margin-top:1.5rem;">
+                <span>Schedule Taproom Launch</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: VENUE PARTNER FAQ ACCORDION
+         ========================================================================= -->
+    <section class="section-py" id="venueFaq">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-coral">
+            <span>Bar Owner Questions</span>
+          </div>
+          <h2 class="section-title">Frequently Asked Venue Questions</h2>
+          <p class="section-desc">
+            Everything taproom managers and brewery operators need to know about hosting Brainwave Trivia.
+          </p>
+        </div>
+
+        <div class="venue-faq-accordion reveal-on-scroll">
+          
+          <div class="faq-accordion-item active">
+            <button type="button" class="faq-accordion-btn" aria-expanded="true">
+              <span>What equipment does our venue need to provide?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accordion-content" style="max-height: 200px;">
+              <p>Almost nothing! Our touring host brings a complete studio sound system, wireless microphones, and HDMI video transmitter to connect to your existing TV screens or projector. Players use their own smartphones as buzzers.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-btn" aria-expanded="false">
+              <span>How does Brainwave promote our trivia night to local players?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Your venue is featured on our weekly schedule page, included in our SMS hint dispatch to 15,000+ local players, promoted across local craft beer community groups, and pinned on our interactive city map.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-btn" aria-expanded="false">
+              <span>Who handles the cash prizes and brewery gift cards?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accordion-content">
+              <p>We provide Brainwave national tournament cash vouchers, while venues typically contribute $30 - $50 in bar tabs or craft merchandise for 1st, 2nd, and 3rd place teams, guaranteeing repeat customer visits.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-btn" aria-expanded="false">
+              <span>Can we choose custom themes for our venue?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Absolutely! We offer monthly pop culture takeovers (The Office, Marvel, 90s Music, Star Wars, Anime, Harry Potter) that draw massive cosplay crowds and sell out taprooms weeks in advance.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer (4-Column Balanced) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+            <div class="brand-logo-badge">
+              <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+                <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+              </svg>
+            </div>
+            <div class="brand-logo-text">
+              <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+              <span class="brand-tagline">LIVE TRIVIA</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Electrifying weekly pub trivia, themed quiz nights, and corporate team battles across 50+ premier taprooms and venues nationwide.
+          </p>
+          <div class="footer-social-links">
+            <a href="javascript:void(0)" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Live Experiences</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home 1 (Pub Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Festival Live)</a></li>
+            <li><a href="schedule.html" class="footer-link">Weekly Game Schedule</a></li>
+            <li><a href="venues.html" class="footer-link">Partner Venues &amp; Cities</a></li>
+            <li><a href="events.html" class="footer-link">Corporate Team Battles</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Host & Community -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Host &amp; Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="host.html" class="footer-link">Partner As A Taproom Venue</a></li>
+            <li><a href="about.html" class="footer-link">Our Emcees &amp; Writers</a></li>
+            <li><a href="about.html#charity" class="footer-link">Fundraising Trivia Nights</a></li>
+            <li><a href="contact.html" class="footer-link">Support &amp; FAQ</a></li>
+            <li><a href="host.html#calculator" class="footer-link">Venue ROI Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & League Alerts -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Weekly Clue Dispatch</h4>
+          <p class="footer-subtext">Get Tuesday hint drop alerts, secret cosplay theme announcements, and partner discounts.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Brainwave Trivia Alerts!');">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Enter your email..." required aria-label="Email for clue dispatch">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+          <div class="footer-trust-badge">
+            <span>Anti-spam guaranteed &bull; 100% Free</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brainwave Trivia Co. All rights reserved. The ultimate live pub trivia tournament experience.</p>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+          <a href="javascript:void(0)">Player Code of Conduct</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to Top" title="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

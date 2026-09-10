@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Trivia Battles &amp; Private Events — Brainwave Trivia</title>
+  <meta name="description" content="Elevate company team building, holiday parties, and all-hands celebrations with custom-crafted corporate trivia battles, comedic emcees, and digital buzzers.">
+
+  <!-- Favicon -->
+  <link rel="icon" id="siteFavicon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Attractive Site Preloader -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo-ring">
+        <div class="preloader-pulse-glow"></div>
+        <svg class="preloader-svg" width="54" height="54" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="2"/>
+          <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+        </svg>
+      </div>
+      <div class="preloader-text-wrap">
+        <span class="preloader-brand">BRAIN<span class="preloader-accent">WAVE</span></span>
+        <span class="preloader-status">SYNCHRONIZING TRIVIA CIRCUIT...</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Global SVG Gradients for Brand Identity -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D946EF" />
+        <stop offset="50%" stop-color="#A855F7" />
+        <stop offset="100%" stop-color="#9333EA" />
+      </linearGradient>
+      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2E93" />
+        <stop offset="50%" stop-color="#D946EF" />
+        <stop offset="100%" stop-color="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Header / Navbar (7 Main Pages) -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <div class="navbar-inner">
+        
+        <!-- Redesigned Attractive Brand Logo (Brainwave + Quiz Lightning) -->
+        <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+          <div class="brand-logo-badge">
+            <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+              <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+            </svg>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+            <span class="brand-tagline">LIVE TRIVIA</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (7 Main Pages) -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          
+          <!-- 1. Home Dropdown (Home 1 & Home 2) -->
+          <div class="nav-item dropdown">
+            <a href="index.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">
+                <span>Home 1 (Pub Classic)</span>
+                <span class="dropdown-badge">Popular</span>
+              </a>
+              <a href="home-2.html" class="dropdown-link">
+                <span>Home 2 (Festival Live)</span>
+                <span class="dropdown-badge">New</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. About -->
+          <div class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </div>
+
+          <!-- 3. Schedule -->
+          <div class="nav-item">
+            <a href="schedule.html" class="nav-link">Schedule</a>
+          </div>
+
+          <!-- 4. Venues & Cities -->
+          <div class="nav-item">
+            <a href="venues.html" class="nav-link">Venues &amp; Cities</a>
+          </div>
+
+          <!-- 5. Corporate & Private Events (ACTIVE) -->
+          <div class="nav-item active">
+            <a href="events.html" class="nav-link">Corporate &amp; Private</a>
+          </div>
+
+          <!-- 6. Host a Trivia Night -->
+          <div class="nav-item">
+            <a href="host.html" class="nav-link">Host a Trivia Night</a>
+          </div>
+
+          <!-- 7. Contact -->
+          <div class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+        </nav>
+
+        <!-- Navbar Actions -->
+        <div class="navbar-actions">
+          
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
+            <span style="font-size:0.75rem; font-weight:800;">RTL</span>
+          </button>
+
+          <!-- CTA Login Button -->
+          <a href="login.html" class="btn btn-primary btn-sm" id="navLoginBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+        <div class="brand-logo-badge">
+          <svg class="brand-logo-svg" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+            <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+          <span class="brand-tagline">LIVE TRIVIA</span>
+        </div>
+      </a>
+      <button type="button" class="mobile-drawer-close" aria-label="Close Mobile Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <div class="mobile-nav-list">
+      <!-- Home Accordion -->
+      <div class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link mobile-dropdown-btn" aria-expanded="false">
+          <span>Home</span>
+          <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="index.html" class="mobile-dropdown-link">
+            <span>Home 1 (Pub Classic)</span>
+            <span class="dropdown-badge">Popular</span>
+          </a>
+          <a href="home-2.html" class="mobile-dropdown-link">
+            <span>Home 2 (Festival Live)</span>
+            <span class="dropdown-badge">New</span>
+          </a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="schedule.html" class="mobile-nav-link">Schedule</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="venues.html" class="mobile-nav-link">Venues &amp; Cities</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="events.html" class="mobile-nav-link active">Corporate &amp; Private</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="host.html" class="mobile-nav-link">Host a Trivia Night</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content: Corporate & Private Events -->
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         SECTION 1: HERO WITH METRIC BANNER & INSTANT QUOTE CTA
+         ========================================================================= -->
+    <section class="events-hero-section" id="eventsHero">
+      <div class="hero-ambient-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-ambient-orb hero-orb-2" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="events-hero-content reveal-on-scroll">
+          
+          <div class="section-tag tag-magenta" style="margin: 0 auto 1.25rem;">
+            <span class="pulse-dot"></span>
+            <span>Unforgettable Corporate Team Building &bull; 15 to 1,000+ Players</span>
+          </div>
+
+          <h1 class="events-hero-title">
+            Corporate Trivia Battles That <span class="text-gradient-brand">Turn Coworkers into Champions</span>.
+          </h1>
+
+          <p class="events-hero-subtitle">
+            Say goodbye to awkward icebreakers. Deliver high-voltage game show excitement with customized company lore, touring standup comedians, instant smartphone buzzers, and live big-screen leaderboards.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center; margin-bottom:3.5rem;">
+            <a href="#quoteCalc" class="btn btn-primary btn-lg glow-btn">
+              <span>Get Instant Event Quote</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#eventPackages" class="btn btn-outline btn-lg">
+              <span>Explore Packages</span>
+            </a>
+          </div>
+
+          <!-- 4-Item Proof Metric Banner -->
+          <div class="events-metric-banner">
+            <div class="event-metric-item">
+              <span class="metric-num text-gradient-brand">450+</span>
+              <span class="metric-label">Corporate Events Hosted</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="event-metric-item">
+              <span class="metric-num text-mint">99.4%</span>
+              <span class="metric-label">Client Satisfaction</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="event-metric-item">
+              <span class="metric-num text-yellow">15 - 1,000+</span>
+              <span class="metric-label">Flexible Group Size</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="event-metric-item">
+              <span class="metric-num text-coral">100%</span>
+              <span class="metric-label">Turnkey Host Staging</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: EVENT FORMATS INTERACTIVE SWITCHER (ONSITE • VIRTUAL • HYBRID)
+         ========================================================================= -->
+    <section class="section-py" id="eventFormats" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-cyan">
+            <span>Flexible Delivery Models</span>
+          </div>
+          <h2 class="section-title">Engineered for Any Office, Venue, or Remote Team</h2>
+          <p class="section-desc">
+            Whether you are taking over your headquarters cafeteria, renting a craft brewery patio, or connecting global remote offices over Zoom, we handle all tech, hosting, and scoring.
+          </p>
+        </div>
+
+        <!-- Interactive Format Switcher Tabs -->
+        <div class="format-tabs-strip reveal-on-scroll">
+          <button type="button" class="format-tab-btn active" data-format-target="onsite">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>In-Person Onsite Battles</span>
+          </button>
+          <button type="button" class="format-tab-btn" data-format-target="virtual">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <span>Remote &amp; Virtual Tournaments</span>
+          </button>
+          <button type="button" class="format-tab-btn" data-format-target="league">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            <span>Multi-Office League Series</span>
+          </button>
+        </div>
+
+        <!-- Format Dynamic Showcase Card -->
+        <div class="format-showcase-display reveal-on-scroll" id="formatDisplayArea">
+          <div class="format-showcase-grid">
+            <div class="format-showcase-media">
+              <img id="formatImg" src="assets/images/events/event-large-auditorium-showdown.webp" alt="In-person corporate trivia event showdown" width="600" height="380" loading="lazy">
+              <span class="format-live-chip" id="formatChip">★ MOST POPULAR FOR OFFSITES</span>
+            </div>
+            <div class="format-showcase-info">
+              <span class="category-pill pill-magenta" id="formatCategory">HEADQUARTERS &amp; TAPROOM OFFSITES</span>
+              <h3 class="format-showcase-title" id="formatTitle">In-Person Onsite Office &amp; Taproom Showdowns</h3>
+              <p class="format-showcase-desc" id="formatDesc">
+                Our master comedian emcee arrives with a full sound kit, wireless microphones, and digital buzzers. We turn your company all-hands, holiday party, or team dinner into an electric TV-style game show.
+              </p>
+              
+              <ul class="format-features-checklist" id="formatList">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Studio-grade PA sound system &amp; wireless mics included</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Smartphone buzzers with real-time leaderboard projection</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated custom company trivia round crafted by our comedy writers</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Engraved custom championship team trophy &amp; winner medals</li>
+              </ul>
+
+              <div style="margin-top:1.5rem;">
+                <a href="#quoteCalc" class="btn btn-primary btn-md glow-btn">Request Onsite Availability</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: 3-TIER CORPORATE PACKAGES & PRICING MATRIX
+         ========================================================================= -->
+    <section class="section-py" id="eventPackages">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-magenta">
+            <span>Transparent Pricing</span>
+          </div>
+          <h2 class="section-title">Turnkey Corporate Entertainment Packages</h2>
+          <p class="section-desc">
+            All-inclusive packages with zero hidden fees. Includes professional comedy emcee, question customization, audio equipment, smartphone buzzers, and prizes.
+          </p>
+        </div>
+
+        <div class="events-package-matrix">
+          
+          <!-- Tier 1: Team Spirit -->
+          <div class="event-pack-card reveal-on-scroll">
+            <div class="pack-badge">TEAM BUILDING</div>
+            <h3 class="pack-title">Team Spirit</h3>
+            <p class="pack-audience">Ideal for small departments &amp; casual happy hours (15 - 50 Players)</p>
+            <div class="pack-price">$750 <small>/ Event</small></div>
+            
+            <ul class="pack-perks-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 90 Minutes High-Energy Live Show</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Professional Comedic Host &amp; AV Rig</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 4 Themed Rounds (Pop Culture, Audio, Speed)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Cloud Smartphone Buzzers (No Apps)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Digital Winner Certificates &amp; Medals</li>
+            </ul>
+
+            <a href="#quoteCalc" class="btn btn-outline btn-md" style="width:100%; justify-content:center;">Select Team Spirit</a>
+          </div>
+
+          <!-- Tier 2: Championship Showcase -->
+          <div class="event-pack-card reveal-on-scroll">
+            <div class="pack-badge">ALL-HANDS &amp; HOLIDAYS</div>
+            <h3 class="pack-title">Championship Showcase</h3>
+            <p class="pack-audience">Best for company-wide parties, retreats &amp; all-hands (50 - 200 Players)</p>
+            <div class="pack-price">$1,450 <small>/ Event</small></div>
+            
+            <ul class="pack-perks-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 2 Full Hours Live Game Show Experience</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Custom Company Trivia Round</strong> (Exec baby photos, company lore)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pro Audio Bose Rig + Multi-Screen Casting</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Engraved Championship Trophy &amp; Gold Medals</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Event Producer &amp; Tech Lead</li>
+            </ul>
+
+            <a href="#quoteCalc" class="btn btn-outline btn-md" style="width:100%; justify-content:center;">Book Championship</a>
+          </div>
+
+          <!-- Tier 3: Enterprise Arena -->
+          <div class="event-pack-card reveal-on-scroll">
+            <div class="pack-badge">ENTERPRISE CONFERENCES</div>
+            <h3 class="pack-title">Enterprise Arena</h3>
+            <p class="pack-audience">Massive multi-city galas, summits &amp; annual conventions (200 - 1,000+ Players)</p>
+            <div class="pack-price">Custom <small>Tier</small></div>
+            
+            <ul class="pack-perks-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Dual Celebrity Emcees + Live Audio DJ</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-Camera Live Stream &amp; Global Zoom Sync</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Fully Branded Corporate Clue Walls &amp; Video Intro</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-Department Tournament Bracket Staging</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Onsite AV Production Crew</li>
+            </ul>
+
+            <a href="#quoteCalc" class="btn btn-outline btn-md" style="width:100%; justify-content:center;">Inquire Enterprise</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: CUSTOM COMPANY QUESTION ENGINE (WHAT WE CUSTOMIZE)
+         ========================================================================= -->
+    <section class="section-py" id="customEngine" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-yellow">
+            <span>100% Tailored To Your Team</span>
+          </div>
+          <h2 class="section-title">The Custom Company Question Engine</h2>
+          <p class="section-desc">
+            We work directly with your planning committee to weave hilarious company milestones, executive lore, and team inside jokes into professional multimedia trivia rounds.
+          </p>
+        </div>
+
+        <div class="custom-engine-showcase reveal-on-scroll">
+          
+          <!-- Left Column: Custom Question Types Selector -->
+          <div class="custom-types-list">
+            
+            <div class="custom-type-item active" data-clue-type="lore">
+              <div class="type-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <div class="type-text">
+                <span class="type-cat">COMPANY HISTORY &amp; PRODUCT</span>
+                <h4>Founding Lore &amp; Product Milestones</h4>
+                <p>Hilarious origin stories, launch date deep cuts, and company trivia.</p>
+              </div>
+            </div>
+
+            <div class="custom-type-item" data-clue-type="photos">
+              <div class="type-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <div class="type-text">
+                <span class="type-cat">EXECUTIVE SPOTLIGHT</span>
+                <h4>Leader Baby Photos &amp; Secret Talents</h4>
+                <p>Can your team match the VP to their childhood haircut or college rock band?</p>
+              </div>
+            </div>
+
+            <div class="custom-type-item" data-clue-type="slack">
+              <div class="type-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <div class="type-text">
+                <span class="type-cat">WORKPLACE CULTURE</span>
+                <h4>Slack Channel Lore &amp; Office Inside Jokes</h4>
+                <p>Legendary emojis, cafeteria debates, and watercooler culture moments.</p>
+              </div>
+            </div>
+
+            <div class="custom-type-item" data-clue-type="industry">
+              <div class="type-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 9V4s3.03.55 4 2c1.08 1.62 0 5 0 5"></path></svg>
+              </div>
+              <div class="type-text">
+                <span class="type-cat">TECHNICAL &amp; INDUSTRY</span>
+                <h4>Industry Acronyms &amp; Competitor Lore</h4>
+                <p>Fun rapid-fire tech acronyms and market history trivia.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Clue Preview Screen -->
+          <div class="custom-preview-display">
+            <div class="preview-display-header">
+              <span class="category-pill pill-cyan" id="clueCatDisplay">CUSTOM COMPANY ROUND PREVIEW</span>
+              <span class="preview-tag-live">LIVE BIG SCREEN CLUE</span>
+            </div>
+
+            <div class="preview-display-body">
+              <div class="preview-q-meta" id="clueMetaDisplay">ROUND 03 &bull; QUESTION 04 &bull; COMPANY LORE</div>
+              <h3 class="preview-q-title" id="clueTitleDisplay">"Which co-founder accidentally deployed to production from an airport terminal in 2022?"</h3>
+              
+              <div class="preview-options-grid" id="clueOptionsDisplay">
+                <div class="preview-opt-card opt-correct">
+                  <span class="opt-letter">A</span>
+                  <span>Sarah (VP of Engineering)</span>
+                </div>
+                <div class="preview-opt-card">
+                  <span class="opt-letter">B</span>
+                  <span>Dave (Chief Product Officer)</span>
+                </div>
+                <div class="preview-opt-card">
+                  <span class="opt-letter">C</span>
+                  <span>Elena (Head of Design)</span>
+                </div>
+                <div class="preview-opt-card">
+                  <span class="opt-letter">D</span>
+                  <span>Marcus (Chief Executive Officer)</span>
+                </div>
+              </div>
+
+              <div class="preview-feedback-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#06D6A0" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>84% of engineering teams guessed correctly in under 4.2 seconds!</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: 4-STEP EVENT PLANNING TIMELINE
+         ========================================================================= -->
+    <section class="section-py" id="eventTimeline">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-mint">
+            <span>Frictionless Planning</span>
+          </div>
+          <h2 class="section-title">From Booking to Game Day in 4 Simple Steps</h2>
+          <p class="section-desc">
+            We handle 100% of the heavy lifting so event organizers can sit back, enjoy craft drinks, and play along with their team.
+          </p>
+        </div>
+
+        <!-- 4-Step Process Grid -->
+        <div class="process-steps-grid reveal-on-scroll">
+          
+          <div class="process-step-card">
+            <div class="step-num-badge">01</div>
+            <h4 class="step-title">Date &amp; Venue Lock</h4>
+            <p class="step-desc">Pick your date, event format (onsite, virtual, or taproom), and estimated team headcount.</p>
+            <span class="step-time-tag">Time: 5 Minutes</span>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-num-badge">02</div>
+            <h4 class="step-title">Custom Question Intake</h4>
+            <p class="step-desc">Fill out our quick 10-question company culture intake form. Our comedy writers do the rest.</p>
+            <span class="step-time-tag">1 Week Prior</span>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-num-badge">03</div>
+            <h4 class="step-title">Host Arrival &amp; AV Rig</h4>
+            <p class="step-desc">Your comedic emcee arrives 60 minutes prior with audio gear, wireless mics, and screen test.</p>
+            <span class="step-time-tag">Game Day - 1 Hour</span>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-num-badge">04</div>
+            <h4 class="step-title">Showtime &amp; Trophy Glory</h4>
+            <p class="step-desc">2 hours of laughter, high-stakes buzzers, dramatic leaderboard shifts, and trophy celebrations.</p>
+            <span class="step-time-tag">2 Hours Showtime</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: CLIENT TESTIMONIALS & CASE STUDIES
+         ========================================================================= -->
+    <section class="section-py" id="clientReviews" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-coral">
+            <span>Trusted By Tech &amp; Fortune 500s</span>
+          </div>
+          <h2 class="section-title">What Corporate Organizers Say About Us</h2>
+          <p class="section-desc">
+            Trusted by HR leaders, team managers, and culture coordinators at over 450 leading companies.
+          </p>
+        </div>
+
+        <div class="client-testimonials-grid reveal-on-scroll">
+          
+          <div class="client-testi-card">
+            <div class="client-rating">★★★★★</div>
+            <blockquote class="client-quote">
+              "Brainwave Trivia hosted our 180-person engineering all-hands in Austin. The custom Slack inside joke round had the entire auditorium crying with laughter. Hands down the best team building event we have ever booked."
+            </blockquote>
+            <div class="client-author-info">
+              <strong>Jessica Chen</strong>
+              <span>Head of People &bull; CloudScale Technologies</span>
+            </div>
+          </div>
+
+          <div class="client-testi-card">
+            <div class="client-rating">★★★★★</div>
+            <blockquote class="client-quote">
+              "We connected 350 remote employees across 6 countries over Zoom for our annual holiday tournament. The smartphone buzzers were lightning fast and the comedy host kept everyone engaged for two straight hours."
+            </blockquote>
+            <div class="client-author-info">
+              <strong>David Morales</strong>
+              <span>Employee Experience Lead &bull; FinTech Global</span>
+            </div>
+          </div>
+
+          <div class="client-testi-card">
+            <div class="client-rating">★★★★★</div>
+            <blockquote class="client-quote">
+              "Our sales team is notoriously competitive. Brainwave built an inter-office playoff tournament with customized product questions that our team is still talking about six months later."
+            </blockquote>
+            <div class="client-author-info">
+              <strong>Amanda Ross</strong>
+              <span>Director of Sales Enablement &bull; Pulse Media</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: INTERACTIVE INSTANT EVENT QUOTE CALCULATOR & BOOKING FORM
+         ========================================================================= -->
+    <section class="section-py" id="quoteCalc">
+      <div class="container">
+        
+        <div class="quote-master-card reveal-on-scroll">
+          
+          <div class="quote-card-header">
+            <span class="category-pill pill-magenta" style="margin-bottom:0.75rem;">INSTANT EVENT ESTIMATOR</span>
+            <h2 style="font-size:2.3rem; font-weight:900; margin-bottom:0.75rem;">
+              Get Your Custom <span class="text-gradient-brand">Corporate Trivia Proposal</span>
+            </h2>
+            <p style="font-size:1rem; color:var(--text-secondary); max-width:640px; margin:0 auto 2rem;">
+              Fill in your event details below for instant pricing calculation and date availability check.
+            </p>
+          </div>
+
+          <form class="quote-calculator-form" id="corporateQuoteForm" onsubmit="event.preventDefault(); alert('Thank you! Your corporate trivia proposal has been generated. Our event team will contact you within 2 business hours.');">
+            
+            <div class="quote-form-grid">
+              
+              <!-- Field 1: Company Name -->
+              <div class="form-field">
+                <label for="companyName">Company / Organization Name *</label>
+                <input type="text" id="companyName" required placeholder="e.g. Acme Corp / Google">
+              </div>
+
+              <!-- Field 2: Contact Email -->
+              <div class="form-field">
+                <label for="contactEmail">Work Email Address *</label>
+                <input type="email" id="contactEmail" required placeholder="name@company.com">
+              </div>
+
+              <!-- Field 3: Expected Headcount -->
+              <div class="form-field">
+                <label for="guestCount">Estimated Player Headcount *</label>
+                <select id="guestCount" required>
+                  <option value="tier1">15 - 50 Players ($750 - $950)</option>
+                  <option value="tier2" selected>50 - 150 Players ($1,250 - $1,650)</option>
+                  <option value="tier3">150 - 300 Players ($1,850 - $2,450)</option>
+                  <option value="tier4">300 - 1,000+ Players (Enterprise Custom)</option>
+                </select>
+              </div>
+
+              <!-- Field 4: Event Format -->
+              <div class="form-field">
+                <label for="formatPref">Event Delivery Format *</label>
+                <select id="formatPref" required>
+                  <option value="office">In-Person at Our Office HQ</option>
+                  <option value="brewery">In-Person at a Partner Taproom / Brewery</option>
+                  <option value="virtual">Virtual Over Zoom / Teams</option>
+                  <option value="hybrid">Hybrid (Onsite + Remote Stream)</option>
+                </select>
+              </div>
+
+              <!-- Field 5: Target Date -->
+              <div class="form-field">
+                <label for="eventDate">Target Event Date *</label>
+                <input type="date" id="eventDate" required>
+              </div>
+
+              <!-- Field 6: City / Metro -->
+              <div class="form-field">
+                <label for="eventCity">City / Location *</label>
+                <input type="text" id="eventCity" required placeholder="e.g. Austin, TX or Remote">
+              </div>
+
+            </div>
+
+            <!-- Estimated Quote Total Box -->
+            <div class="quote-estimate-summary">
+              <div>
+                <span style="font-size:0.8rem; font-weight:800; color:var(--brand-cyan); text-transform:uppercase;">Estimated Turnkey Package Total:</span>
+                <div class="estimate-price-val" id="dynamicQuoteTotal">$1,450</div>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Includes comedic host, sound system, buzzers &amp; custom trivia round</span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg glow-btn">
+                <span>Lock In Date &amp; Request Proposal</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 8: CORPORATE EVENT FAQ ACCORDION
+         ========================================================================= -->
+    <section class="section-py" id="corporateFaq">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-cyan">
+            <span>Corporate FAQ</span>
+          </div>
+          <h2 class="section-title">Frequently Asked Event Questions</h2>
+          <p class="section-desc">
+            Common questions from corporate event organizers, HR directors, and office managers.
+          </p>
+        </div>
+
+        <div class="corporate-faq-accordion reveal-on-scroll">
+          
+          <div class="faq-accordion-item active">
+            <button type="button" class="faq-accordion-btn" aria-expanded="true">
+              <span>How far in advance do we need to book our corporate event?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accordion-content" style="max-height: 200px;">
+              <p>We recommend booking 2 to 4 weeks in advance, especially for Thursday and Friday evenings or holiday party seasons (November through January). However, we can frequently accommodate rush bookings with 5 business days notice.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-btn" aria-expanded="false">
+              <span>How do you write the custom company trivia round?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accordion-content">
+              <p>We send you a simple 5-minute question intake questionnaire asking for funny anecdotes, executive baby photos, Slack channel memes, and product milestones. Our professional comedy writers polish these into high-production quiz slides with audio and video elements.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-btn" aria-expanded="false">
+              <span>Can you help us book a partner craft brewery or private venue?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Yes! We partner with over 50 premier craft taprooms, rooftop beer gardens, and banquet spaces across Austin, Denver, Seattle, Nashville, and Chicago with preferred private buyout rates and catering packages.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button type="button" class="faq-accordion-btn" aria-expanded="false">
+              <span>What is your cancellation and rescheduling policy?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accordion-content">
+              <p>You can reschedule your event date at zero penalty up to 14 days before game day. For emergencies or weather cancellations, deposit credits are transferable for 12 months toward any future onsite or virtual event.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer (4-Column Balanced) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+            <div class="brand-logo-badge">
+              <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+                <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+              </svg>
+            </div>
+            <div class="brand-logo-text">
+              <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+              <span class="brand-tagline">LIVE TRIVIA</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Electrifying weekly pub trivia, themed quiz nights, and corporate team battles across 50+ premier taprooms and venues nationwide.
+          </p>
+          <div class="footer-social-links">
+            <a href="javascript:void(0)" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Live Experiences</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home 1 (Pub Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Festival Live)</a></li>
+            <li><a href="schedule.html" class="footer-link">Weekly Game Schedule</a></li>
+            <li><a href="venues.html" class="footer-link">Partner Venues &amp; Cities</a></li>
+            <li><a href="events.html" class="footer-link">Corporate Team Battles</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Host & Community -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Host &amp; Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="host.html" class="footer-link">Partner As A Taproom Venue</a></li>
+            <li><a href="about.html" class="footer-link">Our Emcees &amp; Writers</a></li>
+            <li><a href="about.html#charity" class="footer-link">Fundraising Trivia Nights</a></li>
+            <li><a href="contact.html" class="footer-link">Support &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & League Alerts -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Weekly Clue Dispatch</h4>
+          <p class="footer-subtext">Get Tuesday hint drop alerts, secret cosplay theme announcements, and partner discounts.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Brainwave Trivia Alerts!');">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Enter your email..." required aria-label="Email for clue dispatch">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+          <div class="footer-trust-badge">
+            <span>Anti-spam guaranteed &bull; 100% Free</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brainwave Trivia Co. All rights reserved. The ultimate live pub trivia tournament experience.</p>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+          <a href="javascript:void(0)">Player Code of Conduct</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to Top" title="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

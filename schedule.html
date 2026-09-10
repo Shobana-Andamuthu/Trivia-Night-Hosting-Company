@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Game Schedule &amp; Pub Quiz Calendar — Brainwave Trivia</title>
+  <meta name="description" content="Browse upcoming weekly live pub trivia nights, taproom quizzes, theme specials, and cash prize showdowns across 50+ partner venues in Austin, Denver, Seattle, and Nashville.">
+
+  <!-- Favicon -->
+  <link rel="icon" id="siteFavicon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Attractive Site Preloader -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo-ring">
+        <div class="preloader-pulse-glow"></div>
+        <svg class="preloader-svg" width="54" height="54" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="2"/>
+          <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+        </svg>
+      </div>
+      <div class="preloader-text-wrap">
+        <span class="preloader-brand">BRAIN<span class="preloader-accent">WAVE</span></span>
+        <span class="preloader-status">SYNCHRONIZING TRIVIA CIRCUIT...</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Global SVG Gradients for Brand Identity -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D946EF" />
+        <stop offset="50%" stop-color="#A855F7" />
+        <stop offset="100%" stop-color="#9333EA" />
+      </linearGradient>
+      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2E93" />
+        <stop offset="50%" stop-color="#D946EF" />
+        <stop offset="100%" stop-color="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Header / Navbar (7 Main Pages) -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <div class="navbar-inner">
+        
+        <!-- Official Brand Logo (Brainwave + Quiz Lightning) -->
+        <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+          <div class="brand-logo-badge">
+            <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+              <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+            </svg>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+            <span class="brand-tagline">LIVE TRIVIA</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (7 Main Pages) -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          
+          <!-- 1. Home Dropdown (Home 1 & Home 2) -->
+          <div class="nav-item dropdown">
+            <a href="index.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">
+                <span>Home 1 (Pub Classic)</span>
+                <span class="dropdown-badge">Popular</span>
+              </a>
+              <a href="home-2.html" class="dropdown-link">
+                <span>Home 2 (Festival Live)</span>
+                <span class="dropdown-badge">New</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. About -->
+          <div class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </div>
+
+          <!-- 3. Schedule (Active) -->
+          <div class="nav-item active">
+            <a href="schedule.html" class="nav-link">Schedule</a>
+          </div>
+
+          <!-- 4. Venues & Cities -->
+          <div class="nav-item">
+            <a href="venues.html" class="nav-link">Venues &amp; Cities</a>
+          </div>
+
+          <!-- 5. Corporate & Private Events -->
+          <div class="nav-item">
+            <a href="events.html" class="nav-link">Corporate &amp; Private</a>
+          </div>
+
+          <!-- 6. Host a Trivia Night -->
+          <div class="nav-item">
+            <a href="host.html" class="nav-link">Host a Trivia Night</a>
+          </div>
+
+          <!-- 7. Contact -->
+          <div class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+        </nav>
+
+        <!-- Navbar Actions -->
+        <div class="navbar-actions">
+          
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
+            <span style="font-size:0.75rem; font-weight:800;">RTL</span>
+          </button>
+
+          <!-- CTA Login Button -->
+          <a href="login.html" class="btn btn-primary btn-sm" id="navLoginBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+        <div class="brand-logo-badge">
+          <svg class="brand-logo-svg" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+            <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+          <span class="brand-tagline">LIVE TRIVIA</span>
+        </div>
+      </a>
+      <button type="button" class="mobile-drawer-close" aria-label="Close Mobile Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <div class="mobile-nav-list">
+      
+      <!-- Home Accordion -->
+      <div class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link mobile-dropdown-btn" aria-expanded="false">
+          <span>Home</span>
+          <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="index.html" class="mobile-dropdown-link">
+            <span>Home 1 (Pub Classic)</span>
+            <span class="dropdown-badge">Popular</span>
+          </a>
+          <a href="home-2.html" class="mobile-dropdown-link">
+            <span>Home 2 (Festival Live)</span>
+            <span class="dropdown-badge">New</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </div>
+
+      <div class="mobile-nav-item active">
+        <a href="schedule.html" class="mobile-nav-link">Schedule</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="venues.html" class="mobile-nav-link">Venues &amp; Cities</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="events.html" class="mobile-nav-link">Corporate &amp; Private</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="host.html" class="mobile-nav-link">Host a Trivia Night</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content (Schedule Page: Exactly 7 Unique Sections) -->
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         SECTION 1: HERO SCHEDULE HUB & 7-DAY DATE PICKER RIBBON
+         ========================================================================= -->
+    <section class="schedule-hero-section" id="schedule-hero">
+      
+      <!-- Background Ambient Glow -->
+      <div class="hero-ambient-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-ambient-orb hero-orb-2" aria-hidden="true"></div>
+
+      <div class="container">
+        
+        <div class="schedule-hero-content reveal-on-scroll">
+          <div class="section-tag tag-magenta">
+            <span class="pulse-dot"></span>
+            <span>58 Live Pub Quizzes Across 4 Metros This Week</span>
+          </div>
+          
+          <h1 class="schedule-hero-title">
+            Find Tonight's <span class="text-gradient-brand">Pub Trivia Game</span>.
+          </h1>
+          
+          <p class="schedule-hero-subtitle">
+            Always 100% free to play for pub teams. Filter weekly recurring taproom trivia, music bingos, and themed pop culture specials by city, time, or cash jackpot size.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: WEEKLY RECURRING GAME MATRIX & LIVE CAPACITY TRACKER
+         ========================================================================= -->
+    <section class="section-py" id="weekly-matrix">
+      <div class="container">
+        
+        <div class="schedule-matrix-header reveal-on-scroll">
+          <div>
+            <h2 style="font-size:1.85rem; font-weight:900; margin-bottom:0.25rem;">Upcoming Weekly Game Schedule</h2>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Real-time table seating availability &bull; Free entry with walk-in or advance squad RSVP</p>
+          </div>
+          <span class="live-games-indicator">
+            <span class="pulse-dot"></span>
+            <span id="activeGamesCount">Showing 6 Featured Venues</span>
+          </span>
+        </div>
+
+        <!-- 7-Day Interactive Horizontal Date Ribbon Strip (Positioned Above Cards for Direct Filtering) -->
+        <div class="week-days-strip reveal-on-scroll" role="tablist" aria-label="Select Day of Week" style="margin: 1.75rem 0 2.25rem 0;">
+          <button type="button" class="day-strip-btn active" data-day="all">
+            <span class="day-abbr">ALL</span>
+            <span class="day-label">Full Week</span>
+            <span class="day-count-badge">58 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="mon">
+            <span class="day-abbr">MON</span>
+            <span class="day-label">Monday</span>
+            <span class="day-count-badge">6 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="tue">
+            <span class="day-abbr">TUE</span>
+            <span class="day-label">Tuesday</span>
+            <span class="day-count-badge">14 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="wed">
+            <span class="day-abbr">WED</span>
+            <span class="day-label">Wednesday</span>
+            <span class="day-count-badge">16 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="thu">
+            <span class="day-abbr">THU</span>
+            <span class="day-label">Thursday</span>
+            <span class="day-count-badge">12 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="fri">
+            <span class="day-abbr">FRI</span>
+            <span class="day-label">Friday</span>
+            <span class="day-count-badge">4 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="sat">
+            <span class="day-abbr">SAT</span>
+            <span class="day-label">Saturday</span>
+            <span class="day-count-badge">6 Games</span>
+          </button>
+        </div>
+
+        <!-- Schedule Cards List -->
+        <div class="schedule-items-list" id="scheduleCardsList">
+          
+          <!-- Card 1: Pinthouse Brewing (Tue - Austin) -->
+          <div class="schedule-card reveal-on-scroll" data-day="tue" data-city="austin" data-format="classic" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">TUESDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; 4 Rounds</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-magenta">CLASSIC PUB TRIVIA</span>
+                <span class="category-pill pill-mint">COMPETITIVE</span>
+              </div>
+              <h3 class="sc-venue-title">Pinthouse Brewing Taproom</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>South Lamar &bull; Austin, TX</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Dave "Lightning" Miller</strong> (4.98 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$300 Cash + $100 Tab</strong>
+              <span class="sc-prize-sub">Top 3 Teams Awarded</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 85%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">85% Full</strong> &bull; 4 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Pinthouse Brewing" data-city="Austin, TX" data-time="Tuesday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Great Divide Brewery (Wed - Denver) -->
+          <div class="schedule-card reveal-on-scroll" data-day="wed" data-city="denver" data-format="music" data-prize="tab">
+            <div class="schedule-card-time">
+              <span class="sc-day">WEDNESDAY</span>
+              <span class="sc-hour">7:30 PM</span>
+              <span class="sc-duration">2 Hours &bull; Audio Stings</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-cyan">MUSIC BINGO &amp; AUDIO</span>
+                <span class="category-pill pill-mint">CASUAL FUN</span>
+              </div>
+              <h3 class="sc-venue-title">Great Divide Barrel Bar</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>RiNo Art District &bull; Denver, CO</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Sarah "Static" Liu</strong> (4.99 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$150 Barrel Tab + Swag</strong>
+              <span class="sc-prize-sub">Free Pitchers for Bonus Rounds</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 60%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">60% Full</strong> &bull; 9 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Great Divide Barrel Bar" data-city="Denver, CO" data-time="Wednesday 7:30 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Fremont Brewing (Thu - Seattle) -->
+          <div class="schedule-card reveal-on-scroll" data-day="thu" data-city="seattle" data-format="theme" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">THURSDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2.5 Hours &bull; Cosplay Night</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-coral">90S MTV NOSTALGIA SPECIAL</span>
+                <span class="category-pill pill-magenta">MASTERS BRACKET</span>
+              </div>
+              <h3 class="sc-venue-title">Fremont Urban Beer Garden</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Fremont Canal &bull; Seattle, WA</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Marcus "The King" King</strong> (4.97 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$500 Cash + $200 Tab</strong>
+              <span class="sc-prize-sub">+$50 Best 90s Costume Award</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 92%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">92% Full</strong> &bull; 2 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Fremont Urban Beer Garden" data-city="Seattle, WA" data-time="Thursday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Yee-Haw Brewing (Mon - Nashville) -->
+          <div class="schedule-card reveal-on-scroll" data-day="mon" data-city="nashville" data-format="classic" data-prize="tab">
+            <div class="schedule-card-time">
+              <span class="sc-day">MONDAY</span>
+              <span class="sc-hour">6:30 PM</span>
+              <span class="sc-duration">2 Hours &bull; Craft Pints</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-mint">INDUSTRY MONDAY TRIVIA</span>
+                <span class="category-pill">CASUAL FUN</span>
+              </div>
+              <h3 class="sc-venue-title">Yee-Haw Downtown Taproom</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>SoBro &bull; Nashville, TN</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Sam "The Professor" Vance</strong> (4.96 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$100 Bar Tab + Pizza Box</strong>
+              <span class="sc-prize-sub">Double Loyalty Points on Monday</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 50%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">50% Full</strong> &bull; 11 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Yee-Haw Downtown Taproom" data-city="Nashville, TN" data-time="Monday 6:30 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Meanwhile Brewing (Sat - Austin) -->
+          <div class="schedule-card reveal-on-scroll" data-day="sat" data-city="austin" data-format="buzzer" data-prize="jackpot">
+            <div class="schedule-card-time">
+              <span class="sc-day">SATURDAY</span>
+              <span class="sc-hour">8:00 PM</span>
+              <span class="sc-duration">3 Hours &bull; Festival Stage</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-yellow">SPEED BUZZER ARENA SHOW</span>
+                <span class="category-pill pill-magenta">$1,500 MEGA JACKPOT</span>
+              </div>
+              <h3 class="sc-venue-title">Meanwhile Outdoor Amphitheater</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>South Austin &bull; Austin, TX</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>MC Dave Miller &amp; Live DJ</strong> (5.0 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight" style="color:#D946EF;">$1,500 Cash Progressive Pot</strong>
+              <span class="sc-prize-sub">Broadcast on 60ft Stadium Wall</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 95%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">95% Full</strong> &bull; FINAL 3 TABLES</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Meanwhile Outdoor Amphitheater" data-city="Austin, TX" data-time="Saturday 8:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: Ratio Beerworks (Tue - Denver) -->
+          <div class="schedule-card reveal-on-scroll" data-day="tue" data-city="denver" data-format="theme" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">TUESDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; Trivia Deck</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-coral">MARVEL VS DC CINEMATIC SPECIAL</span>
+                <span class="category-pill pill-mint">COMPETITIVE</span>
+              </div>
+              <h3 class="sc-venue-title">Ratio Beerworks Overland</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Overland Park &bull; Denver, CO</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Sarah "Static" Liu</strong> (4.99 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$400 Cash + Comic Swag</strong>
+              <span class="sc-prize-sub">Infinity Stone Flight Included</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 78%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">78% Full</strong> &bull; 6 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Ratio Beerworks Overland" data-city="Denver, CO" data-time="Tuesday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: MONTHLY THEMED POP CULTURE CALENDAR SHOWCASE
+         ========================================================================= -->
+    <section class="section-py" id="theme-calendar" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-coral">
+            <span>Specialty Night Series</span>
+          </div>
+          <h2 class="section-title">Monthly Themed Trivia &amp; Fandom Specials</h2>
+          <p class="section-desc">
+            Deep-dive into your favorite universes with cosplay multipliers, themed cocktail flights, custom video clues, and dedicated fandom championship trophies.
+          </p>
+        </div>
+
+        <div class="theme-specials-grid">
+          
+          <!-- Special 1 -->
+          <div class="theme-special-card reveal-on-scroll">
+            <div class="special-card-badge">1ST TUESDAY EACH MONTH</div>
+            <h3 class="special-card-title">Marvel &amp; DC Multiverse Mega-Quiz</h3>
+            <p class="special-card-desc">
+              60 video clues covering the Infinity Saga, comic deep cuts, villain origin easter eggs, and cinematic soundtrack sound puzzles.
+            </p>
+            <div class="special-perks-list">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> +50 Cosplay Bonus Points</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> Themed Infinity Cocktails</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Golden Gauntlet Trophy</span>
+            </div>
+            <div class="special-card-footer">
+              <span class="special-date-tag">Next: Oct 7 &bull; 7:00 PM</span>
+              <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+            </div>
+          </div>
+
+          <!-- Special 2 -->
+          <div class="theme-special-card reveal-on-scroll">
+            <div class="special-card-badge" style="color:var(--brand-primary); border-color:var(--brand-primary);">2ND THURSDAY EACH MONTH</div>
+            <h3 class="special-card-title">90s MTV Hits &amp; Y2K Pop Nostalgia</h3>
+            <p class="special-card-desc">
+              Sing along with boy band anthems, grunge riffs, one-hit wonders, Saturday morning cartoons, and retro arcade video clips.
+            </p>
+            <div class="special-perks-list">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg> Live Sing-Along Rounds</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"></rect><circle cx="8" cy="12" r="2"></circle><circle cx="16" cy="12" r="2"></circle></svg> Retro Cassette Swag</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> $150 Taproom Tab Pot</span>
+            </div>
+            <div class="special-card-footer">
+              <span class="special-date-tag">Next: Oct 16 &bull; 7:30 PM</span>
+              <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+            </div>
+          </div>
+
+          <!-- Special 3 -->
+          <div class="theme-special-card reveal-on-scroll">
+            <div class="special-card-badge" style="color:var(--brand-yellow); border-color:var(--brand-yellow);">3RD WEDNESDAY EACH MONTH</div>
+            <h3 class="special-card-title">Star Wars &amp; Sci-Fi Cantina Lore</h3>
+            <p class="special-card-desc">
+              From the original trilogy to Mandalorian lore, starship schematics, alien dialects, and extended universe trivia challenges.
+            </p>
+            <div class="special-perks-list">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path></svg> Droid Soundbite Challenges</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path></svg> Blue Milk Craft Sours</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> $500 Cash Jackpot</span>
+            </div>
+            <div class="special-card-footer">
+              <span class="special-date-tag">Next: Oct 22 &bull; 7:00 PM</span>
+              <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: GUARANTEED PRIZE VAULT & BAR TAB BREAKDOWN
+         ========================================================================= -->
+    <section class="section-py" id="prizes-vault">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-yellow">
+            <span>Guaranteed Rewards</span>
+          </div>
+          <h2 class="section-title">Real Cash, Brewery Tabs &amp; Championship Glory</h2>
+          <p class="section-desc">
+            We partner directly with taproom owners so winners walk out with real cash envelopes, brewery vouchers, and bragging rights every single week.
+          </p>
+        </div>
+
+        <div class="prizes-vault-grid">
+          
+          <!-- Prize 1: 1st Place -->
+          <div class="prize-vault-card reveal-on-scroll">
+            <div class="prize-trophy-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D946EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <span class="category-pill pill-magenta" style="margin-bottom:0.75rem;">1ST PLACE CHAMPIONS</span>
+            <h3 class="prize-amount">$250 – $1,500 <small>CASH</small></h3>
+            <p class="prize-desc">Cold hard cash envelope handed to your team captain on stage immediately following the final round decider.</p>
+            <ul class="prize-inclusions">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Instant Cash Envelope</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 100 National League Points</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Team Picture on Venue Hall of Fame</li>
+            </ul>
+          </div>
+
+          <!-- Prize 2: 2nd Place -->
+          <div class="prize-vault-card silver-prize reveal-on-scroll">
+            <div class="prize-trophy-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h10c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-2c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 4H6v7a6 6 0 0 0 12 0V4z"></path></svg>
+            </div>
+            <span class="category-pill pill-cyan" style="margin-bottom:0.75rem;">2ND PLACE RUNNERS UP</span>
+            <h3 class="prize-amount">$50 – $150 <small>BAR TAB</small></h3>
+            <p class="prize-desc">Guaranteed taproom credit applied directly to tonight's beer, cider, and food tab or saved for next week.</p>
+            <ul class="prize-inclusions">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Venue Tab Deduction Voucher</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 60 National League Points</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Complimentary Next-Round Pitcher</li>
+            </ul>
+          </div>
+
+          <!-- Prize 3: Spirit & Name -->
+          <div class="prize-vault-card bronze-prize reveal-on-scroll">
+            <div class="prize-trophy-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
+            <span class="category-pill pill-coral" style="margin-bottom:0.75rem;">BEST TEAM NAME &amp; SPIRIT</span>
+            <h3 class="prize-amount">Craft Pitchers </h3>
+            <p class="prize-desc">Crowd-voted funniest punny team name and highest energy cheering squad win instant table rewards.</p>
+            <ul class="prize-inclusions">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Free Craft Beer Pitcher</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Appetizer Snack Platter</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Live On-Mic Shoutout</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: TABLE RSVP & SEATING FAQ ACCORDION
+         ========================================================================= -->
+    <section class="section-py" id="schedule-rsvp" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="schedule-split-faq reveal-on-scroll">
+          
+          <!-- Left Column: Squad Table RSVP Info Box -->
+          <div class="rsvp-info-banner">
+            <span class="category-pill pill-mint" style="margin-bottom:0.75rem;">FREE TABLE RESERVATIONS</span>
+            <h3 style="font-size:2rem; font-weight:900; margin-bottom:1rem;">How Table RSVPs Work</h3>
+            <p style="color:var(--text-secondary); line-height:1.6; margin-bottom:1.5rem;">
+              Trivia is always 100% free to play. Reserving a table in advance guarantees prime sightlines to big screens and saves your team from arriving 45 minutes early to hunt for seats.
+            </p>
+
+            <div class="rsvp-perks-stack">
+              <div class="rsvp-perk">
+                <div class="rsvp-perk-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+                <div>
+                  <strong class="rsvp-perk-title">Guaranteed Reserved Table</strong>
+                  <span class="rsvp-perk-desc">Held under your team name until 15 mins before game kickoff.</span>
+                </div>
+              </div>
+              <div class="rsvp-perk">
+                <div class="rsvp-perk-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                </div>
+                <div>
+                  <strong class="rsvp-perk-title">Instant Smartphone Buzzer Link</strong>
+                  <span class="rsvp-perk-desc">Direct QR code on table connects all team phones in 3 seconds.</span>
+                </div>
+              </div>
+              <div class="rsvp-perk">
+                <div class="rsvp-perk-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <div>
+                  <strong class="rsvp-perk-title">Free Bonus Clue Hint</strong>
+                  <span class="rsvp-perk-desc">Receive tonight's secret Round 2 hint via SMS 2 hours before game time.</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="#weekly-matrix" class="btn btn-primary btn-md glow-btn" style="margin-top:2rem;">
+              <span>Browse Tonight's Games</span>
+            </a>
+          </div>
+
+          <!-- Right Column: Interactive FAQ Accordion -->
+          <div class="schedule-faq-column">
+            <h3 style="font-size:1.5rem; font-weight:900; margin-bottom:1.25rem;">Frequently Asked Questions</h3>
+            
+            <div class="faq-accordion-group">
+              
+              <div class="faq-accordion-item">
+                <button type="button" class="faq-accordion-header" aria-expanded="false">
+                  <span>How many players can be on a trivia team?</span>
+                  <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-accordion-body">
+                  <p>Our standard team limit is <strong>2 to 8 players</strong> per squad. Solo players are always welcome and can either play solo or be placed with a friendly open squad. Teams larger than 8 may play for fun but are ineligible for official cash podium prizes to keep games fair.</p>
+                </div>
+              </div>
+
+              <div class="faq-accordion-item">
+                <button type="button" class="faq-accordion-header" aria-expanded="false">
+                  <span>Do we need to download an app to play?</span>
+                  <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-accordion-body">
+                  <p><strong>Zero app downloads required!</strong> Players simply scan the table QR code with any mobile camera (iPhone or Android) to open our lightweight web buzzer in Safari or Chrome. It takes under 5 seconds to connect.</p>
+                </div>
+              </div>
+
+              <div class="faq-accordion-item">
+                <button type="button" class="faq-accordion-header" aria-expanded="false">
+                  <span>What happens if we arrive late?</span>
+                  <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-accordion-body">
+                  <p>Reserved tables are held until <strong>15 minutes prior to game start</strong>. If you arrive after kickoff, you can still jump into the digital game at the start of Round 2 through the host QR code!</p>
+                </div>
+              </div>
+
+              <div class="faq-accordion-item">
+                <button type="button" class="faq-accordion-header" aria-expanded="false">
+                  <span>Can dogs and minors attend taproom trivia?</span>
+                  <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-accordion-body">
+                  <p>Nearly all of our partner craft breweries and taprooms feature all-ages patios and are dog-friendly! Check individual venue details on our <a href="venues.html" style="color:var(--brand-primary); font-weight:700;">Venues &amp; Cities</a> page for specific patio policies.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: SMS GAME ALERTS & WEEKLY HINT DISPATCH CTA
+         ========================================================================= -->
+    <section class="section-py" id="sms-alerts">
+      <div class="container">
+        
+        <div class="sms-dispatch-banner reveal-on-scroll">
+          <div class="sms-banner-content">
+            <span class="category-pill pill-magenta" style="margin-bottom:0.75rem;">FREE WEEKLY COMPETITIVE EDGE</span>
+            <h2 style="font-size:2.2rem; font-weight:900; margin-bottom:0.75rem;">
+              Get This Week's <span class="text-gradient-brand">Secret Bonus Hint</span>
+            </h2>
+            <p style="color:var(--text-secondary); max-width:600px; font-size:1rem; line-height:1.6; margin-bottom:1.75rem;">
+              Join 18,000+ trivia players who receive our Tuesday 4:00 PM SMS dispatch containing 1 guaranteed answer for tonight's game plus emergency table availability.
+            </p>
+
+            <form class="sms-signup-form" onsubmit="event.preventDefault(); alert('🎉 You are locked in! Check your inbox/phone for this week\'s secret round hint.');">
+              <input type="text" placeholder="Your Team Name..." required aria-label="Team Name">
+              <input type="tel" placeholder="Mobile Number or Email..." required aria-label="Mobile Number or Email">
+              <button type="submit" class="btn btn-primary glow-btn">Get Free Hint</button>
+            </form>
+            <span style="font-size:0.75rem; color:var(--text-muted); margin-top:0.75rem; display:block;">
+              🔒 100% free. 1 message per week. Reply STOP anytime.
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Table RSVP Modal Popup -->
+  <div class="modal-overlay" id="rsvpModal" aria-hidden="true" role="dialog" aria-labelledby="rsvpModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="category-pill pill-mint" style="margin-bottom:0.35rem;">FREE TABLE HOLD</span>
+          <h3 id="rsvpModalTitle" style="font-size:1.35rem; font-weight:900; color:#FFFFFF; margin:0;">Reserve Squad Table</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeRsvpModalBtn" aria-label="Close RSVP Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-venue-summary" id="modalVenueSummary" style="background:rgba(217,70,239,0.1); border:1px solid rgba(217,70,239,0.3); border-radius:var(--radius-md); padding:0.85rem 1rem; margin-bottom:1.25rem;">
+          <strong style="color:var(--brand-primary); display:block; font-size:1rem;" id="modalVenueName">Pinthouse Brewing</strong>
+          <span style="color:var(--text-secondary); font-size:0.85rem;" id="modalVenueDetails">Austin, TX &bull; Tuesday 7:00 PM</span>
+        </div>
+
+        <form id="rsvpBookingForm" onsubmit="event.preventDefault(); document.getElementById('modalSuccessState').style.display='block'; document.getElementById('modalFormState').style.display='none';">
+          <div id="modalFormState">
+            <div class="form-group" style="margin-bottom:1rem;">
+              <label style="display:block; font-size:0.8rem; font-weight:800; color:#FFFFFF; margin-bottom:0.35rem;">Team / Captain Name *</label>
+              <input type="text" class="footer-input" style="width:100%; border-radius:var(--radius-md);" placeholder="e.g. Quiztopher Walkens" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom:1rem;">
+              <label style="display:block; font-size:0.8rem; font-weight:800; color:#FFFFFF; margin-bottom:0.35rem;">Captain Mobile Phone (For Table SMS Confirmation) *</label>
+              <input type="tel" class="footer-input" style="width:100%; border-radius:var(--radius-md);" placeholder="(512) 555-0198" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom:1.25rem;">
+              <label style="display:block; font-size:0.8rem; font-weight:800; color:#FFFFFF; margin-bottom:0.35rem;">Estimated Squad Size</label>
+              <select class="footer-input" style="width:100%; border-radius:var(--radius-md); color:var(--text-primary);">
+                <option value="2-4">2 – 4 Players (Standard Booth)</option>
+                <option value="5-6" selected>5 – 6 Players (Full Pub Table)</option>
+                <option value="7-8">7 – 8 Players (Large Squad Table)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary glow-btn" style="width:100%; justify-content:center;">
+              <span>Confirm Free Table Reservation</span>
+            </button>
+          </div>
+
+          <div id="modalSuccessState" style="display:none; text-align:center; padding:1.5rem 0;">
+            <div style="font-size:3rem; margin-bottom:0.5rem;">🎉</div>
+            <h4 style="font-size:1.35rem; font-weight:900; color:#06D6A0; margin-bottom:0.5rem;">Table Reserved Successfully!</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1.25rem;">
+              We sent a confirmation text with your buzzer link and secret Round 2 hint. See you at the taproom!
+            </p>
+            <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('rsvpModal').classList.remove('active'); document.getElementById('modalSuccessState').style.display='none'; document.getElementById('modalFormState').style.display='block';">
+              Close Window
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer (4-Column Balanced) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+            <div class="brand-logo-badge">
+              <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+                <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+              </svg>
+            </div>
+            <div class="brand-logo-text">
+              <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+              <span class="brand-tagline">LIVE TRIVIA</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Electrifying weekly pub trivia, themed quiz nights, and corporate team battles across 50+ premier taprooms and venues nationwide.
+          </p>
+          <div class="footer-social-links">
+            <a href="javascript:void(0)" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Live Experiences</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home 1 (Pub Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Festival Live)</a></li>
+            <li><a href="schedule.html" class="footer-link">Weekly Game Schedule</a></li>
+            <li><a href="venues.html" class="footer-link">Partner Venues &amp; Cities</a></li>
+            <li><a href="events.html" class="footer-link">Corporate Team Battles</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Host & Community -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Host &amp; Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="host.html" class="footer-link">Partner As A Taproom Venue</a></li>
+            <li><a href="about.html" class="footer-link">Our Emcees &amp; Writers</a></li>
+            <li><a href="about.html#charity" class="footer-link">Fundraising Trivia Nights</a></li>
+            <li><a href="contact.html" class="footer-link">Support &amp; FAQ</a></li>
+            <li><a href="contact.html#careers" class="footer-link">Audition As A Quiz Host</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Live Alerts -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Never Miss A Game</h4>
+          <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.5; margin-bottom:1rem;">
+            Get weekly hints, thematic round announcements, and progressive jackpot alerts in your city.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Brainwave Trivia hints!');">
+            <input type="email" placeholder="Your team email..." class="footer-input" required aria-label="Team Email Address">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+          <span style="font-size:0.75rem; color:var(--text-muted); margin-top:0.6rem; display:block;">
+            Zero spam. Unsubscribe anytime with 1-click.
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; 2026 <strong>Brainwave Trivia, Inc.</strong> All rights reserved. Built for social pub entertainment.
+        </div>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+          <a href="javascript:void(0)">Responsible Gaming</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

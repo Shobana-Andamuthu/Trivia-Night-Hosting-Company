@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival Live &amp; Arena Trivia Showdowns — Brainwave Trivia</title>
+  <meta name="description" content="Experience massive festival-scale pub trivia tournaments, stadium video clue walls, instant smartphone digital buzzers, and $50,000 national championship leagues.">
+
+  <!-- Favicon -->
+  <link rel="icon" id="siteFavicon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Attractive Site Preloader -->
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-logo-ring">
+        <div class="preloader-pulse-glow"></div>
+        <svg class="preloader-svg" width="54" height="54" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="2"/>
+          <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+        </svg>
+      </div>
+      <div class="preloader-text-wrap">
+        <span class="preloader-brand">BRAIN<span class="preloader-accent">WAVE</span></span>
+        <span class="preloader-status">SYNCHRONIZING TRIVIA CIRCUIT...</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Global SVG Gradients for Brand Identity -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D946EF" />
+        <stop offset="50%" stop-color="#A855F7" />
+        <stop offset="100%" stop-color="#9333EA" />
+      </linearGradient>
+      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2E93" />
+        <stop offset="50%" stop-color="#D946EF" />
+        <stop offset="100%" stop-color="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Header / Navbar (7 Main Pages) -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <div class="navbar-inner">
+        
+        <!-- Redesigned Attractive Brand Logo (Brainwave + Quiz Lightning) -->
+        <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+          <div class="brand-logo-badge">
+            <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+              <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+            </svg>
+          </div>
+          <div class="brand-logo-text">
+            <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+            <span class="brand-tagline">LIVE TRIVIA</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (7 Main Pages) -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          
+          <!-- 1. Home Dropdown (Home 1 & Home 2) -->
+          <div class="nav-item dropdown active">
+            <a href="home-2.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">
+                <span>Home 1 (Pub Classic)</span>
+                <span class="dropdown-badge">Popular</span>
+              </a>
+              <a href="home-2.html" class="dropdown-link active">
+                <span>Home 2 (Festival Live)</span>
+                <span class="dropdown-badge">New</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. About -->
+          <div class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </div>
+
+          <!-- 3. Schedule -->
+          <div class="nav-item">
+            <a href="schedule.html" class="nav-link">Schedule</a>
+          </div>
+
+          <!-- 4. Venues & Cities -->
+          <div class="nav-item">
+            <a href="venues.html" class="nav-link">Venues &amp; Cities</a>
+          </div>
+
+          <!-- 5. Corporate & Private Events -->
+          <div class="nav-item">
+            <a href="events.html" class="nav-link">Corporate &amp; Private</a>
+          </div>
+
+          <!-- 6. Host a Trivia Night -->
+          <div class="nav-item">
+            <a href="host.html" class="nav-link">Host a Trivia Night</a>
+          </div>
+
+          <!-- 7. Contact -->
+          <div class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+        </nav>
+
+        <!-- Navbar Actions -->
+        <div class="navbar-actions">
+          
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
+            <span style="font-size:0.75rem; font-weight:800;">RTL</span>
+          </button>
+
+          <!-- CTA Login Button -->
+          <a href="login.html" class="btn btn-primary btn-sm" id="navLoginBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+        <div class="brand-logo-badge">
+          <svg class="brand-logo-svg" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+            <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+          <span class="brand-tagline">LIVE TRIVIA</span>
+        </div>
+      </a>
+      <button type="button" class="mobile-drawer-close" aria-label="Close Mobile Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <div class="mobile-nav-list">
+      
+      <!-- Home Accordion -->
+      <div class="mobile-nav-item active">
+        <button type="button" class="mobile-nav-link mobile-dropdown-btn" aria-expanded="false">
+          <span>Home</span>
+          <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="index.html" class="mobile-dropdown-link">
+            <span>Home 1 (Pub Classic)</span>
+            <span class="dropdown-badge">Popular</span>
+          </a>
+          <a href="home-2.html" class="mobile-dropdown-link active">
+            <span>Home 2 (Festival Live)</span>
+            <span class="dropdown-badge">New</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="schedule.html" class="mobile-nav-link">Schedule</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="venues.html" class="mobile-nav-link">Venues &amp; Cities</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="events.html" class="mobile-nav-link">Corporate &amp; Private</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="host.html" class="mobile-nav-link">Host a Trivia Night</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content (Home 2: Exactly 8 Unique Sections) -->
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         SECTION 1: FESTIVAL ARENA HERO WITH BACKGROUND IMAGE & CENTERED LAYOUT
+         ========================================================================= -->
+    <section class="hero-section hero-festival-bg hero-festival-center" id="hero2">
+      
+      <!-- Ambient Glow Orbs -->
+      <div class="hero-ambient-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-ambient-orb hero-orb-2" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-festival-centered-content">
+          
+          <div class="section-tag tag-magenta" style="margin: 0 auto 1.25rem;">
+            <span class="pulse-dot"></span>
+            <span>Concert-Scale Live Pub Trivia &amp; Stadium Showdowns</span>
+          </div>
+          
+          <h1 class="hero-title hero-title-centered">
+            Stadium-Scale Trivia Nights That <span class="text-gradient-brand">Ignite 500+ Player Arenas</span>.
+          </h1>
+          
+          <p class="hero-subtitle hero-subtitle-centered">
+            The next evolution of live social entertainment: synchronized stadium video clue walls, instant smartphone buzzers, craft beer festival stages, and national championship playoff brackets.
+          </p>
+
+          <div class="hero-actions hero-actions-centered">
+            <a href="schedule.html" class="btn btn-primary btn-lg glow-btn">
+              <span>Browse Festival Tour Stops</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="events.html" class="btn btn-outline btn-lg">
+              <span>Book Arena Package</span>
+            </a>
+          </div>
+
+          <!-- Centered 4-Item Stats Showcase Ribbon -->
+          <div class="hero-stats-banner">
+            <div class="hero-stat-cell">
+              <span class="stat-cell-num text-gradient-brand">500+</span>
+              <span class="stat-cell-label">Players Per Arena</span>
+            </div>
+            <div class="stat-cell-divider"></div>
+            <div class="hero-stat-cell">
+              <span class="stat-cell-num text-mint">0.3s</span>
+              <span class="stat-cell-label">Buzzer Latency</span>
+            </div>
+            <div class="stat-cell-divider"></div>
+            <div class="hero-stat-cell">
+              <span class="stat-cell-num text-fuchsia">$50,000+</span>
+              <span class="stat-cell-label">Tournament Cash</span>
+            </div>
+            <div class="stat-cell-divider"></div>
+            <div class="hero-stat-cell">
+              <span class="stat-cell-num text-yellow">50+</span>
+              <span class="stat-cell-label">Partner Taprooms</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: 100% SMARTPHONE POWERED SCORING ENGINE (BENTO CARDS)
+         ========================================================================= -->
+    <section class="section-py" id="buzzer-tech" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-cyan">
+            <span>Proprietary Tech Platform</span>
+          </div>
+          <h2 class="section-title">No Pens, No Paper: 100% Smartphone Powered</h2>
+          <p class="section-desc">
+            Players connect in seconds via mobile browser. No app download required. Instant millisecond buzzer locking, anti-cheat randomized questions, and real-time big screen leaderboards.
+          </p>
+        </div>
+
+        <div class="app-bento-grid">
+          
+          <!-- Image Feature Preview -->
+          <div class="spotlight-card-media reveal-on-scroll" style="height: 380px; border-radius: var(--radius-xl); overflow: hidden; border: 1.5px solid rgba(217, 70, 239, 0.35); box-shadow: 0 15px 40px rgba(0,0,0,0.4);">
+            <img src="assets/images/home2/format-digital-buzzers.webp" alt="Players excitedly tapping smartphone trivia app buzzers at brewery table" width="650" height="380" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+
+          <!-- Feature Cards List -->
+          <div class="app-feature-list">
+            
+            <div class="app-feature-card reveal-on-scroll">
+              <div class="app-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div class="app-feature-body">
+                <h3 class="app-feature-title">Sub-Millisecond Speed Buzzing</h3>
+                <p class="app-feature-desc">
+                  Cloud web-socket architecture calculates buzzer presses down to 1/1,000th of a second for thrilling head-to-head ties.
+                </p>
+              </div>
+            </div>
+
+            <div class="app-feature-card reveal-on-scroll">
+              <div class="app-feature-icon" style="background:rgba(6,214,160,0.18); color:var(--brand-cyan); border-color:rgba(6,214,160,0.4);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="app-feature-body">
+                <h3 class="app-feature-title">Smart Anti-Cheat Time Locks</h3>
+                <p class="app-feature-desc">
+                  Timed countdowns and instant video clue reveals prevent mobile search engines from spoiling the competitive rush.
+                </p>
+              </div>
+            </div>
+
+            <div class="app-feature-card reveal-on-scroll">
+              <div class="app-feature-icon" style="background:rgba(217,70,239,0.15); color:var(--brand-yellow); border-color:rgba(217,70,239,0.4);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div class="app-feature-body">
+                <h3 class="app-feature-title">Dynamic Stadium Video Walls</h3>
+                <p class="app-feature-desc">
+                  Live scores update on every venue screen automatically after every question with dramatic sound stings and animated rank shifts.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: LIVE ARENA TOUR SCHEDULE (FLIGHT-BOARD ROW TRACKER)
+         ========================================================================= -->
+    <section class="section-py" id="tour-radar">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-magenta">
+            <span>National Tour Circuit</span>
+          </div>
+          <h2 class="section-title">Upcoming Stadium Festival Showdowns</h2>
+          <p class="section-desc">
+            Catch the Brainwave Festival Tour as we take over mega taprooms, brewery coliseums, and rooftop beer gardens with hundreds of trivia players.
+          </p>
+        </div>
+
+        <!-- Flight Board Filter Bar -->
+        <div class="flightboard-filter-strip reveal-on-scroll">
+          <div class="flightboard-tabs">
+            <button type="button" class="tour-filter-btn active" data-tour-filter="all">All Tour Stops</button>
+            <button type="button" class="tour-filter-btn" data-tour-filter="austin">Austin, TX</button>
+            <button type="button" class="tour-filter-btn" data-tour-filter="denver">Denver, CO</button>
+            <button type="button" class="tour-filter-btn" data-tour-filter="seattle">Seattle, WA</button>
+            <button type="button" class="tour-filter-btn" data-tour-filter="nashville">Nashville, TN</button>
+          </div>
+          <span class="flightboard-live-badge">
+            <span class="pulse-dot"></span>
+            <span>4 LIVE CITIES THIS WEEK</span>
+          </span>
+        </div>
+
+        <!-- Flight Board Live Matrix Table Rows -->
+        <div class="flightboard-matrix reveal-on-scroll">
+          
+          <!-- Row 1: Austin -->
+          <div class="flightboard-row" data-tour-city="austin">
+            <div class="flightboard-date">
+              <span class="fb-month">OCT</span>
+              <span class="fb-day">18</span>
+              <span class="fb-time">7:30 PM CST</span>
+            </div>
+            <div class="flightboard-venue">
+              <span class="category-pill pill-magenta" style="margin-bottom:0.25rem;">ARENA AREAL SHOWDOWN</span>
+              <h4 class="fb-title">Austin Craft Brewery Festival Hall</h4>
+              <span class="fb-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Austin, TX &bull; 520 Player Capacity</span>
+              </span>
+            </div>
+            <div class="flightboard-prize">
+              <span class="fb-prize-val">$3,500</span>
+              <span class="fb-prize-label">Cash Pool</span>
+            </div>
+            <div class="flightboard-capacity">
+              <div class="fb-cap-bar">
+                <div class="fb-cap-fill" style="width: 94%;"></div>
+              </div>
+              <span class="fb-cap-text"><strong style="color:var(--brand-coral);">94% Full</strong> &bull; 6 Tables Left</span>
+            </div>
+            <div class="flightboard-action">
+              <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">
+                <span>Book Table</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: Denver -->
+          <div class="flightboard-row" data-tour-city="denver">
+            <div class="flightboard-date">
+              <span class="fb-month">OCT</span>
+              <span class="fb-day">21</span>
+              <span class="fb-time">8:00 PM MST</span>
+            </div>
+            <div class="flightboard-venue">
+              <span class="category-pill pill-mint" style="margin-bottom:0.25rem;">BIG SCREEN AUDIO CLASH</span>
+              <h4 class="fb-title">Denver Taphouse Stadium Coliseum</h4>
+              <span class="fb-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Denver, CO &bull; 460 Player Capacity</span>
+              </span>
+            </div>
+            <div class="flightboard-prize">
+              <span class="fb-prize-val">$4,200</span>
+              <span class="fb-prize-label">Cash Pool</span>
+            </div>
+            <div class="flightboard-capacity">
+              <div class="fb-cap-bar">
+                <div class="fb-cap-fill" style="width: 82%;"></div>
+              </div>
+              <span class="fb-cap-text"><strong style="color:var(--brand-cyan);">82% Full</strong> &bull; 12 Tables Left</span>
+            </div>
+            <div class="flightboard-action">
+              <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">
+                <span>Book Table</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 3: Seattle -->
+          <div class="flightboard-row" data-tour-city="seattle">
+            <div class="flightboard-date">
+              <span class="fb-month">OCT</span>
+              <span class="fb-day">24</span>
+              <span class="fb-time">7:00 PM PST</span>
+            </div>
+            <div class="flightboard-venue">
+              <span class="category-pill pill-coral" style="margin-bottom:0.25rem;">POP CULTURE COSPLAY NIGHT</span>
+              <h4 class="fb-title">Seattle Waterfront Sound Stage</h4>
+              <span class="fb-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Seattle, WA &bull; 380 Player Capacity</span>
+              </span>
+            </div>
+            <div class="flightboard-prize">
+              <span class="fb-prize-val">$2,800</span>
+              <span class="fb-prize-label">Cash Pool</span>
+            </div>
+            <div class="flightboard-capacity">
+              <div class="fb-cap-bar">
+                <div class="fb-cap-fill" style="width: 75%;"></div>
+              </div>
+              <span class="fb-cap-text"><strong style="color:var(--brand-yellow);">75% Full</strong> &bull; 18 Tables Left</span>
+            </div>
+            <div class="flightboard-action">
+              <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">
+                <span>Book Table</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 4: Nashville -->
+          <div class="flightboard-row" data-tour-city="nashville">
+            <div class="flightboard-date">
+              <span class="fb-month">OCT</span>
+              <span class="fb-day">27</span>
+              <span class="fb-time">7:30 PM CST</span>
+            </div>
+            <div class="flightboard-venue">
+              <span class="category-pill pill-magenta" style="margin-bottom:0.25rem;">MUSIC MASHUP CHAMPIONSHIP</span>
+              <h4 class="fb-title">Nashville Broadway Sound Arena</h4>
+              <span class="fb-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Nashville, TN &bull; 500 Player Capacity</span>
+              </span>
+            </div>
+            <div class="flightboard-prize">
+              <span class="fb-prize-val">$5,000</span>
+              <span class="fb-prize-label">Grand Jackpot</span>
+            </div>
+            <div class="flightboard-capacity">
+              <div class="fb-cap-bar">
+                <div class="fb-cap-fill" style="width: 91%;"></div>
+              </div>
+              <span class="fb-cap-text"><strong style="color:var(--brand-coral);">91% Full</strong> &bull; 8 Tables Left</span>
+            </div>
+            <div class="flightboard-action">
+              <a href="schedule.html" class="btn btn-primary btn-sm glow-btn">
+                <span>Book Table</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: 5-ROUND STADIUM TOURNAMENT PIPELINE (CIRCUIT STEPPER)
+         ========================================================================= -->
+    <section class="section-py" id="tournament-rules" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-mint">
+            <span>Championship Rules</span>
+          </div>
+          <h2 class="section-title">The 5-Round Arena Tournament Structure</h2>
+          <p class="section-desc">
+            Engineered for high drama, strategic betting, and explosive buzzer races where any table can climb the podium in the final showdown.
+          </p>
+        </div>
+
+        <!-- Connected Horizontal Circuit Stepper Flow -->
+        <div class="tournament-circuit-track reveal-on-scroll">
+          
+          <div class="circuit-step-item">
+            <div class="circuit-step-node">
+              <span class="node-num">01</span>
+              <div class="node-pulse"></div>
+            </div>
+            <div class="circuit-step-content">
+              <div class="circuit-step-tag-wrap">
+                <span class="category-pill pill-cyan">WARMUP</span>
+              </div>
+              <h4 class="circuit-step-title">Speed Blitz</h4>
+              <p class="circuit-step-desc">10 rapid-fire pop culture headlines to calibrate buzzers.</p>
+              <div class="circuit-step-meta">
+                <span>5 Mins &bull; 10 Pts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="circuit-connector-line"></div>
+
+          <div class="circuit-step-item">
+            <div class="circuit-step-node node-fuchsia">
+              <span class="node-num">02</span>
+              <div class="node-pulse"></div>
+            </div>
+            <div class="circuit-step-content">
+              <div class="circuit-step-tag-wrap">
+                <span class="category-pill pill-magenta">AUDIO CLASH</span>
+              </div>
+              <h4 class="circuit-step-title">Audio Mashup</h4>
+              <p class="circuit-step-desc">Decipher reverse album tracks and TV theme stings.</p>
+              <div class="circuit-step-meta">
+                <span>12 Mins &bull; 25 Pts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="circuit-connector-line"></div>
+
+          <div class="circuit-step-item">
+            <div class="circuit-step-node node-coral">
+              <span class="node-num">03</span>
+              <div class="node-pulse"></div>
+            </div>
+            <div class="circuit-step-content">
+              <div class="circuit-step-tag-wrap">
+                <span class="category-pill pill-coral">HIGH STAKES</span>
+              </div>
+              <h4 class="circuit-step-title">Double Wager</h4>
+              <p class="circuit-step-desc">Wager banked points on science, cinema, and world lore.</p>
+              <div class="circuit-step-meta">
+                <span>15 Mins &bull; 50 Pts Max</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="circuit-connector-line"></div>
+
+          <div class="circuit-step-item">
+            <div class="circuit-step-node node-yellow">
+              <span class="node-num">04</span>
+              <div class="node-pulse"></div>
+            </div>
+            <div class="circuit-step-content">
+              <div class="circuit-step-tag-wrap">
+                <span class="category-pill pill-yellow">SPEED BUZZER</span>
+              </div>
+              <h4 class="circuit-step-title">Rapid Buzzer</h4>
+              <p class="circuit-step-desc">Head-to-head millisecond buzzing. Fastest tap locks in.</p>
+              <div class="circuit-step-meta">
+                <span>10 Mins &bull; 40 Pts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="circuit-connector-line"></div>
+
+          <div class="circuit-step-item">
+            <div class="circuit-step-node node-mint">
+              <span class="node-num">05</span>
+              <div class="node-pulse"></div>
+            </div>
+            <div class="circuit-step-content">
+              <div class="circuit-step-tag-wrap">
+                <span class="category-pill pill-mint">GRAND FINALE</span>
+              </div>
+              <h4 class="circuit-step-title">Arena Finale</h4>
+              <p class="circuit-step-desc">Top 3 tables go on stage big screens for the jackpot.</p>
+              <div class="circuit-step-meta">
+                <span>Podium &bull; All-In Pts</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: THEMED COSPLAY & POP CULTURE ARENA VAULT (SPLIT SHOWCASE)
+         ========================================================================= -->
+    <section class="section-py" id="cosplay-vault">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-coral">
+            <span>Specialty Theme Nights</span>
+          </div>
+          <h2 class="section-title">The Arena Pop Culture &amp; Cosplay Vault</h2>
+          <p class="section-desc">
+            Cosplay bonuses, themed craft cocktails, custom video clips, and specialty question packs crafted for die-hard fandoms.
+          </p>
+        </div>
+
+        <!-- Split Dynamic Theme Showcase -->
+        <div class="vault-split-showcase reveal-on-scroll">
+          
+          <!-- Left Column: Interactive Theme Selector Strip (5 Balanced Items) -->
+          <div class="vault-selector-list">
+            
+            <div class="vault-selector-item active" data-vault-target="marvel">
+              <div class="vault-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div class="vault-item-text">
+                <span class="vault-item-cat">COMIC CINEMATICS</span>
+                <h4 class="vault-item-name">Multiverse Heroes &amp; Villains</h4>
+                <p class="vault-item-brief">Infinity saga lore, secret cameos, and superhero audio challenges.</p>
+              </div>
+            </div>
+
+            <div class="vault-selector-item" data-vault-target="mtv">
+              <div class="vault-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><circle cx="8" cy="12" r="2"></circle><circle cx="16" cy="12" r="2"></circle></svg>
+              </div>
+              <div class="vault-item-text">
+                <span class="vault-item-cat">SING-ALONG NOSTALGIA</span>
+                <h4 class="vault-item-name">90s &amp; 2000s MTV Hits</h4>
+                <p class="vault-item-brief">Boy bands, grunge riffs, one-hit wonders, and retro cartoon audio.</p>
+              </div>
+            </div>
+
+            <div class="vault-selector-item" data-vault-target="anime">
+              <div class="vault-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
+              </div>
+              <div class="vault-item-text">
+                <span class="vault-item-cat">ANIME &amp; GAMING</span>
+                <h4 class="vault-item-name">Anime Masters &amp; Pixel Legends</h4>
+                <p class="vault-item-brief">Shonen powerups, video game easter eggs, and boss fight trivia.</p>
+              </div>
+            </div>
+
+            <div class="vault-selector-item" data-vault-target="scifi">
+              <div class="vault-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path></svg>
+              </div>
+              <div class="vault-item-text">
+                <span class="vault-item-cat">GALAXY LORE</span>
+                <h4 class="vault-item-name">Star Wars &amp; Sci-Fi Cantina</h4>
+                <p class="vault-item-brief">Galactic timelines, starship schematics, and extended universe deep cuts.</p>
+              </div>
+            </div>
+
+            <div class="vault-selector-item" data-vault-target="sitcoms">
+              <div class="vault-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+              </div>
+              <div class="vault-item-text">
+                <span class="vault-item-cat">BINGE &amp; COMEDY</span>
+                <h4 class="vault-item-name">Sitcom Royalty &amp; Cult Classics</h4>
+                <p class="vault-item-brief">The Office, Friends, Parks &amp; Rec, and 2000s comedy quote lightning.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Expansive Dynamic Showcase Display Stage -->
+          <div class="vault-stage-display">
+            <div class="vault-stage-header">
+              <span class="category-pill pill-magenta" id="vaultStageCat">FEATURED COSPLAY SHOWDOWN</span>
+              <span class="vault-bonus-badge">+$1,500 COSPLAY REWARD</span>
+            </div>
+            
+            <h3 class="vault-stage-title" id="vaultStageTitle">Multiverse Heroes: Marvel vs DC Championship</h3>
+            <p class="vault-stage-desc" id="vaultStageDesc">
+              Suit up in full costume for extra bonus points! Features 60 live stadium video clues, custom character voice acting stings, and comic book easter eggs spanning from 1962 to modern blockbuster hits.
+            </p>
+
+            <div class="vault-perks-row">
+              <div class="vault-perk-item">
+                <span class="perk-label">Cosplay Bonus:</span>
+                <strong class="perk-val">+50 Starting Points</strong>
+              </div>
+              <div class="vault-perk-item">
+                <span class="perk-label">Themed Drinks:</span>
+                <strong class="perk-val">Infinity Stone Craft Sours</strong>
+              </div>
+              <div class="vault-perk-item">
+                <span class="perk-label">Live Format:</span>
+                <strong class="perk-val">Stadium Clue Wall Sync</strong>
+              </div>
+            </div>
+
+            <!-- Sample Live Clue Teaser Box -->
+            <div class="vault-clue-teaser">
+              <span class="teaser-label">SAMPLE STADIUM CLUE:</span>
+              <p class="teaser-text">"Identify the fictional metal mined exclusively in Wakanda from this 4-second vibratory audio frequency spectrum."</p>
+            </div>
+
+            <div class="vault-stage-action">
+              <a href="schedule.html" class="btn btn-primary btn-lg glow-btn">
+                <span>View Fandom Tour Dates</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span style="font-size:0.825rem; color:var(--text-muted); font-weight:700;">Costumes strictly encouraged, not required</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: CHAMPIONSHIP LEAGUE 3D STADIUM PODIUM & LIVE STANDINGS
+         ========================================================================= -->
+    <section class="section-py" id="podium" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-yellow">
+            <span>National Playoffs</span>
+          </div>
+          <h2 class="section-title">Championship League Standings &amp; Podium</h2>
+          <p class="section-desc">
+            Teams accumulate season points across all Brainwave festival stops to earn invitations to the $50,000 National Finals in Las Vegas.
+          </p>
+        </div>
+
+        <!-- True 3D Stadium Elevation Podium -->
+        <div class="stadium-podium-stage reveal-on-scroll">
+          
+          <!-- 2nd Place Silver Pillar -->
+          <div class="podium-pillar pillar-silver">
+            <div class="pillar-team-card">
+              <div class="pillar-medal medal-silver">2</div>
+              <h4 class="pillar-team-name">The Quiztopher Walkens</h4>
+              <span class="pillar-team-city">Denver Coliseum</span>
+              <div class="pillar-team-score">14,820 <small>PTS</small></div>
+              <span class="pillar-team-badge">★ Finals Qualifier</span>
+            </div>
+            <div class="pillar-block block-silver">
+              <span class="pillar-block-num">2ND</span>
+            </div>
+          </div>
+
+          <!-- 1st Place Gold Pillar (Elevated Center) -->
+          <div class="podium-pillar pillar-gold">
+            <div class="pillar-team-card champion-card">
+              <div class="pillar-medal medal-gold">1</div>
+              <span class="category-pill pill-yellow" style="margin-bottom:0.35rem;">LEAGUE LEADER</span>
+              <h3 class="pillar-team-name gold-name">Brews &amp; Clues Alliance</h3>
+              <span class="pillar-team-city">Austin Festival Arena</span>
+              <div class="pillar-team-score gold-score">16,450 <small>PTS</small></div>
+              <span class="pillar-team-badge gold-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg> 2026 Champion Seed</span>
+            </div>
+            <div class="pillar-block block-gold">
+              <span class="pillar-block-num">1ST PLACE</span>
+            </div>
+          </div>
+
+          <!-- 3rd Place Bronze Pillar -->
+          <div class="podium-pillar pillar-bronze">
+            <div class="pillar-team-card">
+              <div class="pillar-medal medal-bronze">3</div>
+              <h4 class="pillar-team-name">Trivia Newton John</h4>
+              <span class="pillar-team-city">Seattle Sound Stage</span>
+              <div class="pillar-team-score">13,910 <small>PTS</small></div>
+              <span class="pillar-team-badge">★ Finals Qualifier</span>
+            </div>
+            <div class="pillar-block block-bronze">
+              <span class="pillar-block-num">3RD</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Full-Width Standings Matrix for Ranks 4-10 -->
+        <div class="standings-table-matrix reveal-on-scroll">
+          <div class="standings-matrix-header">
+            <h4>Live Seasonal Standings Matrix (Championship Bubble)</h4>
+            <span class="category-pill pill-mint">UPDATED LIVE AFTER EVERY TOUR STOP</span>
+          </div>
+
+          <div class="standings-rows-list">
+            
+            <div class="standings-row-item">
+              <div class="standings-rank">#4</div>
+              <div class="standings-team">
+                <strong>Tequila Mockingbird</strong>
+                <span>Nashville, TN &bull; 10 Tournaments Played</span>
+              </div>
+              <div class="standings-streak">
+                <span class="streak-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z"></path></svg> 3 Wins Streak</span>
+              </div>
+              <div class="standings-points">12,640 Pts</div>
+              <div class="standings-status"><span class="status-pill status-in">Playoff In</span></div>
+            </div>
+
+            <div class="standings-row-item">
+              <div class="standings-rank">#5</div>
+              <div class="standings-team">
+                <strong>Quizzy McQuizface</strong>
+                <span>Chicago, IL &bull; 9 Tournaments Played</span>
+              </div>
+              <div class="standings-streak">
+                <span class="streak-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> 2 Podium Finishes</span>
+              </div>
+              <div class="standings-points">11,980 Pts</div>
+              <div class="standings-status"><span class="status-pill status-in">Playoff In</span></div>
+            </div>
+
+            <div class="standings-row-item">
+              <div class="standings-rank">#6</div>
+              <div class="standings-team">
+                <strong>Smartinis on the Rocks</strong>
+                <span>Austin, TX &bull; 8 Tournaments Played</span>
+              </div>
+              <div class="standings-streak">
+                <span class="streak-pill">1 Win</span>
+              </div>
+              <div class="standings-points">10,850 Pts</div>
+              <div class="standings-status"><span class="status-pill status-bubble">Bubble Seed</span></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: CELEBRITY EMCEE SPOTLIGHT BANNER & ROSTER
+         ========================================================================= -->
+    <section class="section-py" id="emcees">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag tag-magenta">
+            <span>Stadium Personalities</span>
+          </div>
+          <h2 class="section-title">Charismatic Master Hosts &amp; Comedians</h2>
+          <p class="section-desc">
+            Our stadium shows are hosted by touring stand-up comedians, improv actors, and veteran quizmasters who turn trivia into electric comedy concert experiences.
+          </p>
+        </div>
+
+        <!-- Split Spotlight & Host Roster Layout -->
+        <div class="emcee-spotlight-layout reveal-on-scroll">
+          
+          <!-- Left Column: Headliner Emcee Feature Banner -->
+          <div class="emcee-headliner-banner">
+            <div class="headliner-badge">
+              <span class="pulse-dot"></span>
+              <span>HEADLINER MASTER HOST OF THE MONTH</span>
+            </div>
+            <h3 class="headliner-name">MC Dave Miller</h3>
+            <span class="headliner-title">Touring Stand-Up Comedian &bull; 600+ Stadium Shows</span>
+            
+            <blockquote class="headliner-quote">
+              "Live arena trivia isn't about sitting quietly at a desk — it's a 500-player comedy concert where your wits and rapid buzzers steal the spotlight."
+            </blockquote>
+
+            <div class="headliner-stats-strip">
+              <div>
+                <strong>4.99 / 5</strong>
+                <span>Crowd Rating</span>
+              </div>
+              <div>
+                <strong>8 Years</strong>
+                <span>Arena Tour Master</span>
+              </div>
+              <div>
+                <strong>Austin &amp; Dallas</strong>
+                <span>Home Circuit</span>
+              </div>
+            </div>
+
+            <a href="schedule.html" class="btn btn-primary btn-md glow-btn" style="margin-top:1.5rem;">
+              <span>See MC Dave's Tour Dates</span>
+            </a>
+          </div>
+
+          <!-- Right Column: Host Lineup Strips & Audition CTA -->
+          <div class="emcee-roster-column">
+            
+            <div class="emcee-strip-item">
+              <div class="emcee-strip-avatar" style="background:linear-gradient(135deg, var(--brand-accent), var(--brand-cyan));">SL</div>
+              <div class="emcee-strip-info">
+                <h4>Sarah "Static" Liu</h4>
+                <span class="emcee-circuit">Denver &amp; Salt Lake City Circuit</span>
+                <p>Improv comedy champion famous for rapid-fire audio mashups and buzzer tie-breakers.</p>
+              </div>
+              <span class="category-pill pill-mint">FAN FAVORITE</span>
+            </div>
+
+            <div class="emcee-strip-item">
+              <div class="emcee-strip-avatar" style="background:linear-gradient(135deg, #F59E0B, #FF2E93);">MK</div>
+              <div class="emcee-strip-info">
+                <h4>Marcus "The King" King</h4>
+                <span class="emcee-circuit">Nashville &amp; Chicago Circuit</span>
+                <p>Radio veteran specializing in pop culture showdowns and high-stakes jackpot finales.</p>
+              </div>
+              <span class="category-pill pill-coral">LEGEND</span>
+            </div>
+
+            <!-- Host Audition Callout -->
+            <div class="emcee-audition-callout">
+              <div>
+                <h5 class="emcee-audition-title">Are You a Charismatic Entertainer?</h5>
+                <p class="emcee-audition-desc">We are hiring touring emcees and stand-up hosts across 15+ new metro markets.</p>
+              </div>
+              <a href="about.html" class="btn btn-primary btn-sm">Audition Now</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 8: MEGA ARENA VIP PASS COMPARISON MATRIX & CTA
+         ========================================================================= -->
+    <section class="section-py" id="arena-cta" style="background-color: var(--bg-surface);">
+      <div class="container">
+        
+        <div class="arena-cta-master-box reveal-on-scroll">
+          
+          <div class="cta-master-header">
+            <span class="category-pill pill-magenta" style="margin-bottom:0.75rem;">GUARANTEE YOUR SQUAD TABLE</span>
+            <h2 style="font-size:2.4rem; font-weight:900; margin-bottom:0.75rem;">
+              Ready to Take the <span class="text-gradient-brand">Arena Stage</span>?
+            </h2>
+            <p style="font-size:1.05rem; color:var(--text-secondary); max-width:680px; margin:0 auto 2.5rem; line-height:1.6;">
+              Select your festival pass tier below to lock in your table, synchronized mobile buzzers, and exclusive craft beer pitcher package.
+            </p>
+          </div>
+
+          <!-- 3-Tier Arena Pass Comparison Matrix -->
+          <div class="arena-pass-matrix">
+            
+            <!-- Tier 1 -->
+            <div class="pass-matrix-card">
+              <div class="pass-tier-badge">STANDARD SQUAD</div>
+              <h4 class="pass-tier-name">Squad Pass (4 Players)</h4>
+              <div class="pass-tier-price">$45 <small>/ Table</small></div>
+              <p class="pass-tier-desc">Ideal for casual friend groups ready to test their trivia chops.</p>
+              <ul class="pass-perks-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Reserved 4-Person Table</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 4 Cloud Smartphone Buzzers</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Entry to $3,500 Cash Pool</li>
+              </ul>
+              <a href="schedule.html" class="btn btn-outline btn-md" style="width:100%; justify-content:center;">Book Squad Pass</a>
+            </div>
+
+            <!-- Tier 2 (VIP Booth) -->
+            <div class="pass-matrix-card">
+              <div class="pass-tier-badge">VIP ARENA BOOTH</div>
+              <h4 class="pass-tier-name">VIP Booth (6 Players)</h4>
+              <div class="pass-tier-price">$85 <small>/ Table</small></div>
+              <p class="pass-tier-desc">Premium center-stage sightlines with complimentary craft beer pitchers.</p>
+              <ul class="pass-perks-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Center-Stage Elevated Booth (6 Pax)</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 2 Craft Beer Pitchers Included</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 6 Smartphone Sync Buzzers</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Double Raffle Ticket Bonus</li>
+              </ul>
+              <a href="schedule.html" class="btn btn-outline btn-md" style="width:100%; justify-content:center;">Book VIP Booth</a>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="pass-matrix-card">
+              <div class="pass-tier-badge">CORPORATE MEGAPACK</div>
+              <h4 class="pass-tier-name">Arena Suite (10+ Players)</h4>
+              <div class="pass-tier-price">$160 <small>/ Suite</small></div>
+              <p class="pass-tier-desc">Full squad experience with dedicated server, appetizer platters, and merch.</p>
+              <ul class="pass-perks-list">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Private Arena Lounge Suite</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 4 Craft Pitchers + 3 Snack Platters</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 10+ Sync Buzzers + Swag Packs</li>
+              </ul>
+              <a href="events.html" class="btn btn-outline btn-md" style="width:100%; justify-content:center;">Reserve Arena Suite</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer (4-Column Balanced) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
+            <div class="brand-logo-badge">
+              <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)" stroke-width="1.8"/>
+                <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)"/>
+              </svg>
+            </div>
+            <div class="brand-logo-text">
+              <span class="brand-title">BRAIN<span class="brand-accent">WAVE</span></span>
+              <span class="brand-tagline">LIVE TRIVIA</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Electrifying weekly pub trivia, themed quiz nights, and corporate team battles across 50+ premier taprooms and venues nationwide.
+          </p>
+          <div class="footer-social-links">
+            <a href="javascript:void(0)" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="javascript:void(0)" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Live Experiences</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-link">Home 1 (Pub Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Festival Live)</a></li>
+            <li><a href="schedule.html" class="footer-link">Weekly Game Schedule</a></li>
+            <li><a href="venues.html" class="footer-link">Partner Venues &amp; Cities</a></li>
+            <li><a href="events.html" class="footer-link">Corporate Team Battles</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Host & Community -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Host &amp; Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="host.html" class="footer-link">Partner As A Taproom Venue</a></li>
+            <li><a href="about.html" class="footer-link">Our Emcees &amp; Writers</a></li>
+            <li><a href="about.html#charity" class="footer-link">Fundraising Trivia Nights</a></li>
+            <li><a href="contact.html" class="footer-link">Support &amp; FAQ</a></li>
+            <li><a href="contact.html#careers" class="footer-link">Audition As A Quiz Host</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Live Alerts -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Never Miss A Game</h4>
+          <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.5; margin-bottom:1rem;">
+            Get weekly hints, thematic round announcements, and progressive jackpot alerts in your city.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Brainwave Trivia hints!');">
+            <input type="email" placeholder="Your team email..." class="footer-input" required aria-label="Team Email Address">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+          <span style="font-size:0.75rem; color:var(--text-muted); margin-top:0.6rem; display:block;">
+            Zero spam. Unsubscribe anytime with 1-click.
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; 2026 <strong>Brainwave Trivia, Inc.</strong> All rights reserved. Built for social pub entertainment.
+        </div>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+          <a href="javascript:void(0)">Responsible Gaming</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Master JavaScript File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Interactive Live Buzzer Click Event Script for Home 2 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buzzerBtn = document.getElementById('liveBuzzerBtn');
+      const feedback = document.getElementById('buzzerFeedback');
+      
+      if (buzzerBtn && feedback) {
+        buzzerBtn.addEventListener('click', () => {
+          buzzerBtn.classList.add('buzzer-pressed');
+          
+          // Generate realistic random reaction speed
+          const randomLatency = (0.28 + Math.random() * 0.18).toFixed(2);
+          
+          feedback.innerHTML = `<span class="buzzer-latency-chip" style="background:rgba(6,214,160,0.25); color:#06D6A0; border-color:#06D6A0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>LOCKED IN! Latency: <strong>${randomLatency}s</strong> &bull; +50 Pts</span>
+          </span>`;
+          
+          // Audio chime trigger using Web Audio API
+          try {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
+            osc.frequency.exponentialRampToValueAtTime(880.00, ctx.currentTime + 0.15); // A5
+            gain.gain.setValueAtTime(0.25, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.3);
+          } catch(e) {}
+
+          setTimeout(() => {
+            buzzerBtn.classList.remove('buzzer-pressed');
+          }, 350);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
