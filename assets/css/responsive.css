@@ -208,6 +208,28 @@ button {
     padding: 1.75rem 1.25rem;
   }
 
+  .venue-cards-grid {
+    gap: 1.25rem !important;
+  }
+
+  .venue-card-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .venue-card-footer {
+    gap: 0.65rem !important;
+  }
+
+  .venue-prize-callout strong {
+    font-size: 0.82rem !important;
+  }
+
+  .venue-card-footer .btn {
+    padding: 0.35rem 0.65rem !important;
+    font-size: 0.75rem !important;
+    flex-shrink: 0 !important;
+  }
+
   .footer-grid {
     gap: 2rem;
   }
@@ -341,6 +363,29 @@ button {
     display: inline-flex !important;
     align-items: center !important;
     line-height: 1.2 !important;
+  }
+
+  /* Venue Cards at 1024px (iPad Pro) */
+  .venue-cards-grid {
+    gap: 1.15rem !important;
+  }
+
+  .venue-card-body {
+    padding: 1.2rem 0.9rem !important;
+  }
+
+  .venue-card-footer {
+    gap: 0.6rem !important;
+  }
+
+  .venue-prize-callout strong {
+    font-size: 0.8rem !important;
+  }
+
+  .venue-card-footer .btn {
+    padding: 0.35rem 0.65rem !important;
+    font-size: 0.74rem !important;
+    flex-shrink: 0 !important;
   }
 }
 
