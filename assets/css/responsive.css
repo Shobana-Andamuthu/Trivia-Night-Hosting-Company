@@ -151,7 +151,7 @@ button {
   }
 
   .emcee-card {
-    padding: 1.5rem 0.9rem;
+    padding: 1.5rem 0.85rem;
     min-height: unset;
   }
 
@@ -171,17 +171,20 @@ button {
   }
 
   .emcee-specialties {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.35rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
     margin-top: auto !important;
+    min-height: 52px !important;
+    align-content: flex-start !important;
   }
 
   .emcee-specialties span {
     font-size: 0.65rem !important;
-    text-align: center !important;
-    justify-content: center !important;
-    white-space: normal !important;
+    padding: 0.18rem 0.38rem !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
     line-height: 1.2 !important;
   }
 
@@ -241,6 +244,49 @@ button {
 
   .spotlight-card-media {
     height: 320px !important;
+  }
+
+  /* Section 5: Emcee Roster Grid at 1024px (iPad Pro) */
+  .emcee-roster-grid {
+    gap: 1.15rem;
+  }
+
+  .emcee-card {
+    padding: 1.4rem 0.75rem;
+    min-height: unset;
+  }
+
+  .emcee-name {
+    font-size: 1rem !important;
+    min-height: 3.2rem !important;
+  }
+
+  .emcee-role {
+    min-height: 2.8rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .emcee-bio {
+    min-height: 6rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .emcee-specialties {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.28rem !important;
+    margin-top: auto !important;
+    min-height: 48px !important;
+    align-content: flex-start !important;
+  }
+
+  .emcee-specialties span {
+    font-size: 0.63rem !important;
+    padding: 0.16rem 0.36rem !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: 1.2 !important;
   }
 }
 
@@ -795,10 +841,19 @@ button {
   }
 
   .emcee-specialties {
-    display: grid !important;
-    grid-template-columns: repeat(2, auto) !important;
-    justify-content: flex-start !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
     gap: 0.35rem !important;
+    margin-top: auto !important;
+    align-content: flex-start !important;
+  }
+
+  .emcee-specialties span {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.45rem !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   .charity-grid {
