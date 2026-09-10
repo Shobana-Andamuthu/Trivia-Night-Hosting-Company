@@ -2166,7 +2166,7 @@ p {
   font-weight: 800;
   margin-bottom: 0.75rem;
   color: #FFFFFF;
-  min-height: 2.2rem;
+  min-height: 3.5rem;
   display: flex;
   align-items: flex-start;
   line-height: 1.25;
@@ -2178,6 +2178,7 @@ p {
   line-height: 1.6;
   margin-bottom: 0;
   flex: 1 1 auto;
+  min-height: 5.5rem;
 }
 
 .bento-round-footer {
@@ -5924,7 +5925,6 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.45rem;
-  margin-top: auto;
   margin-bottom: 1.25rem;
   width: 100%;
 }
@@ -5956,7 +5956,7 @@ p {
 .venue-card-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding-top: 1rem;
   border-top: 1px solid rgba(217, 70, 239, 0.2);
   margin-top: auto;
@@ -5966,6 +5966,7 @@ p {
 .venue-prize-callout {
   display: flex;
   flex-direction: column;
+  min-height: 2.8rem;
 }
 
 .prize-tag {
@@ -5978,6 +5979,7 @@ p {
 .venue-prize-callout strong {
   font-size: 0.95rem;
   color: #06D6A0;
+  white-space: nowrap;
 }
 
 /* AV Specs Bento Grid (Section 3) */

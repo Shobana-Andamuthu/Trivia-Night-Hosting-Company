@@ -129,10 +129,60 @@ button {
   .bento-kit-card,
   .studio-card {
     padding: 1.75rem 1.25rem;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .bento-round-body {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .bento-round-desc {
+    flex: 1 1 auto !important;
+    min-height: 5.5rem !important;
+  }
+
+  .bento-round-footer {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
   }
 
   .emcee-card {
-    padding: 1.75rem 1rem;
+    padding: 1.5rem 0.9rem;
+    min-height: unset;
+  }
+
+  .emcee-name {
+    font-size: 1.05rem !important;
+    min-height: 3.2rem !important;
+  }
+
+  .emcee-role {
+    min-height: 2.8rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  .emcee-bio {
+    min-height: 6rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .emcee-specialties {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.35rem !important;
+    margin-top: auto !important;
+  }
+
+  .emcee-specialties span {
+    font-size: 0.65rem !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
   }
 
   .contact-channels-grid {
@@ -730,6 +780,25 @@ button {
   .emcee-roster-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+
+  .emcee-name {
+    min-height: 3.2rem;
+  }
+
+  .emcee-role {
+    min-height: 2.5rem;
+  }
+
+  .emcee-bio {
+    min-height: 5rem;
+  }
+
+  .emcee-specialties {
+    display: grid !important;
+    grid-template-columns: repeat(2, auto) !important;
+    justify-content: flex-start !important;
+    gap: 0.35rem !important;
   }
 
   .charity-grid {
