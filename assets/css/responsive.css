@@ -118,6 +118,13 @@ button {
     border-radius: var(--radius-full);
   }
 
+  #navLoginBtn {
+    height: 36px;
+    min-height: 36px;
+    padding: 0 0.95rem;
+    font-size: 0.8125rem;
+  }
+
   .bento-experience-grid,
   .turnkey-bento-grid,
   .emcee-roster-grid,
@@ -1134,6 +1141,13 @@ button {
     border-radius: var(--radius-full);
   }
 
+  #navLoginBtn {
+    height: 36px;
+    min-height: 36px;
+    padding: 0 0.95rem;
+    font-size: 0.8125rem;
+  }
+
   /* Hero Showcase Stage (Home 1) */
   .hero-showcase-stage {
     height: auto;
@@ -2051,6 +2065,13 @@ button {
     min-height: 34px;
   }
 
+  #navLoginBtn {
+    height: 34px;
+    min-height: 34px;
+    padding: 0 0.85rem;
+    font-size: 0.775rem;
+  }
+
   .mobile-nav-toggle {
     width: 34px;
     height: 34px;
@@ -2415,6 +2436,186 @@ button {
   .theme-flip-grid .theme-flip-card-wrap:last-child {
     grid-column: auto !important;
     max-width: 100% !important;
+  }
+
+  /* Universal Form & Dropdown Mobile Responsiveness */
+  .form-row-2,
+  .form-grid-2,
+  .quote-form-grid,
+  .host-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.15rem !important;
+    width: 100% !important;
+  }
+
+  .form-field {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea,
+  .form-control,
+  .form-select,
+  select,
+  input[type="date"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px !important; /* Prevents auto-zoom on mobile browsers */
+    box-sizing: border-box !important;
+    min-height: 48px !important;
+  }
+
+  .form-field textarea {
+    min-height: 110px !important;
+  }
+
+  .form-field select,
+  select {
+    background-repeat: no-repeat !important;
+    padding-right: 2.75rem !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .contact-main-grid,
+  .quote-builder-grid,
+  .calc-interactive-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    width: 100% !important;
+  }
+
+  .form-row-2,
+  .quote-form-grid,
+  .host-form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-pane,
+  .contact-info-pane,
+  .quote-builder-box,
+  .host-form-card,
+  .auth-card-main,
+  .search-filter-card {
+    padding: 1.5rem 1.15rem !important;
+    border-radius: var(--radius-lg, 16px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-field select,
+  select {
+    font-size: 0.9375rem !important;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea,
+  .form-control,
+  .form-select,
+  input[type="date"],
+  .btn {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-form-pane,
+  .contact-info-pane,
+  .quote-builder-box,
+  .host-form-card,
+  .auth-card-main {
+    padding: 1.25rem 0.85rem !important;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea,
+  .custom-select-trigger,
+  input[type="date"] {
+    padding-left: 0.85rem !important;
+    padding-right: 2.4rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .custom-select-option {
+    padding: 8px 10px !important;
+    font-size: 0.875rem !important;
+  }
+
+  .btn-lg,
+  .glow-btn {
+    padding: 0.85rem 1rem !important;
+    font-size: 0.9rem !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-form-pane,
+  .contact-info-pane,
+  .quote-builder-box,
+  .host-form-card,
+  .auth-card-main {
+    padding: 1rem 0.65rem !important;
+  }
+
+  .form-field label {
+    font-size: 0.8rem !important;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea,
+  .custom-select-trigger,
+  input[type="date"] {
+    padding: 0.65rem 0.65rem !important;
+    padding-right: 2.2rem !important;
+    font-size: 0.8125rem !important;
+    min-height: 44px !important;
+  }
+
+  .custom-select-option {
+    padding: 7px 8px !important;
+    font-size: 0.8125rem !important;
+  }
+}
+
+@media (max-width: 200px) {
+  .container,
+  .contact-form-pane,
+  .contact-info-pane,
+  .quote-builder-box,
+  .host-form-card,
+  .auth-card-main {
+    padding: 0.65rem 0.35rem !important;
+    border-radius: 8px !important;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea,
+  .custom-select-trigger,
+  input[type="date"] {
+    padding: 0.5rem !important;
+    font-size: 0.75rem !important;
+    min-height: 40px !important;
+  }
+
+  .custom-select-option {
+    padding: 5px 6px !important;
+    font-size: 0.75rem !important;
   }
 }
 

@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLeaderboardInteractions();
   initScrollReveal();
   initRadarCountdown();
+  initCustomSelectDropdowns();
 });
 
 /* --------------------------------------------------------------------------
@@ -1751,6 +1752,145 @@ function initLeaderboardInteractions() {
     }
   });
 }
+
+/* --------------------------------------------------------------------------
+   Custom Select Dropdown Engine (100% Boundary-Contained & Responsive)
+   -------------------------------------------------------------------------- */
+function initCustomSelectDropdowns() {
+  const selects = document.querySelectorAll('select:not(.no-custom-select)');
+  if (!selects.length) return;
+
+  selects.forEach(select => {
+    if (select.parentElement && select.parentElement.classList.contains('custom-select-wrapper')) {
+      return;
+    }
+
+    select.classList.add('has-custom-select');
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'custom-select-wrapper';
+    
+    select.parentNode.insertBefore(wrapper, select);
+    wrapper.appendChild(select);
+
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'custom-select-trigger';
+    trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('aria-expanded', 'false');
+
+    const selectedOption = select.options[select.selectedIndex] || select.options[0];
+    const labelText = selectedOption ? selectedOption.textContent : 'Select option';
+
+    const labelSpan = document.createElement('span');
+    labelSpan.className = 'custom-select-label';
+    labelSpan.textContent = labelText;
+
+    const arrowSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    arrowSvg.setAttribute('class', 'custom-select-arrow');
+    arrowSvg.setAttribute('viewBox', '0 0 24 24');
+    arrowSvg.setAttribute('fill', 'none');
+    arrowSvg.setAttribute('stroke', 'currentColor');
+    arrowSvg.setAttribute('stroke-width', '2.5');
+    arrowSvg.setAttribute('stroke-linecap', 'round');
+    arrowSvg.setAttribute('stroke-linejoin', 'round');
+    const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+    polyline.setAttribute('points', '6 9 12 15 18 9');
+    arrowSvg.appendChild(polyline);
+
+    trigger.appendChild(labelSpan);
+    trigger.appendChild(arrowSvg);
+    wrapper.appendChild(trigger);
+
+    const menu = document.createElement('div');
+    menu.className = 'custom-select-menu';
+    menu.setAttribute('role', 'listbox');
+
+    Array.from(select.options).forEach((opt, idx) => {
+      const optionEl = document.createElement('div');
+      optionEl.className = 'custom-select-option';
+      if (idx === select.selectedIndex) {
+        optionEl.classList.add('selected');
+      }
+      optionEl.setAttribute('role', 'option');
+      optionEl.setAttribute('data-value', opt.value);
+      optionEl.textContent = opt.textContent;
+
+      optionEl.addEventListener('click', (e) => {
+        e.stopPropagation();
+        select.value = opt.value;
+        select.selectedIndex = idx;
+        labelSpan.textContent = opt.textContent;
+
+        menu.querySelectorAll('.custom-select-option').forEach(o => o.classList.remove('selected'));
+        optionEl.classList.add('selected');
+
+        wrapper.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+        select.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+
+      menu.appendChild(optionEl);
+    });
+
+    wrapper.appendChild(menu);
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = wrapper.classList.contains('open');
+
+      document.querySelectorAll('.custom-select-wrapper.open').forEach(w => {
+        if (w !== wrapper) {
+          w.classList.remove('open');
+          const t = w.querySelector('.custom-select-trigger');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (isOpen) {
+        wrapper.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      } else {
+        wrapper.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    select.addEventListener('change', () => {
+      const currentOpt = select.options[select.selectedIndex];
+      if (currentOpt) {
+        labelSpan.textContent = currentOpt.textContent;
+        menu.querySelectorAll('.custom-select-option').forEach((o, i) => {
+          if (i === select.selectedIndex) o.classList.add('selected');
+          else o.classList.remove('selected');
+        });
+      }
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.custom-select-wrapper')) {
+      document.querySelectorAll('.custom-select-wrapper.open').forEach(w => {
+        w.classList.remove('open');
+        const t = w.querySelector('.custom-select-trigger');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.custom-select-wrapper.open').forEach(w => {
+        w.classList.remove('open');
+        const t = w.querySelector('.custom-select-trigger');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+}
+
 
 
 

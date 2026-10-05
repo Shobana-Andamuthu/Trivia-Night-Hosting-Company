@@ -772,13 +772,42 @@ p {
 }
 
 #navLoginBtn {
-  padding: 0.48rem 1.15rem;
+  height: 38px;
+  min-height: 38px;
+  padding: 0 1.15rem;
   font-size: 0.875rem;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.45rem;
   border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+  border: 1px solid rgba(217, 70, 239, 0.5);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(217, 70, 239, 0.35);
   box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+#navLoginBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 70, 239, 0.55);
+  color: #FFFFFF;
+}
+
+#navLoginBtn span {
+  display: inline-block;
+  line-height: 1;
+}
+
+#navLoginBtn svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
 }
 
 /* Hamburger Trigger - Hidden on desktop, identical circular button on mobile */
@@ -1108,21 +1137,79 @@ p {
 }
 
 .form-control,
-.form-select {
+.form-select,
+select {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 0.85rem 1.15rem;
-  font-size: 0.95rem;
-  background-color: var(--bg-input);
-  border: 1.5px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.4;
+  background-color: var(--bg-input, #160829);
+  border: 1.5px solid var(--border-subtle, rgba(217, 70, 239, 0.3));
+  border-radius: var(--radius-md, 10px);
+  color: var(--text-primary, #FFFFFF);
   transition: all var(--transition-fast);
 }
 
+select,
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D946EF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.15rem center;
+  background-size: 16px 16px;
+  padding-right: 2.85rem !important;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+[dir="rtl"] select,
+[dir="rtl"] .form-select {
+  background-position: left 1.15rem center;
+  padding-right: 1.15rem !important;
+  padding-left: 2.85rem !important;
+}
+
+select option,
+.form-select option {
+  background-color: #160829 !important;
+  color: #FFFFFF !important;
+  padding: 12px 16px !important;
+  font-size: 0.95rem;
+}
+
+[data-theme="light"] select,
+[data-theme="light"] .form-select {
+  background-color: #FFFFFF;
+  color: #1A0B2E;
+  border-color: rgba(217, 70, 239, 0.35);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239333EA' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat !important;
+  background-position: right 1.15rem center !important;
+  background-size: 16px 16px !important;
+}
+
+[data-theme="light"][dir="rtl"] select,
+[data-theme="light"][dir="rtl"] .form-select {
+  background-position: left 1.15rem center !important;
+}
+
+[data-theme="light"] select option,
+[data-theme="light"] .form-select option {
+  background-color: #FFFFFF !important;
+  color: #1A0B2E !important;
+}
+
 .form-control:focus,
-.form-select:focus {
-  border-color: var(--brand-primary);
-  box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.25);
+.form-select:focus,
+select:focus {
+  border-color: var(--brand-primary, #D946EF);
+  box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.25), 0 0 15px rgba(217, 70, 239, 0.35);
 }
 
 .form-control::placeholder {
@@ -1142,6 +1229,199 @@ p {
 .form-group.has-error .form-feedback {
   display: block;
   color: var(--brand-coral);
+}
+
+/* --------------------------------------------------------------------------
+   Custom Select Dropdown Component (Flawless Responsive Boundary Containment)
+   -------------------------------------------------------------------------- */
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.custom-select-wrapper select.has-custom-select {
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 0.85rem 1.15rem;
+  background: rgba(30, 10, 58, 0.85);
+  border: 1.5px solid rgba(217, 70, 239, 0.35);
+  border-radius: var(--radius-md, 10px);
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.4;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  outline: none;
+}
+
+.custom-select-trigger:focus,
+.custom-select-wrapper.open .custom-select-trigger {
+  border-color: var(--brand-primary, #D946EF);
+  box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.25), 0 0 15px rgba(217, 70, 239, 0.35);
+  background: rgba(38, 14, 74, 0.95);
+}
+
+.custom-select-label {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  text-align: left;
+}
+
+[dir="rtl"] .custom-select-label {
+  text-align: right;
+}
+
+.custom-select-arrow {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  stroke: var(--brand-primary, #D946EF);
+  margin-left: 0.75rem;
+  transition: transform var(--transition-fast);
+}
+
+[dir="rtl"] .custom-select-arrow {
+  margin-left: 0;
+  margin-right: 0.75rem;
+}
+
+.custom-select-wrapper.open .custom-select-arrow {
+  transform: rotate(180deg);
+}
+
+.custom-select-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  max-height: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #160829;
+  border: 1.5px solid rgba(217, 70, 239, 0.4);
+  border-radius: var(--radius-md, 10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 20px rgba(217, 70, 239, 0.25);
+  z-index: 1050;
+  display: none;
+  padding: 6px;
+  box-sizing: border-box;
+  backdrop-filter: blur(14px);
+}
+
+.custom-select-wrapper.open .custom-select-menu {
+  display: block;
+  animation: selectMenuFade 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes selectMenuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-select-option {
+  padding: 10px 12px;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  color: #E2E8F0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  word-break: break-word;
+  white-space: normal;
+  text-align: left;
+}
+
+[dir="rtl"] .custom-select-option {
+  text-align: right;
+}
+
+.custom-select-option:hover,
+.custom-select-option.selected {
+  background: rgba(217, 70, 239, 0.22);
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.custom-select-option.selected {
+  border-left: 3px solid var(--brand-primary, #D946EF);
+}
+
+[dir="rtl"] .custom-select-option.selected {
+  border-left: none;
+  border-right: 3px solid var(--brand-primary, #D946EF);
+}
+
+/* Light Theme for Custom Select */
+[data-theme="light"] .custom-select-trigger {
+  background: #FAF7FD !important;
+  border-color: rgba(217, 70, 239, 0.35) !important;
+  color: #1A0B2E !important;
+}
+
+[data-theme="light"] .custom-select-trigger:focus,
+[data-theme="light"] .custom-select-wrapper.open .custom-select-trigger {
+  background: #FFFFFF !important;
+  border-color: var(--brand-primary, #D946EF) !important;
+  color: #1A0B2E !important;
+  box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.25), 0 0 15px rgba(217, 70, 239, 0.25) !important;
+}
+
+[data-theme="light"] .custom-select-label {
+  color: #1A0B2E !important;
+}
+
+[data-theme="light"] .custom-select-arrow {
+  stroke: #9333EA !important;
+}
+
+[data-theme="light"] .custom-select-menu {
+  background: #FFFFFF !important;
+  border-color: rgba(217, 70, 239, 0.35) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 0 15px rgba(217, 70, 239, 0.2) !important;
+}
+
+[data-theme="light"] .custom-select-option {
+  color: #1A0B2E !important;
+}
+
+[data-theme="light"] .custom-select-option:hover,
+[data-theme="light"] .custom-select-option.selected {
+  background: #F5E8FF !important;
+  color: #7928CA !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -6860,19 +7140,36 @@ p {
 
 .form-select-custom {
   width: 100%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1.5px solid rgba(217, 70, 239, 0.3);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: rgba(30, 10, 58, 0.85);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D946EF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.15rem center;
+  background-size: 16px 16px;
+  border: 1.5px solid rgba(217, 70, 239, 0.35);
   border-radius: var(--radius-md);
-  padding: 0.85rem 1.25rem;
+  padding: 0.85rem 2.85rem 0.85rem 1.25rem;
   color: #FFFFFF;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.4;
   outline: none;
   cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+[dir="rtl"] .form-select-custom {
+  background-position: left 1.15rem center;
+  padding: 0.85rem 1.25rem 0.85rem 2.85rem;
 }
 
 .form-select-custom option {
-  background: #1A0B2E;
-  color: #FFFFFF;
+  background-color: #160829 !important;
+  color: #FFFFFF !important;
+  padding: 12px 14px !important;
 }
 
 .calc-perks-checklist {
@@ -7746,57 +8043,141 @@ p {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1.5px solid rgba(217, 70, 239, 0.3);
+  background: rgba(30, 10, 58, 0.85);
+  border: 1.5px solid rgba(217, 70, 239, 0.35);
   border-radius: var(--radius-md);
   padding: 0.85rem 1.25rem;
   color: #FFFFFF;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.4;
   outline: none;
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D946EF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.15rem center;
+  background-size: 16px 16px;
+  padding-right: 2.85rem !important;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+[dir="rtl"] .form-field select {
+  background-position: left 1.15rem center;
+  padding-right: 1.25rem !important;
+  padding-left: 2.85rem !important;
 }
 
 .form-field input:focus,
 .form-field select:focus {
   border-color: var(--brand-primary);
-  box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
+  box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.25), 0 0 15px rgba(217, 70, 239, 0.35);
+  background: rgba(38, 14, 74, 0.95);
 }
 
 .form-field select option {
-  background: #1A0B2E;
-  color: #FFFFFF;
+  background-color: #160829 !important;
+  color: #FFFFFF !important;
+  padding: 12px 14px !important;
+  font-size: 0.95rem;
 }
 
 .form-field input[type="date"],
-input[type="date"] {
-  color-scheme: dark;
-  color: #FFFFFF;
+input[type="date"],
+.form-control[type="date"] {
+  color-scheme: dark !important;
+  color: #FFFFFF !important;
+  background-color: rgba(30, 10, 58, 0.85);
+  border: 1.5px solid rgba(217, 70, 239, 0.35);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.15rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  min-height: 48px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.form-field input[type="date"]:focus,
+input[type="date"]:focus,
+.form-control[type="date"]:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.25), 0 0 15px rgba(217, 70, 239, 0.35);
+  background: rgba(38, 14, 74, 0.95);
 }
 
 .form-field input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type="date"]::-webkit-calendar-picker-indicator,
+.form-control[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
-  filter: brightness(0) invert(1) !important;
+  filter: invert(1) brightness(2.5) contrast(1.2) drop-shadow(0 0 4px rgba(255, 255, 255, 0.9)) !important;
   opacity: 1 !important;
-  transition: transform var(--transition-fast), filter var(--transition-fast);
+  padding: 4px 6px;
+  margin-inline-start: 0.5rem;
+  border-radius: 4px;
+  transition: transform var(--transition-fast), filter var(--transition-fast), opacity var(--transition-fast);
 }
 
 .form-field input[type="date"]::-webkit-calendar-picker-indicator:hover,
-input[type="date"]::-webkit-calendar-picker-indicator:hover {
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+.form-control[type="date"]::-webkit-calendar-picker-indicator:hover {
   transform: scale(1.15);
-  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(217, 70, 239, 0.9)) !important;
+  opacity: 1 !important;
+  filter: invert(1) brightness(3) drop-shadow(0 0 8px rgba(217, 70, 239, 1)) !important;
+}
+
+[data-theme="light"] .form-field select {
+  background-color: #FFFFFF !important;
+  color: #1A0B2E !important;
+  border-color: rgba(217, 70, 239, 0.35) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239333EA' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 1.15rem center !important;
+  background-size: 16px 16px !important;
+}
+
+[data-theme="light"][dir="rtl"] .form-field select {
+  background-position: left 1.15rem center !important;
+}
+
+[data-theme="light"] .form-field select option {
+  background-color: #FFFFFF !important;
+  color: #1A0B2E !important;
 }
 
 [data-theme="light"] .form-field input[type="date"],
-[data-theme="light"] input[type="date"] {
-  color-scheme: light;
-  color: #1A0B2E;
+[data-theme="light"] input[type="date"],
+[data-theme="light"] .form-control[type="date"] {
+  color-scheme: light !important;
+  color: #1A0B2E !important;
+  background-color: #FAF7FD !important;
+  border-color: rgba(217, 70, 239, 0.28) !important;
 }
 
 [data-theme="light"] .form-field input[type="date"]::-webkit-calendar-picker-indicator,
-[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: brightness(0) !important;
-  opacity: 0.75 !important;
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="light"] .form-control[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(15%) sepia(40%) saturate(3000%) hue-rotate(250deg) brightness(85%) contrast(95%) !important;
+  opacity: 0.9 !important;
+}
+
+[data-theme="light"] .form-field input[type="date"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="light"] .form-control[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1 !important;
+  transform: scale(1.15);
+  filter: invert(25%) sepia(85%) saturate(4000%) hue-rotate(275deg) brightness(85%) contrast(105%) drop-shadow(0 0 5px rgba(217, 70, 239, 0.6)) !important;
 }
 
 .quote-estimate-summary {
@@ -7941,16 +8322,15 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   color: #1A0B2E;
 }
 
-[data-theme="light"] .form-field input,
-[data-theme="light"] .form-field select {
+[data-theme="light"] .form-field input {
   background: #FAF7FD;
   border-color: rgba(217, 70, 239, 0.25);
   color: #1A0B2E;
 }
 
 [data-theme="light"] .form-field select option {
-  background: #FFFFFF;
-  color: #1A0B2E;
+  background-color: #FFFFFF !important;
+  color: #1A0B2E !important;
 }
 
 [data-theme="light"] .quote-estimate-summary {
@@ -12506,25 +12886,44 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   padding: 0 1.25rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #FFFFFF;
   transition: all 0.25s ease;
   outline: none;
 }
 
 .auth-select-field {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: rgba(30, 10, 58, 0.9);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D946EF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.15rem center;
+  background-size: 16px 16px;
+  padding-right: 2.85rem !important;
   cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+[dir="rtl"] .auth-select-field {
+  background-position: left 1.15rem center;
+  padding-right: 1.25rem !important;
+  padding-left: 2.85rem !important;
 }
 
 .auth-select-field option {
-  background: #130924;
-  color: #FFFFFF;
+  background-color: #130924 !important;
+  color: #FFFFFF !important;
+  padding: 12px 14px !important;
 }
 
 .auth-input-wrapper input:focus,
 .auth-select-field:focus {
   border-color: var(--brand-primary);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(38, 14, 74, 0.95);
   box-shadow: 0 0 14px rgba(217, 70, 239, 0.4);
 }
 
