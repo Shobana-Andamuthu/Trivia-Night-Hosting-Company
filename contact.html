@@ -257,70 +257,102 @@
   <main id="mainContent">
 
     <!-- =========================================================================
-         SECTION 1: HERO WITH 4 DIRECT CONTACT CHANNELS
+         SECTION 1: HERO CONTACT PAGE BANNER
          ========================================================================= -->
-    <section class="contact-hero-section" id="contactHero">
+    <section class="page-hero-banner contact-hero-banner" id="contactHero">
       <div class="hero-ambient-orb contact-orb-1" aria-hidden="true"></div>
       <div class="hero-ambient-orb contact-orb-2" aria-hidden="true"></div>
 
       <div class="container">
-        <div class="contact-hero-content reveal-on-scroll">
-          
-          <div class="section-tag tag-cyan" style="margin: 0 auto 1.25rem;">
+        <div class="page-hero-content reveal-on-scroll">
+          <div class="section-tag tag-cyan">
             <span class="pulse-dot"></span>
-            <span>Direct Support &amp; Regional Directory &bull; Fast Response Guaranteed</span>
+            <span>Direct Support &bull; Fast 2-Hour Response Time Guaranteed</span>
           </div>
 
-          <h1 class="contact-hero-title">
-            Let's Connect. We Are Here For <span class="text-gradient-brand">Players, Venues &amp; Companies</span>.
+          <h1 class="page-hero-title">
+            Let's Connect with Our <span class="text-gradient-brand">Live Trivia Team</span>.
           </h1>
 
-          <p class="contact-hero-subtitle">
-            Whether you have a question about weekly table reservations, want to host Brainwave in your taproom, need a custom corporate all-hands quote, or want to audition as an emcee—our team is ready.
+          <p class="page-hero-subtitle">
+            Whether you have questions about table bookings, hosting Brainwave in your taproom, private corporate quotes, or emcee auditions—our squad is ready.
           </p>
 
-          <!-- 4 Direct Department Cards Grid -->
-          <div class="contact-channels-grid">
-            
-            <a href="#contactFormSection" class="channel-card" data-channel="support">
-              <div class="channel-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-              </div>
+          <div class="hero-actions page-hero-actions">
+            <a href="#contactFormSection" class="btn btn-primary btn-lg glow-btn">
+              <span>Send Us A Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contactChannelsSection" class="btn btn-outline btn-lg">
+              <span>Department Channels</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: 4 DIRECT DEPARTMENT CHANNELS
+         ========================================================================= -->
+    <section class="section-py" id="contactChannelsSection" style="padding-bottom: 2rem;">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll" style="text-align: center; margin-bottom: 2.5rem;">
+          <div class="section-tag tag-magenta">
+            <span>Direct Department Routing</span>
+          </div>
+          <h2 class="section-title">Reach The Right Desk Directly</h2>
+          <p class="section-desc">Click any channel below or use our master contact form to get instant assistance from our regional teams.</p>
+        </div>
+
+        <div class="contact-channels-grid reveal-on-scroll">
+          
+          <a href="#contactFormSection" class="channel-card" data-channel="support">
+            <div class="channel-media">
+              <img src="assets/images/contact/channel-player-support.png" alt="Player &amp; Table Support" width="600" height="340" loading="lazy">
+            </div>
+            <div class="channel-body">
               <h4>Player &amp; Table Support</h4>
               <p>Scores, league rankings, table reservations &amp; feedback.</p>
               <span class="channel-link">support@brainwavetrivia.com</span>
-            </a>
+            </div>
+          </a>
 
-            <a href="#contactFormSection" class="channel-card" data-channel="venues">
-              <div class="channel-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg>
-              </div>
+          <a href="#contactFormSection" class="channel-card" data-channel="venues">
+            <div class="channel-media">
+              <img src="assets/images/contact/channel-taproom-partner.jpg" alt="Taproom Partnerships" width="600" height="340" loading="lazy">
+            </div>
+            <div class="channel-body">
               <h4>Taproom Partnerships</h4>
               <p>Turnkey hosting kits, draft revenue lifts &amp; acoustics audit.</p>
               <span class="channel-link">venues@brainwavetrivia.com</span>
-            </a>
+            </div>
+          </a>
 
-            <a href="#contactFormSection" class="channel-card" data-channel="events">
-              <div class="channel-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-              </div>
+          <a href="#contactFormSection" class="channel-card" data-channel="events">
+            <div class="channel-media">
+              <img src="assets/images/contact/channel-corporate-events.jpg" alt="Corporate &amp; Private Events" width="600" height="340" loading="lazy">
+            </div>
+            <div class="channel-body">
               <h4>Corporate &amp; Private Events</h4>
               <p>Custom questions, team building &amp; holiday galas.</p>
               <span class="channel-link">events@brainwavetrivia.com</span>
-            </a>
+            </div>
+          </a>
 
-            <a href="#contactFormSection" class="channel-card" data-channel="auditions">
-              <div class="channel-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-              </div>
+          <a href="#contactFormSection" class="channel-card" data-channel="auditions">
+            <div class="channel-media">
+              <img src="assets/images/contact/channel-emcee-casting.png" alt="Emcee &amp; Talent Casting" width="600" height="340" loading="lazy">
+            </div>
+            <div class="channel-body">
               <h4>Emcee &amp; Talent Casting</h4>
               <p>Standup comics &amp; hosts in Austin, Denver, Seattle &amp; Chicago.</p>
               <span class="channel-link">casting@brainwavetrivia.com</span>
-            </a>
-
-          </div>
+            </div>
+          </a>
 
         </div>
+
       </div>
     </section>
 

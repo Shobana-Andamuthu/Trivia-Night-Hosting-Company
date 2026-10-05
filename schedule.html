@@ -265,31 +265,37 @@
   <main id="mainContent">
 
     <!-- =========================================================================
-         SECTION 1: HERO SCHEDULE HUB & 7-DAY DATE PICKER RIBBON
+         SECTION 1: HERO SCHEDULE HUB PAGE BANNER
          ========================================================================= -->
-    <section class="schedule-hero-section" id="schedule-hero">
-      
-      <!-- Background Ambient Glow -->
+    <section class="page-hero-banner schedule-hero-banner" id="schedule-hero">
       <div class="hero-ambient-orb hero-orb-1" aria-hidden="true"></div>
       <div class="hero-ambient-orb hero-orb-2" aria-hidden="true"></div>
 
       <div class="container">
-        
-        <div class="schedule-hero-content reveal-on-scroll">
+        <div class="page-hero-content reveal-on-scroll">
           <div class="section-tag tag-magenta">
             <span class="pulse-dot"></span>
             <span>58 Live Pub Quizzes Across 4 Metros This Week</span>
           </div>
           
-          <h1 class="schedule-hero-title">
-            Find Tonight's <span class="text-gradient-brand">Pub Trivia Game</span>.
+          <h1 class="page-hero-title">
+            Find Tonight's <span class="text-gradient-brand">Pub Trivia Game</span> &amp; Compete for Live Jackpots.
           </h1>
           
-          <p class="schedule-hero-subtitle">
-            Always 100% free to play for pub teams. Filter weekly recurring taproom trivia, music bingos, and themed pop culture specials by city, time, or cash jackpot size.
+          <p class="page-hero-subtitle">
+            Always 100% free to play for pub teams. Filter weekly recurring taproom trivia, music bingos, and themed pop culture specials by city, time, or cash jackpot size. Lock in your squad table in advance or walk in tonight to claim craft beer tabs and cash prizes.
           </p>
-        </div>
 
+          <div class="hero-actions page-hero-actions">
+            <a href="#weekly-matrix" class="btn btn-primary btn-lg glow-btn">
+              <span>View Weekly Matrix</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#theme-calendar" class="btn btn-outline btn-lg">
+              <span>Theme Specials Calendar</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -605,55 +611,70 @@
           
           <!-- Special 1 -->
           <div class="theme-special-card reveal-on-scroll">
-            <div class="special-card-badge">1ST TUESDAY EACH MONTH</div>
-            <h3 class="special-card-title">Marvel &amp; DC Multiverse Mega-Quiz</h3>
-            <p class="special-card-desc">
-              60 video clues covering the Infinity Saga, comic deep cuts, villain origin easter eggs, and cinematic soundtrack sound puzzles.
-            </p>
-            <div class="special-perks-list">
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> +50 Cosplay Bonus Points</span>
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> Themed Infinity Cocktails</span>
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Golden Gauntlet Trophy</span>
+            <div class="special-card-media">
+              <img src="assets/images/schedule/special-marvel-dc.jpg" alt="Marvel and DC Multiverse Mega-Quiz" class="special-card-img" loading="lazy">
+              <div class="special-card-badge">1ST TUESDAY EACH MONTH</div>
             </div>
-            <div class="special-card-footer">
-              <span class="special-date-tag">Next: Oct 7 &bull; 7:00 PM</span>
-              <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+            <div class="special-card-body">
+              <h3 class="special-card-title">Marvel &amp; DC Multiverse Mega-Quiz</h3>
+              <p class="special-card-desc">
+                60 video clues covering the Infinity Saga, comic deep cuts, villain origin easter eggs, and cinematic soundtrack sound puzzles.
+              </p>
+              <div class="special-perks-list">
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> +50 Cosplay Bonus Points</span>
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> Themed Infinity Cocktails</span>
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Golden Gauntlet Trophy</span>
+              </div>
+              <div class="special-card-footer">
+                <span class="special-date-tag">Next: Oct 7 &bull; 7:00 PM</span>
+                <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+              </div>
             </div>
           </div>
 
           <!-- Special 2 -->
           <div class="theme-special-card reveal-on-scroll">
-            <div class="special-card-badge" style="color:var(--brand-primary); border-color:var(--brand-primary);">2ND THURSDAY EACH MONTH</div>
-            <h3 class="special-card-title">90s MTV Hits &amp; Y2K Pop Nostalgia</h3>
-            <p class="special-card-desc">
-              Sing along with boy band anthems, grunge riffs, one-hit wonders, Saturday morning cartoons, and retro arcade video clips.
-            </p>
-            <div class="special-perks-list">
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg> Live Sing-Along Rounds</span>
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"></rect><circle cx="8" cy="12" r="2"></circle><circle cx="16" cy="12" r="2"></circle></svg> Retro Cassette Swag</span>
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> $150 Taproom Tab Pot</span>
+            <div class="special-card-media">
+              <img src="assets/images/schedule/special-90s-mtv.jpg" alt="90s MTV Hits and Y2K Pop Nostalgia boybands" class="special-card-img" loading="lazy">
+              <div class="special-card-badge badge-magenta">2ND THURSDAY EACH MONTH</div>
             </div>
-            <div class="special-card-footer">
-              <span class="special-date-tag">Next: Oct 16 &bull; 7:30 PM</span>
-              <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+            <div class="special-card-body">
+              <h3 class="special-card-title">90s MTV Hits &amp; Y2K Pop Nostalgia</h3>
+              <p class="special-card-desc">
+                Sing along with boy band anthems, grunge riffs, one-hit wonders, Saturday morning cartoons, and retro arcade video clips.
+              </p>
+              <div class="special-perks-list">
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg> Live Sing-Along Rounds</span>
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"></rect><circle cx="8" cy="12" r="2"></circle><circle cx="16" cy="12" r="2"></circle></svg> Retro Cassette Swag</span>
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> $150 Taproom Tab Pot</span>
+              </div>
+              <div class="special-card-footer">
+                <span class="special-date-tag">Next: Oct 16 &bull; 7:30 PM</span>
+                <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+              </div>
             </div>
           </div>
 
           <!-- Special 3 -->
           <div class="theme-special-card reveal-on-scroll">
-            <div class="special-card-badge" style="color:var(--brand-yellow); border-color:var(--brand-yellow);">3RD WEDNESDAY EACH MONTH</div>
-            <h3 class="special-card-title">Star Wars &amp; Sci-Fi Cantina Lore</h3>
-            <p class="special-card-desc">
-              From the original trilogy to Mandalorian lore, starship schematics, alien dialects, and extended universe trivia challenges.
-            </p>
-            <div class="special-perks-list">
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path></svg> Droid Soundbite Challenges</span>
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path></svg> Blue Milk Craft Sours</span>
-              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> $500 Cash Jackpot</span>
+            <div class="special-card-media">
+              <img src="assets/images/schedule/special-scifi-cantina.jpg" alt="Star Wars and Sci-Fi Cantina Lore" class="special-card-img" loading="lazy">
+              <div class="special-card-badge badge-yellow">3RD WEDNESDAY EACH MONTH</div>
             </div>
-            <div class="special-card-footer">
-              <span class="special-date-tag">Next: Oct 22 &bull; 7:00 PM</span>
-              <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+            <div class="special-card-body">
+              <h3 class="special-card-title">Star Wars &amp; Sci-Fi Cantina Lore</h3>
+              <p class="special-card-desc">
+                From the original trilogy to Mandalorian lore, starship schematics, alien dialects, and extended universe trivia challenges.
+              </p>
+              <div class="special-perks-list">
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path></svg> Droid Soundbite Challenges</span>
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path></svg> Blue Milk Craft Sours</span>
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> $500 Cash Jackpot</span>
+              </div>
+              <div class="special-card-footer">
+                <span class="special-date-tag">Next: Oct 22 &bull; 7:00 PM</span>
+                <a href="#weekly-matrix" class="btn btn-outline btn-sm">Find Venues</a>
+              </div>
             </div>
           </div>
 
@@ -682,10 +703,7 @@
           
           <!-- Prize 1: 1st Place -->
           <div class="prize-vault-card reveal-on-scroll">
-            <div class="prize-trophy-icon">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D946EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-            </div>
-            <span class="category-pill pill-magenta" style="margin-bottom:0.75rem;">1ST PLACE CHAMPIONS</span>
+            <span class="category-pill pill-magenta" style="margin-bottom:0.85rem; width:fit-content;">1ST PLACE CHAMPIONS</span>
             <h3 class="prize-amount">$250 – $1,500 <small>CASH</small></h3>
             <p class="prize-desc">Cold hard cash envelope handed to your team captain on stage immediately following the final round decider.</p>
             <ul class="prize-inclusions">
@@ -697,10 +715,7 @@
 
           <!-- Prize 2: 2nd Place -->
           <div class="prize-vault-card silver-prize reveal-on-scroll">
-            <div class="prize-trophy-icon">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h10c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-2c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 4H6v7a6 6 0 0 0 12 0V4z"></path></svg>
-            </div>
-            <span class="category-pill pill-cyan" style="margin-bottom:0.75rem;">2ND PLACE RUNNERS UP</span>
+            <span class="category-pill pill-cyan" style="margin-bottom:0.85rem; width:fit-content;">2ND PLACE RUNNERS UP</span>
             <h3 class="prize-amount">$50 – $150 <small>BAR TAB</small></h3>
             <p class="prize-desc">Guaranteed taproom credit applied directly to tonight's beer, cider, and food tab or saved for next week.</p>
             <ul class="prize-inclusions">
@@ -712,11 +727,8 @@
 
           <!-- Prize 3: Spirit & Name -->
           <div class="prize-vault-card bronze-prize reveal-on-scroll">
-            <div class="prize-trophy-icon">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-            </div>
-            <span class="category-pill pill-coral" style="margin-bottom:0.75rem;">BEST TEAM NAME &amp; SPIRIT</span>
-            <h3 class="prize-amount">Craft Pitchers </h3>
+            <span class="category-pill pill-coral" style="margin-bottom:0.85rem; width:fit-content;">BEST TEAM NAME &amp; SPIRIT</span>
+            <h3 class="prize-amount">Craft Pitchers</h3>
             <p class="prize-desc">Crowd-voted funniest punny team name and highest energy cheering squad win instant table rewards.</p>
             <ul class="prize-inclusions">
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Free Craft Beer Pitcher</li>
@@ -740,43 +752,50 @@
           
           <!-- Left Column: Squad Table RSVP Info Box -->
           <div class="rsvp-info-banner">
-            <span class="category-pill pill-mint" style="margin-bottom:0.75rem;">FREE TABLE RESERVATIONS</span>
+            <span class="category-pill pill-mint" style="margin-bottom:0.75rem; width:fit-content;">FREE TABLE RESERVATIONS</span>
             <h3 style="font-size:2rem; font-weight:900; margin-bottom:1rem;">How Table RSVPs Work</h3>
             <p style="color:var(--text-secondary); line-height:1.6; margin-bottom:1.5rem;">
               Trivia is always 100% free to play. Reserving a table in advance guarantees prime sightlines to big screens and saves your team from arriving 45 minutes early to hunt for seats.
             </p>
 
             <div class="rsvp-perks-stack">
-              <div class="rsvp-perk">
-                <div class="rsvp-perk-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              
+              <!-- RSVP Item 1 -->
+              <div class="rsvp-card-item">
+                <div class="rsvp-card-media">
+                  <img src="assets/images/schedule/rsvp-reserved-table.jpg" alt="Guaranteed Reserved Table" class="rsvp-card-img" loading="lazy">
                 </div>
-                <div>
-                  <strong class="rsvp-perk-title">Guaranteed Reserved Table</strong>
-                  <span class="rsvp-perk-desc">Held under your team name until 15 mins before game kickoff.</span>
-                </div>
-              </div>
-              <div class="rsvp-perk">
-                <div class="rsvp-perk-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-                </div>
-                <div>
-                  <strong class="rsvp-perk-title">Instant Smartphone Buzzer Link</strong>
-                  <span class="rsvp-perk-desc">Direct QR code on table connects all team phones in 3 seconds.</span>
+                <div class="rsvp-card-content">
+                  <h4 class="rsvp-card-title">Guaranteed Reserved Table</h4>
+                  <p class="rsvp-card-desc">Held under your team name until 15 mins before game kickoff.</p>
                 </div>
               </div>
-              <div class="rsvp-perk">
-                <div class="rsvp-perk-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+
+              <!-- RSVP Item 2 -->
+              <div class="rsvp-card-item">
+                <div class="rsvp-card-media">
+                  <img src="assets/images/schedule/rsvp-smartphone-buzzer.jpg" alt="Instant Smartphone Buzzer Link" class="rsvp-card-img" loading="lazy">
                 </div>
-                <div>
-                  <strong class="rsvp-perk-title">Free Bonus Clue Hint</strong>
-                  <span class="rsvp-perk-desc">Receive tonight's secret Round 2 hint via SMS 2 hours before game time.</span>
+                <div class="rsvp-card-content">
+                  <h4 class="rsvp-card-title">Instant Smartphone Buzzer Link</h4>
+                  <p class="rsvp-card-desc">Direct QR code connects all team phones in 3 seconds.</p>
                 </div>
               </div>
+
+              <!-- RSVP Item 3 -->
+              <div class="rsvp-card-item">
+                <div class="rsvp-card-media">
+                  <img src="assets/images/schedule/rsvp-bonus-perks.jpg" alt="Free Bonus Clue Hint" class="rsvp-card-img" loading="lazy">
+                </div>
+                <div class="rsvp-card-content">
+                  <h4 class="rsvp-card-title">Free Bonus Clue Hint</h4>
+                  <p class="rsvp-card-desc">Receive secret Round 2 hint via SMS 2 hours before game time.</p>
+                </div>
+              </div>
+
             </div>
 
-            <a href="#weekly-matrix" class="btn btn-primary btn-md glow-btn" style="margin-top:2rem;">
+            <a href="#weekly-matrix" class="btn btn-primary btn-md glow-btn" style="margin-top:1.75rem;">
               <span>Browse Tonight's Games</span>
             </a>
           </div>

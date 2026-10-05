@@ -77,9 +77,9 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   2. Desktop & Standard Laptop (1025px - 1439px) — Includes iPad Pro Landscape
+   2. Desktop & Wide Displays (1201px - 1439px)
    -------------------------------------------------------------------------- */
-@media (max-width: 1439px) and (min-width: 1025px) {
+@media (max-width: 1439px) and (min-width: 1201px) {
   .container,
   .site-header .container {
     max-width: 1140px;
@@ -236,12 +236,13 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   3. Tablet Landscape / Small Laptop (992px - 1024px)
+   3. Tablet Landscape / iPad / Small Screen Viewports (<= 1200px)
    -------------------------------------------------------------------------- */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .navbar-inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .nav-menu,
@@ -274,6 +275,25 @@ button {
   .app-bento-grid {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
+  }
+
+  /* 3-Card Sections on iPad Pro (1024px - 1200px): 1st Row 2 Cards, 2nd Row 1 Card */
+  .arena-pass-matrix,
+  .theme-specials-grid,
+  .prizes-vault-grid,
+  .theme-flip-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.75rem !important;
+  }
+
+  .arena-pass-matrix .pass-matrix-card:last-child,
+  .theme-specials-grid .theme-special-card:last-child,
+  .prizes-vault-grid .prize-vault-card:last-child,
+  .theme-flip-grid .theme-flip-card-wrap:last-child {
+    grid-column: span 2 !important;
+    max-width: 540px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .spotlight-card-media {
@@ -444,6 +464,25 @@ button {
     display: none !important;
   }
 
+  /* Unified Inner-Page Hero Sections on Tablet */
+  .page-hero-banner,
+  .schedule-hero-section,
+  .venues-hero-section,
+  .events-hero-section,
+  .host-hero-section,
+  .about-hero-section,
+  .contact-hero-section {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 2.5rem);
+    padding-bottom: 3rem;
+  }
+
+  .about-visual-media,
+  .venues-visual-media,
+  .host-visual-media {
+    height: 320px;
+  }
+
   /* Grids */
   .card-grid-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -518,6 +557,13 @@ button {
   .theme-flip-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.5rem !important;
+  }
+
+  .theme-flip-grid .theme-flip-card-wrap:last-child {
+    grid-column: span 2 !important;
+    max-width: 520px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
   /* Featured Partner Venue Story Grid */
@@ -600,14 +646,43 @@ button {
   }
 
   .flightboard-row {
-    grid-template-columns: 80px 1fr;
-    gap: 1rem;
+    grid-template-columns: 140px 1fr 130px;
+    grid-template-areas:
+      "media venue action"
+      "media stats action";
+    gap: 0.85rem 1.25rem;
+    align-items: center;
+    padding: 1.15rem 1.25rem;
   }
 
-  .flightboard-prize,
-  .flightboard-capacity,
+  .flightboard-media {
+    grid-area: media;
+    height: 95px;
+    width: 100%;
+  }
+
+  .flightboard-venue {
+    grid-area: venue;
+  }
+
+  .flightboard-prize {
+    grid-area: stats;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    width: fit-content;
+  }
+
+  .flightboard-capacity {
+    grid-column: 2 / 3;
+  }
+
   .flightboard-action {
-    grid-column: span 2;
+    grid-area: action;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .tournament-circuit-track {
@@ -625,20 +700,16 @@ button {
     max-width: 460px;
   }
 
-  .vault-split-showcase {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .vault-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 
-  /* home-2.html: vault stage header pills row - fix wrapping on mobile */
-  .vault-stage-header {
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    align-items: flex-start;
-  }
-
-  .vault-stage-header .category-pill {
-    flex-shrink: 0;
+  .vault-theme-card:last-child {
+    grid-column: span 2;
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .vault-bonus-badge {
@@ -685,8 +756,15 @@ button {
   }
 
   .arena-pass-matrix {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.75rem !important;
+  }
+
+  .arena-pass-matrix .pass-matrix-card:last-child {
+    grid-column: span 2 !important;
+    max-width: 540px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .standings-row-item {
@@ -712,8 +790,16 @@ button {
 
   .theme-specials-grid,
   .prizes-vault-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.75rem !important;
+  }
+
+  .theme-specials-grid .theme-special-card:last-child,
+  .prizes-vault-grid .prize-vault-card:last-child {
+    grid-column: span 2 !important;
+    max-width: 540px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .schedule-split-faq {
@@ -1060,6 +1146,25 @@ button {
     display: none !important;
   }
 
+  /* Unified Inner-Page Hero Sections on Mobile */
+  .page-hero-banner,
+  .schedule-hero-section,
+  .venues-hero-section,
+  .events-hero-section,
+  .host-hero-section,
+  .about-hero-section,
+  .contact-hero-section {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 1.75rem);
+    padding-bottom: 2.25rem;
+  }
+
+  .about-visual-media,
+  .venues-visual-media,
+  .host-visual-media {
+    height: 240px;
+  }
+
   .floating-quiz-main-screen {
     transform: none !important;
     max-width: 100%;
@@ -1129,7 +1234,17 @@ button {
 
   .theme-flip-grid {
     grid-template-columns: 1fr !important;
-    gap: 1.25rem !important;
+    gap: 1.5rem !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+  }
+
+  .theme-flip-card-wrap {
+    min-height: 460px !important;
+  }
+
+  .theme-card-media {
+    height: 180px !important;
   }
 
   .card-grid-3,
@@ -1318,9 +1433,88 @@ button {
     gap: 0.75rem;
   }
 
-  .vault-perks-row {
+  .flightboard-row {
+    display: flex;
+    flex-direction: column;
+    padding: 1.15rem;
+    gap: 1rem;
+    border-radius: var(--radius-xl);
+  }
+
+  .flightboard-media {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-lg);
+  }
+
+  .flightboard-date-badge {
+    top: 10px;
+    left: 10px;
+    padding: 0.35rem 0.65rem;
+    border-radius: 8px;
+  }
+
+  .flightboard-date-badge .fb-month {
+    font-size: 0.72rem;
+  }
+
+  .flightboard-date-badge .fb-day {
+    font-size: 1.3rem;
+  }
+
+  .flightboard-venue .fb-title {
+    font-size: 1.2rem;
+  }
+
+  .flightboard-venue .fb-loc {
+    font-size: 0.85rem;
+  }
+
+  .flightboard-prize {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+  }
+
+  .fb-prize-val {
+    font-size: 1.35rem;
+  }
+
+  .fb-prize-label {
+    margin-top: 0;
+    font-size: 0.75rem;
+  }
+
+  .flightboard-capacity {
+    width: 100%;
+  }
+
+  .flightboard-action {
+    width: 100%;
+  }
+
+  .flightboard-action .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .vault-cards-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 1.25rem;
+  }
+
+  .vault-theme-card:last-child {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+
+  .vault-card-media {
+    height: 170px;
   }
 
   .headliner-stats-strip {
@@ -1983,6 +2177,245 @@ button {
 
   .quick-pin-mini-form .btn {
     width: 100% !important;
-    justify-content: center !important;
+}
+}
+
+/* ==========================================================================
+   9. Corporate & Private Events Responsive Styles (events.html)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .events-package-matrix {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .event-pack-card {
+    width: 100% !important;
+  }
+
+  .event-pack-card:last-child {
+    grid-column: 1 / -1 !important;
+    max-width: 460px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .event-pack-card.featured-pack {
+    transform: none !important;
+  }
+
+  .event-pack-card.featured-pack:hover {
+    transform: translateY(-6px) !important;
+  }
+
+  .pack-perks-list li {
+    white-space: normal !important;
+  }
+
+  .corporate-events-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.75rem !important;
+    width: 100% !important;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .client-testimonials-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.25rem !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .client-testi-card {
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  .client-quote {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .client-author-row {
+    gap: 0.75rem !important;
+  }
+
+  .client-avatar-wrap {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .client-author-info strong {
+    font-size: 0.95rem !important;
+  }
+
+  .client-author-info span {
+    font-size: 0.725rem !important;
+  }
+
+  .format-showcase-grid {
+    grid-template-columns: 1fr !important;
   }
 }
+
+@media (max-width: 768px) {
+  .events-package-matrix {
+    grid-template-columns: 1fr !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    gap: 2rem !important;
+    width: 100% !important;
+  }
+
+  .event-pack-card:last-child {
+    grid-column: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .corporate-events-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    gap: 1.5rem !important;
+  }
+
+  .corp-event-title,
+  .corp-event-desc {
+    min-height: auto !important;
+  }
+
+  .quote-master-card {
+    padding: 2.25rem 1.5rem !important;
+  }
+
+  .quote-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .quote-type-selector-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .client-testimonials-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+    gap: 1.25rem !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .process-steps-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+  }
+
+  .step-title,
+  .step-desc {
+    min-height: auto !important;
+  }
+
+  .client-author-row {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+}
+
+/* ==========================================================================
+   10. Host a Trivia Night / Venue Partner Responsive Styles (host.html)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .turnkey-bento-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.75rem !important;
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .comparison-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+
+  .onboarding-stepper-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .turnkey-bento-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    gap: 1.5rem !important;
+  }
+
+  .bento-title,
+  .bento-desc {
+    min-height: auto !important;
+  }
+
+  .onboarding-stepper-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 460px !important;
+    margin: 0 auto !important;
+  }
+
+  .step-name,
+  .step-info {
+    min-height: auto !important;
+  }
+
+  .case-media {
+    height: 190px !important;
+  }
+
+  .case-stats-strip {
+    padding: 0.85rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .case-stats-strip .stat-big {
+    font-size: 1.25rem !important;
+  }
+
+  .case-stats-strip .stat-sub {
+    font-size: 0.7rem !important;
+  }
+
+  .arena-pass-matrix,
+  .theme-specials-grid,
+  .prizes-vault-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+    gap: 1.5rem !important;
+  }
+
+  .arena-pass-matrix .pass-matrix-card:last-child,
+  .theme-specials-grid .theme-special-card:last-child,
+  .prizes-vault-grid .prize-vault-card:last-child,
+  .theme-flip-grid .theme-flip-card-wrap:last-child {
+    grid-column: auto !important;
+    max-width: 100% !important;
+  }
+}
+
+

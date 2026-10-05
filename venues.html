@@ -257,40 +257,60 @@
   <main id="mainContent">
 
     <!-- =========================================================================
-         SECTION 1: HERO WITH 2-COLUMN SHOWCASE & TAPROOM EXPERIENCE
+         SECTION 1: HERO TAPROOM & VENUES PAGE BANNER
          ========================================================================= -->
-    <section class="venues-hero-section" id="venuesHero">
+    <section class="page-hero-banner venues-hero-banner" id="venuesHero">
       <div class="hero-ambient-orb hero-orb-1" aria-hidden="true"></div>
       <div class="hero-ambient-orb hero-orb-2" aria-hidden="true"></div>
 
       <div class="container">
+        <div class="page-hero-content reveal-on-scroll">
+          <div class="section-tag tag-magenta">
+            <span class="pulse-dot"></span>
+            <span>50+ Partner Taprooms &bull; 8 Major Metro Hubs</span>
+          </div>
+
+          <h1 class="page-hero-title">
+            Discover Premier <span class="text-gradient-brand">Craft Taprooms &amp; Pub Venues</span>.
+          </h1>
+
+          <p class="page-hero-subtitle">
+            From breezy downtown rooftop patios to cavernous industrial warehouse breweries, experience high-energy pub trivia with synchronized big screens, crystal audio, and 30+ craft taps on pour.
+          </p>
+
+          <div class="hero-actions page-hero-actions">
+            <a href="#venuesGrid" class="btn btn-primary btn-lg glow-btn">
+              <span>Explore 50+ Taprooms</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#transitMatrix" class="btn btn-outline btn-lg">
+              <span>Transit &amp; Parking Matrix</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: TAPROOM EXPERIENCE SHOWCASE
+         ========================================================================= -->
+    <section class="section-py" id="venueShowcase" style="background-color: var(--bg-surface);">
+      <div class="container">
         <div class="venues-hero-grid reveal-on-scroll">
           
-          <!-- Left Column: Copy, CTAs & Key Badges -->
+          <!-- Left Column: Copy & Badges -->
           <div class="venues-hero-left">
-            <div class="section-tag tag-magenta" style="margin-bottom: 1.25rem;">
-              <span class="pulse-dot"></span>
-              <span>50+ Partner Taprooms &bull; 8 Major Metro Hubs</span>
+            <div class="section-tag tag-cyan" style="margin-bottom: 1rem;">
+              <span>The Taproom Experience</span>
             </div>
 
-            <h1 class="venues-hero-title">
-              Discover Premier <span class="text-gradient-brand">Craft Taprooms &amp; Pub Venues</span>.
-            </h1>
+            <h2 style="font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-weight: 900; line-height: 1.2; margin-bottom: 1rem;">
+              Where Craft Beer Meets <span class="text-gradient-brand">Live Showmanship</span>.
+            </h2>
 
-            <p class="venues-hero-subtitle">
-              From breezy downtown rooftop patios to cavernous industrial warehouse breweries, experience high-energy pub trivia with synchronized big screens, crystal audio, and 30+ craft taps on pour.
+            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.75rem;">
+              Every partner taproom is handpicked for acoustic quality, seating sightlines, and electric social atmosphere. Enjoy delicious food truck pairings, signature trivia cocktails, and seamless table service while competing.
             </p>
-
-            <!-- Hero CTA Actions -->
-            <div class="hero-actions" style="margin-bottom:2.25rem;">
-              <a href="#venuesGrid" class="btn btn-primary btn-lg glow-btn">
-                <span>Explore 50+ Taprooms</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-              <a href="#transitMatrix" class="btn btn-outline btn-lg">
-                <span>Transit &amp; Parking Matrix</span>
-              </a>
-            </div>
 
             <!-- Feature Highlight Badges -->
             <div class="venues-hero-highlights">
@@ -594,52 +614,64 @@
         <!-- 4-Card Bento Grid -->
         <div class="amenity-bento-grid">
           
+          <!-- Card 1 -->
           <div class="amenity-bento-card bento-card-highlight reveal-on-scroll">
-            <div class="bento-icon-circle">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <div class="bento-card-media">
+              <img src="assets/images/venues/spec-audio-tuning.png" alt="Zero Echo, Studio-Grade Acoustic Tuning" class="bento-card-img" loading="lazy">
+              <span class="category-pill pill-cyan">AUDIO FIDELITY</span>
             </div>
-            <span class="category-pill pill-cyan">AUDIO FIDELITY</span>
-            <h3 class="bento-title">Zero Echo, Studio-Grade Acoustic Tuning</h3>
-            <p class="bento-desc">
-              No muffled microphones or straining to hear questions. Every venue undergoes acoustic zone calibration with balanced wireless mics and subwoofer sound stings.
-            </p>
-            <div class="bento-spec-tag">Bose Professional &bull; EV Live Sound Certified</div>
+            <div class="bento-card-body">
+              <h3 class="bento-title">Zero Echo, Studio-Grade Acoustic Tuning</h3>
+              <p class="bento-desc">
+                No muffled microphones or straining to hear questions. Every venue undergoes acoustic zone calibration with balanced wireless mics and subwoofer sound stings.
+              </p>
+              <div class="bento-spec-tag">Bose Professional &bull; EV Live Sound Certified</div>
+            </div>
           </div>
 
+          <!-- Card 2 -->
           <div class="amenity-bento-card reveal-on-scroll">
-            <div class="bento-icon-circle" style="background:rgba(6,214,160,0.18); color:var(--brand-cyan); border-color:rgba(6,214,160,0.4);">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <div class="bento-card-media">
+              <img src="assets/images/venues/spec-multiscreen-sync.png" alt="4K Big Screen Visual Multicast" class="bento-card-img" loading="lazy">
+              <span class="category-pill pill-mint">MULTI-SCREEN SYNC</span>
             </div>
-            <span class="category-pill pill-mint">MULTI-SCREEN SYNC</span>
-            <h3 class="bento-title">4K Big Screen Visual Multicast</h3>
-            <p class="bento-desc">
-              Live scoreboards, photo clues, and music video puzzles are broadcast simultaneously across 10 to 25 HD taproom displays with zero latency.
-            </p>
-            <div class="bento-spec-tag">1080p / 4K Wireless Clue Wall Casting</div>
+            <div class="bento-card-body">
+              <h3 class="bento-title">4K Big Screen Visual Multicast</h3>
+              <p class="bento-desc">
+                Live scoreboards, photo clues, and music video puzzles are broadcast simultaneously across 10 to 25 HD taproom displays with zero latency.
+              </p>
+              <div class="bento-spec-tag">1080p / 4K Wireless Clue Wall Casting</div>
+            </div>
           </div>
 
+          <!-- Card 3 -->
           <div class="amenity-bento-card reveal-on-scroll">
-            <div class="bento-icon-circle" style="background:rgba(217,70,239,0.15); color:var(--brand-yellow); border-color:rgba(217,70,239,0.4);">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            <div class="bento-card-media">
+              <img src="assets/images/venues/spec-craft-food.jpg" alt="Curated Draft Specials and Trivia Menus" class="bento-card-img" loading="lazy">
+              <span class="category-pill pill-yellow">CRAFT FOOD &amp; DRINK</span>
             </div>
-            <span class="category-pill pill-yellow">CRAFT FOOD &amp; DRINK</span>
-            <h3 class="bento-title">Curated Draft Specials &amp; Trivia Menus</h3>
-            <p class="bento-desc">
-              Enjoy exclusive weeknight $5 beer pitcher specials, loaded nacho platters, artisan flatbreads, and custom trivia night cocktail pairings.
-            </p>
-            <div class="bento-spec-tag">Happy Hour Pricing Active 6PM - 10PM</div>
+            <div class="bento-card-body">
+              <h3 class="bento-title">Curated Draft Specials &amp; Trivia Menus</h3>
+              <p class="bento-desc">
+                Enjoy exclusive weeknight $5 beer pitcher specials, loaded nacho platters, artisan flatbreads, and custom trivia night cocktail pairings.
+              </p>
+              <div class="bento-spec-tag">Happy Hour Pricing Active 6PM - 10PM</div>
+            </div>
           </div>
 
+          <!-- Card 4 -->
           <div class="amenity-bento-card reveal-on-scroll">
-            <div class="bento-icon-circle" style="background:rgba(255,46,147,0.18); color:var(--brand-coral); border-color:rgba(255,46,147,0.4);">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <div class="bento-card-media">
+              <img src="assets/images/venues/spec-comedy-hosts.png" alt="Dedicated Emcees and Standup Comedians" class="bento-card-img" loading="lazy">
+              <span class="category-pill pill-coral">COMEDY HOSTS</span>
             </div>
-            <span class="category-pill pill-coral">COMEDY HOSTS</span>
-            <h3 class="bento-title">Dedicated Emcees &amp; Standup Comedians</h3>
-            <p class="bento-desc">
-              Every show is anchored by vetted, charismatic performers who keep the pace brisk, humorous, and captivating for two full hours of entertainment.
-            </p>
-            <div class="bento-spec-tag">100% Guaranteed 2-Hour High-Paced Flow</div>
+            <div class="bento-card-body">
+              <h3 class="bento-title">Dedicated Emcees &amp; Standup Comedians</h3>
+              <p class="bento-desc">
+                Every show is anchored by vetted, charismatic performers who keep the pace brisk, humorous, and captivating for two full hours of entertainment.
+              </p>
+              <div class="bento-spec-tag">100% Guaranteed 2-Hour High-Paced Flow</div>
+            </div>
           </div>
 
         </div>

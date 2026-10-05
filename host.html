@@ -257,39 +257,60 @@
   <main id="mainContent">
 
     <!-- =========================================================================
-         SECTION 1: HERO WITH 2-COLUMN SHOWCASE & TAPROOM REVENUE ENGINE
+         SECTION 1: HERO TAPROOM PARTNER PAGE BANNER
          ========================================================================= -->
-    <section class="host-hero-section" id="hostHero">
+    <section class="page-hero-banner host-hero-banner" id="hostHero">
       <div class="hero-ambient-orb host-orb-1" aria-hidden="true"></div>
       <div class="hero-ambient-orb host-orb-2" aria-hidden="true"></div>
 
+      <div class="container">
+        <div class="page-hero-content reveal-on-scroll">
+          <div class="section-tag tag-cyan">
+            <span class="pulse-dot"></span>
+            <span>Taproom &amp; Brewery Partner Program &bull; 50+ Partner Venues</span>
+          </div>
+
+          <h1 class="page-hero-title">
+            Pack Your Slowest Weeknights with <span class="text-gradient-brand">80+ Thirsty Players</span>.
+          </h1>
+
+          <p class="page-hero-subtitle">
+            Turn dead Tuesdays and Wednesdays into your most profitable nights. We bring the comedic emcee, sound system, digital buzzers, and targeted social marketing—you simply pour craft beer and ring up bar tabs.
+          </p>
+
+          <div class="hero-actions page-hero-actions">
+            <a href="#partnerInquiry" class="btn btn-primary btn-lg glow-btn">
+              <span>Book Venue Consultation</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#turnkeyKit" class="btn btn-outline btn-lg">
+              <span>Explore Turnkey Kit</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: TAPROOM REVENUE SHOWCASE
+         ========================================================================= -->
+    <section class="section-py" id="hostShowcase">
       <div class="container">
         <div class="host-hero-grid reveal-on-scroll">
           
           <!-- Left Column: Story Copy, CTAs & Highlight Badges -->
           <div class="host-hero-left">
-            <div class="section-tag tag-cyan" style="margin-bottom: 1.25rem;">
-              <span class="pulse-dot"></span>
-              <span>Taproom &amp; Brewery Partner Program &bull; 50+ Partner Venues</span>
+            <div class="section-tag tag-magenta" style="margin-bottom: 1rem;">
+              <span>Turnkey Entertainment</span>
             </div>
 
-            <h1 class="host-hero-title">
-              Pack Your Slowest Weeknights with <span class="text-gradient-brand">80+ Thirsty Players</span> Every Week.
-            </h1>
+            <h2 style="font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-weight: 900; line-height: 1.2; margin-bottom: 1rem;">
+              We Bring The Crowd. <span class="text-gradient-brand">You Pour The Beer</span>.
+            </h2>
 
-            <p class="host-hero-subtitle">
-              Turn dead Tuesdays and Wednesdays into your most profitable nights of the week. We bring the comedic emcee, sound system, digital smartphone buzzers, and targeted social marketing—you simply pour craft beer and ring up the bar tabs.
+            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.75rem;">
+              Say goodbye to quiet taprooms on weeknights. Our turnkey production includes sound hardware, trained comedy quizmasters, weekly visual content, and hyper-local promo campaigns that drive repeat customer loyalty.
             </p>
-
-            <div class="hero-actions" style="margin-bottom: 2rem;">
-              <a href="#partnerInquiry" class="btn btn-primary btn-lg glow-btn">
-                <span>Book Venue Consultation</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-              <a href="#turnkeyKit" class="btn btn-outline btn-lg">
-                <span>Explore Turnkey Kit</span>
-              </a>
-            </div>
 
             <div class="host-hero-highlights">
               <div class="host-highlight-badge">
@@ -344,9 +365,13 @@
           </div>
 
         </div>
+      </div>
+    </section>
 
-        <!-- 4-Item Proof Metric Banner below 2-column grid -->
-        <div class="host-metric-banner reveal-on-scroll" style="margin-top: 3.5rem;">
+    <!-- Proof Metric Banner Strip -->
+    <section class="section-metric-strip" style="background-color: var(--bg-surface); padding: 2.25rem 0; border-bottom: 1px solid rgba(217, 70, 239, 0.2);">
+      <div class="container">
+        <div class="host-metric-banner reveal-on-scroll" style="margin-top: 0;">
           <div class="host-metric-item">
             <span class="metric-num text-gradient-brand">+46%</span>
             <span class="metric-label">Midweek Draft &amp; Food Lift</span>
@@ -367,7 +392,6 @@
             <span class="metric-label">Turnkey Production Delivery</span>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -471,105 +495,117 @@
 
         <div class="turnkey-bento-grid reveal-on-scroll">
           
-          <!-- Bento Item 1: Pro Emcees (Featured Large) -->
-          <div class="bento-kit-card bento-kit-large">
-            <div class="bento-icon-badge">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+          <!-- Bento Item 1: Pro Emcees -->
+          <div class="bento-kit-card">
+            <div class="bento-kit-media">
+              <img src="assets/images/host/kit-standup-hosts.jpg" alt="Standup Comedians &amp; Energetic Hosts" width="600" height="340" loading="lazy">
+              <span class="bento-tag">VETTED TALENT LINEUP</span>
             </div>
-            <span class="bento-tag">VETTED TALENT LINEUP</span>
-            <h3 class="bento-title">Standup Comedians &amp; Energetic Hosts</h3>
-            <p class="bento-desc">
-              We only hire experienced standup comics and charismatic entertainers. Every host is auditioned, background-checked, and trained in room pacing, crowd banter, and drink upsell announcements.
-            </p>
-            <div class="bento-pill-list">
-              <span>Auditioned Talent</span>
-              <span>Room Pacing Pros</span>
-              <span>Drink Specials Shouts</span>
+            <div class="bento-kit-body">
+              <h3 class="bento-title">Standup Comedians &amp; Energetic Hosts</h3>
+              <p class="bento-desc">
+                We only hire experienced standup comics and charismatic entertainers. Every host is auditioned, background-checked, and trained in room pacing, crowd banter, and drink upsell announcements.
+              </p>
+              <div class="bento-pill-list">
+                <span>Auditioned Talent</span>
+                <span>Room Pacing Pros</span>
+                <span>Drink Specials Shouts</span>
+              </div>
             </div>
           </div>
 
           <!-- Bento Item 2: PA Sound Rig -->
           <div class="bento-kit-card">
-            <div class="bento-icon-badge">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <div class="bento-kit-media">
+              <img src="assets/images/host/kit-audio-sound-rig.png" alt="Studio PA &amp; Wireless Audio" width="600" height="340" loading="lazy">
+              <span class="bento-tag">AUDIO ENGINEERING</span>
             </div>
-            <span class="bento-tag">AUDIO ENGINEERING</span>
-            <h3 class="bento-title">Studio PA &amp; Wireless Audio</h3>
-            <p class="bento-desc">
-              Your host brings compact Bose/JBL sound rigs and Shure wireless microphones calibrated to your room's acoustics without overpowering your bartenders.
-            </p>
-            <div class="bento-pill-list">
-              <span>Bose Sound Tower</span>
-              <span>Wireless Mics</span>
-              <span>HDMI Casting</span>
+            <div class="bento-kit-body">
+              <h3 class="bento-title">Studio PA &amp; Wireless Audio</h3>
+              <p class="bento-desc">
+                Your host brings compact Bose/JBL sound rigs and Shure wireless microphones calibrated to your room's acoustics without overpowering your bartenders.
+              </p>
+              <div class="bento-pill-list">
+                <span>Bose Sound Tower</span>
+                <span>Wireless Mics</span>
+                <span>HDMI Casting</span>
+              </div>
             </div>
           </div>
 
           <!-- Bento Item 3: Digital Buzzers -->
           <div class="bento-kit-card">
-            <div class="bento-icon-badge">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <div class="bento-kit-media">
+              <img src="assets/images/host/kit-smartphone-buzzers.png" alt="Smartphone Cloud Buzzers" width="600" height="340" loading="lazy">
+              <span class="bento-tag">ZERO APP DOWNLOADS</span>
             </div>
-            <span class="bento-tag">ZERO APP DOWNLOADS</span>
-            <h3 class="bento-title">Smartphone Cloud Buzzers</h3>
-            <p class="bento-desc">
-              Players scan a table QR code to submit answers instantly with their phones. Instant scoring, automated leaderboard projections, and zero messy paper score sheets.
-            </p>
-            <div class="bento-pill-list">
-              <span>QR Code Connect</span>
-              <span>Instant Grading</span>
-              <span>Zero Paper Waste</span>
+            <div class="bento-kit-body">
+              <h3 class="bento-title">Smartphone Cloud Buzzers</h3>
+              <p class="bento-desc">
+                Players scan a table QR code to submit answers instantly with their phones. Instant scoring, automated leaderboard projections, and zero messy paper score sheets.
+              </p>
+              <div class="bento-pill-list">
+                <span>QR Code Connect</span>
+                <span>Instant Grading</span>
+                <span>Zero Paper Waste</span>
+              </div>
             </div>
           </div>
 
           <!-- Bento Item 4: Local Geofenced Marketing -->
           <div class="bento-kit-card">
-            <div class="bento-icon-badge">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            <div class="bento-kit-media">
+              <img src="assets/images/host/kit-geofenced-ads.png" alt="Geofenced Social Ad Spend" width="600" height="340" loading="lazy">
+              <span class="bento-tag">SPONSORED PROMOTION</span>
             </div>
-            <span class="bento-tag">SPONSORED PROMOTION</span>
-            <h3 class="bento-title">Geofenced Social Ad Spend</h3>
-            <p class="bento-desc">
-              We invest $250+ per month promoting your weekly night across Instagram, Facebook, and Google Maps to trivia lovers living within a 5-mile radius of your venue.
-            </p>
-            <div class="bento-pill-list">
-              <span>5-Mile Radius Ads</span>
-              <span>Table Tents Included</span>
-              <span>SEO Venue Listing</span>
+            <div class="bento-kit-body">
+              <h3 class="bento-title">Geofenced Social Ad Spend</h3>
+              <p class="bento-desc">
+                We invest $250+ per month promoting your weekly night across Instagram, Facebook, and Google Maps to trivia lovers living within a 5-mile radius of your venue.
+              </p>
+              <div class="bento-pill-list">
+                <span>5-Mile Radius Ads</span>
+                <span>Table Tents Included</span>
+                <span>SEO Venue Listing</span>
+              </div>
             </div>
           </div>
 
           <!-- Bento Item 5: Premium Comedy Questions -->
           <div class="bento-kit-card">
-            <div class="bento-icon-badge">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"></line><line x1="10" y1="22" x2="14" y2="22"></line><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg>
+            <div class="bento-kit-media">
+              <img src="assets/images/host/kit-quiz-party-decks.jpg" alt="Weekly Fresh Quiz Decks" width="600" height="340" loading="lazy">
+              <span class="bento-tag">WRITERS ROOM</span>
             </div>
-            <span class="bento-tag">WRITERS ROOM</span>
-            <h3 class="bento-title">Weekly Fresh Quiz Decks</h3>
-            <p class="bento-desc">
-              100% original trivia questions refreshed every single week by our comedic writing staff. Multimedia music bingo, visual speed rounds, and themed specials.
-            </p>
-            <div class="bento-pill-list">
-              <span>Music Clips</span>
-              <span>Picture Puzzles</span>
-              <span>Monthly Cosplay</span>
+            <div class="bento-kit-body">
+              <h3 class="bento-title">Weekly Fresh Quiz Decks</h3>
+              <p class="bento-desc">
+                100% original trivia questions refreshed every single week by our comedic writing staff. Multimedia music bingo, visual speed rounds, and themed specials.
+              </p>
+              <div class="bento-pill-list">
+                <span>Music Clips</span>
+                <span>Picture Puzzles</span>
+                <span>Monthly Cosplay</span>
+              </div>
             </div>
           </div>
 
-          <!-- Bento Item 6: Live Dashboard & Analytics -->
+          <!-- Bento Item 6: Live Taproom Atmosphere & Crowd Retention -->
           <div class="bento-kit-card">
-            <div class="bento-icon-badge">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <div class="bento-kit-media">
+              <img src="assets/images/host/kit-packed-taproom-crowd.jpg" alt="Packed Taproom Crowd &amp; Live League Energy" width="600" height="340" loading="lazy">
+              <span class="bento-tag">REVENUE &amp; RETENTION</span>
             </div>
-            <span class="bento-tag">REAL-TIME DASHBOARD</span>
-            <h3 class="bento-title">Revenue &amp; Attendance Portal</h3>
-            <p class="bento-desc">
-              Access your partner portal to track weekly player counts, repeat team retention, food &amp; draft tab averages, and automated 8-week seasonal league standings.
-            </p>
-            <div class="bento-pill-list">
-              <span>Attendance Analytics</span>
-              <span>League Rankings</span>
-              <span>Drink Spend Tracker</span>
+            <div class="bento-kit-body">
+              <h3 class="bento-title">Packed Crowd &amp; League Retention</h3>
+              <p class="bento-desc">
+                Transform slow weeknights into electric, high-margin packed houses. 8-week structured seasons keep teams returning week after week with full draft tabs.
+              </p>
+              <div class="bento-pill-list">
+                <span>8-Week Seasons</span>
+                <span>Draft Tab Boost</span>
+                <span>Loyalty Retention</span>
+              </div>
             </div>
           </div>
 
@@ -596,52 +632,64 @@
 
         <div class="onboarding-stepper-grid reveal-on-scroll">
           
+          <!-- Step 1: Week 01 -->
           <div class="onboarding-step-card">
-            <div class="step-counter">WEEK 01</div>
-            <div class="step-icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+            <div class="step-media">
+              <img src="assets/images/host/onboarding-week-01.jpg" alt="Acoustics &amp; Seating Audit" width="600" height="340" loading="lazy">
+              <span class="step-counter">WEEK 01</span>
             </div>
-            <h4 class="step-name">Acoustics &amp; Seating Audit</h4>
-            <p class="step-info">
-              Our regional director visits your taproom for sound level calibration, TV screen mapping, and optimal 6-person table layout planning.
-            </p>
-            <span class="step-badge-tag">30 Min Walkthrough</span>
+            <div class="step-card-body">
+              <h4 class="step-name">Acoustics &amp; Seating Audit</h4>
+              <p class="step-info">
+                Our regional director visits your taproom for sound level calibration, TV screen mapping, and optimal 6-person table layout planning.
+              </p>
+              <span class="step-badge-tag">30 Min Walkthrough</span>
+            </div>
           </div>
 
+          <!-- Step 2: Week 02 -->
           <div class="onboarding-step-card">
-            <div class="step-counter">WEEK 02</div>
-            <div class="step-icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            <div class="step-media">
+              <img src="assets/images/host/onboarding-week-02.png" alt="Local Promo Blitz &amp; Staff Training" width="600" height="340" loading="lazy">
+              <span class="step-counter">WEEK 02</span>
             </div>
-            <h4 class="step-name">Local Promo Blitz</h4>
-            <p class="step-info">
-              We deliver custom table tents and acrylic bar displays, while our marketing team launches hyper-local geofenced Instagram campaigns.
-            </p>
-            <span class="step-badge-tag">Marketing Goes Live</span>
+            <div class="step-card-body">
+              <h4 class="step-name">Local Promo Blitz</h4>
+              <p class="step-info">
+                We deliver custom table tents and acrylic bar displays, while our marketing team launches hyper-local geofenced Instagram campaigns.
+              </p>
+              <span class="step-badge-tag">Marketing Goes Live</span>
+            </div>
           </div>
 
+          <!-- Step 3: Week 03 -->
           <div class="onboarding-step-card">
-            <div class="step-counter">WEEK 03</div>
-            <div class="step-icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <div class="step-media">
+              <img src="assets/images/host/onboarding-week-03.png" alt="Grand Premiere Night &amp; Red Carpet Marquee" width="600" height="340" loading="lazy">
+              <span class="step-counter">WEEK 03</span>
             </div>
-            <h4 class="step-name">Grand Premiere Night</h4>
-            <p class="step-info">
-              Your comedy emcee arrives 60 minutes early for soundcheck. We kick off your premiere game with cash prizes, high-energy buzzers, and packed tables.
-            </p>
-            <span class="step-badge-tag">Showtime Premiere</span>
+            <div class="step-card-body">
+              <h4 class="step-name">Grand Premiere Night</h4>
+              <p class="step-info">
+                Your comedy emcee arrives 60 minutes early for soundcheck. We kick off your premiere game with cash prizes, high-energy buzzers, and packed tables.
+              </p>
+              <span class="step-badge-tag">Showtime Premiere</span>
+            </div>
           </div>
 
+          <!-- Step 4: Week 04 -->
           <div class="onboarding-step-card">
-            <div class="step-counter">WEEK 04</div>
-            <div class="step-icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            <div class="step-media">
+              <img src="assets/images/host/onboarding-week-04.png" alt="Weekly Loyalty Regulars &amp; Table Debrief" width="600" height="340" loading="lazy">
+              <span class="step-counter">WEEK 04</span>
             </div>
-            <h4 class="step-name">Weekly Loyalty Regulars</h4>
-            <p class="step-info">
-              Teams register for 8-week seasonal leagues. Your weekly attendance stabilizes at 80–120 regular patrons who return every week for beer and trivia.
-            </p>
-            <span class="step-badge-tag">Recurring Revenue</span>
+            <div class="step-card-body">
+              <h4 class="step-name">Weekly Loyalty Regulars</h4>
+              <p class="step-info">
+                Teams register for 8-week seasonal leagues. Your weekly attendance stabilizes at 80–120 regular patrons who return every week for beer and trivia.
+              </p>
+              <span class="step-badge-tag">Recurring Revenue</span>
+            </div>
           </div>
 
         </div>
@@ -669,9 +717,12 @@
           
           <!-- Case Study 1: Blackstone Brewing -->
           <div class="partner-case-card">
+            <div class="case-media">
+              <img src="assets/images/host/case-study-blackstone-beer-flight.png" alt="Blackstone Craft Brewery Taproom &amp; Beer Flights" width="600" height="340" loading="lazy">
+              <span class="category-pill pill-cyan case-location-badge">AUSTIN, TX</span>
+            </div>
             <div class="case-header">
               <div class="case-venue-info">
-                <span class="category-pill pill-cyan">AUSTIN, TX</span>
                 <h3 class="case-venue-name">Blackstone Craft Brewery</h3>
                 <span class="case-night-tag">Tuesday Nights &bull; 7:00 PM</span>
               </div>
@@ -705,9 +756,12 @@
 
           <!-- Case Study 2: Mile High Taphouse -->
           <div class="partner-case-card">
+            <div class="case-media">
+              <img src="assets/images/host/case-study-milehigh-taproom-toast.jpg" alt="Mile High Alpine Taphouse Crowd Cheers &amp; Dining" width="600" height="340" loading="lazy">
+              <span class="category-pill pill-magenta case-location-badge">DENVER, CO</span>
+            </div>
             <div class="case-header">
               <div class="case-venue-info">
-                <span class="category-pill pill-magenta">DENVER, CO</span>
                 <h3 class="case-venue-name">Mile High Alpine Taphouse</h3>
                 <span class="case-night-tag">Wednesday Nights &bull; 7:30 PM</span>
               </div>
