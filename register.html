@@ -52,14 +52,18 @@
     </defs>
   </svg>
 
-  <!-- Auth Split Layout Container (Form Left, Visual Right matching screenshot 2) -->
-  <div class="auth-split-wrapper register-layout">
+  <!-- Auth Split Layout Container (Visual Showcase Left/Top, Interactive Form Right/Bottom) -->
+  <div class="auth-split-wrapper">
 
-    <!-- Left Column: Interactive Form Pane -->
-    <div class="auth-form-pane">
-      
+    <!-- Left/Top Column: Visual Showcase Pane -->
+    <div class="auth-visual-pane">
+      <div class="auth-visual-bg">
+        <img src="assets/images/auth/portal-team-celebrate.webp" alt="Brainwave Trivia pub crowd cheering victory" class="auth-hero-img">
+        <div class="auth-visual-overlay"></div>
+      </div>
+
       <!-- Top Brand Header -->
-      <div class="auth-form-top-brand">
+      <div class="auth-visual-top">
         <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
           <div class="brand-logo-badge">
             <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,6 +77,48 @@
             <span class="brand-tagline">LIVE TRIVIA</span>
           </div>
         </a>
+      </div>
+
+      <!-- Bottom Caption & Badge -->
+      <div class="auth-visual-bottom">
+        <div class="auth-stat-chip lime-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span>FREE 3-ROUND TRIAL INCLUDED</span>
+        </div>
+        <h2 class="auth-visual-heading">
+          Book your first live trivia table before you even arrive at the pub.
+        </h2>
+      </div>
+
+    </div>
+
+    <!-- Right/Bottom Column: Interactive Form Pane -->
+    <div class="auth-form-pane">
+      
+      <!-- Top Action Controls (Theme Toggle & RTL) -->
+      <div class="auth-top-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn auth-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button type="button" class="rtl-toggle-btn auth-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
+          <span style="font-size:0.75rem; font-weight:800;">RTL</span>
+        </button>
       </div>
 
       <!-- Centered Form Container -->
@@ -161,60 +207,6 @@
           <a href="login.html" class="auth-switch-link">Log In</a>
         </div>
 
-      </div>
-
-    </div>
-
-    <!-- Right Column: Visual Showcase Pane -->
-    <div class="auth-visual-pane">
-      <div class="auth-visual-bg">
-        <img src="assets/images/auth/portal-team-celebrate.webp" alt="Brainwave Trivia pub crowd cheering victory" class="auth-hero-img">
-        <div class="auth-visual-overlay"></div>
-      </div>
-
-      <!-- Top Right Controls -->
-      <div class="auth-top-actions visual-top-actions">
-        <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle-btn auth-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-
-        <!-- RTL Toggle -->
-        <button type="button" class="rtl-toggle-btn auth-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL/LTR">
-          <span style="font-size:0.75rem; font-weight:800;">RTL</span>
-        </button>
-      </div>
-
-      <!-- Bottom Right Caption & Badge -->
-      <div class="auth-visual-bottom">
-        <div class="auth-stat-chip lime-chip">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-          </svg>
-          <span>FREE 3-ROUND TRIAL INCLUDED</span>
-        </div>
-        <h2 class="auth-visual-heading">
-          Book your first live trivia table before you even arrive at the pub.
-        </h2>
-      </div>
-
-      <!-- Floating verified badge in bottom right -->
-      <div class="auth-floating-badge">
-        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-          <rect x="2" y="2" width="36" height="36" rx="10" fill="rgba(217, 70, 239, 0.2)" stroke="#D946EF" stroke-width="2"/>
-          <path d="M12 20L18 26L28 14" stroke="#D946EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
       </div>
 
     </div>

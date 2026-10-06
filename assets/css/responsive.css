@@ -74,6 +74,33 @@ button {
   .navbar-actions {
     gap: 0.45rem;
   }
+
+  /* Full-Screen Hero 1 & 2 for Ultra-wide / 4K */
+  .hero-section,
+  .hero-festival-center {
+    min-height: calc(100vh - var(--header-height, 74px));
+    min-height: calc(100dvh - var(--header-height, 74px));
+    padding: clamp(3rem, 6vh, 5.5rem) 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-showcase-stage {
+    height: clamp(500px, 54vh, 580px);
+  }
+
+  .hero-festival-centered-content {
+    max-width: 1040px;
+  }
+
+  .hero-stats-banner {
+    max-width: 960px;
+    padding: 1.85rem 2.5rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -84,6 +111,24 @@ button {
   .site-header .container {
     max-width: 1140px;
     padding-inline: 1rem;
+  }
+
+  /* Full-Screen Hero 1 & 2 */
+  .hero-section,
+  .hero-festival-center {
+    min-height: calc(100vh - var(--header-height, 74px));
+    min-height: calc(100dvh - var(--header-height, 74px));
+    padding: clamp(2.5rem, 5vh, 4rem) 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .hero-showcase-stage {
+    height: 480px;
   }
 
   .navbar-inner {
@@ -246,6 +291,54 @@ button {
    3. Tablet Landscape / iPad / Small Screen Viewports (<= 1200px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
+  /* Full-Screen Hero 1 & 2 for Laptops & iPad Pro (1024px - 1200px) */
+  .hero-section,
+  .hero-festival-center {
+    min-height: calc(100vh - var(--header-height, 74px));
+    min-height: calc(100dvh - var(--header-height, 74px));
+    padding: clamp(2.25rem, 4.5vh, 3.5rem) 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 3.2vw, 2.75rem);
+  }
+
+  .hero-showcase-stage {
+    height: 440px;
+  }
+
+  .card-slide-bg {
+    width: 240px;
+    transform: rotateX(10deg) rotateY(-14deg) scale(0.85);
+  }
+
+  .card-about-host {
+    width: 270px;
+    transform: rotateX(8deg) rotateY(-8deg) scale(0.85);
+  }
+
+  .floating-quiz-main-screen {
+    width: 380px;
+    right: 5px;
+    bottom: 5px;
+    transform: rotateX(10deg) rotateY(-10deg) scale(0.9) translateZ(15px);
+  }
+
+  .hero-title-centered {
+    font-size: clamp(2.4rem, 3.8vw, 3.2rem);
+  }
+
+  .hero-stats-banner {
+    max-width: 840px;
+    padding: 1.35rem 1.75rem;
+  }
+
   .navbar-inner {
     display: flex;
     justify-content: space-between;
@@ -425,10 +518,22 @@ button {
     height: var(--header-height);
   }
 
+  /* Full-Screen Hero Sections (Home 1 & Home 2 Tablet) */
+  .hero-section,
+  .hero-festival-center {
+    min-height: calc(100vh - var(--header-height, 70px));
+    min-height: calc(100dvh - var(--header-height, 70px));
+    padding: clamp(2.5rem, 4.5vh, 3.5rem) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* Hero Section (Home 1) */
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.25rem;
+    width: 100%;
   }
 
   .hero-content {
@@ -436,24 +541,36 @@ button {
     text-align: center;
   }
 
-  .hero-subtitle {
+  .hero-title {
+    font-size: clamp(2.1rem, 4.8vw, 2.8rem);
+    max-width: 680px;
     margin-inline: auto;
+  }
+
+  .hero-subtitle {
+    max-width: 580px;
+    margin-inline: auto;
+    margin-bottom: 1.75rem;
   }
 
   .hero-actions {
     justify-content: center;
+    margin-bottom: 2rem;
   }
 
   .hero-stats-row {
-    justify-content: center;
+    max-width: 540px;
+    margin-inline: auto;
   }
 
   .hero-showcase-stage {
     height: auto;
+    min-height: 0;
     perspective: none;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .floating-quiz-main-screen {
@@ -469,6 +586,42 @@ button {
   .card-slide-bg,
   .card-about-host {
     display: none !important;
+  }
+
+  /* Home 2 Centered Hero Tablet */
+  .hero-festival-centered-content {
+    max-width: 720px;
+  }
+
+  .hero-title-centered {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    max-width: 720px;
+  }
+
+  .hero-subtitle-centered {
+    max-width: 620px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions-centered {
+    justify-content: center;
+    margin-bottom: 2.25rem;
+  }
+
+  .hero-stats-banner {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+    max-width: 720px;
+    padding: 1.25rem 1.5rem !important;
+  }
+
+  .stat-cell-divider {
+    display: none !important;
+  }
+
+  .hero-stat-cell {
+    flex: unset !important;
   }
 
   /* Unified Inner-Page Hero Sections on Tablet */
@@ -653,43 +806,46 @@ button {
   }
 
   .flightboard-row {
-    grid-template-columns: 140px 1fr 130px;
-    grid-template-areas:
-      "media venue action"
-      "media stats action";
-    gap: 0.85rem 1.25rem;
-    align-items: center;
-    padding: 1.15rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    padding: 1.35rem;
+    border-radius: var(--radius-xl);
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .flightboard-media {
-    grid-area: media;
-    height: 95px;
     width: 100%;
+    height: 160px;
+    border-radius: var(--radius-lg);
   }
 
   .flightboard-venue {
-    grid-area: venue;
+    width: 100%;
   }
 
   .flightboard-prize {
-    grid-area: stats;
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 0.75rem;
-    width: fit-content;
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .flightboard-capacity {
-    grid-column: 2 / 3;
+    width: 100%;
   }
 
   .flightboard-action {
-    grid-area: action;
-    display: flex;
-    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .flightboard-action .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .tournament-circuit-track {
@@ -774,14 +930,64 @@ button {
     margin: 0 auto !important;
   }
 
+  .standings-matrix-header {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .standings-matrix-header h4 {
+    font-size: 1.1rem;
+  }
+
+  .standings-matrix-header .category-pill {
+    white-space: nowrap;
+    font-size: 0.72rem;
+  }
+
   .standings-row-item {
-    grid-template-columns: 40px 1fr 100px;
-    gap: 0.75rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    padding: 0.85rem 1.15rem !important;
+  }
+
+  .standings-rank {
+    min-width: 32px !important;
+    font-size: 1.15rem !important;
+    font-weight: 900 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .standings-team {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .standings-team strong {
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .standings-team span {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+    display: block !important;
+    margin-top: 2px !important;
+    white-space: normal !important;
   }
 
   .standings-streak,
   .standings-status {
-    display: none;
+    display: none !important;
+  }
+
+  .standings-points {
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+    text-align: right !important;
+    flex-shrink: 0 !important;
   }
 
   /* Schedule Page Tablet */
@@ -878,12 +1084,36 @@ button {
   .events-metric-banner {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.5rem !important;
-    padding: 2rem 1.5rem !important;
+    gap: 1.75rem 1.25rem !important;
+    padding: 1.75rem 1.5rem !important;
+    align-items: start !important;
   }
 
   .events-metric-banner .metric-divider {
     display: none !important;
+  }
+
+  .event-metric-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .event-metric-item .metric-num {
+    min-height: 2.4rem !important;
+    font-size: clamp(1.65rem, 3vw, 2.1rem) !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .event-metric-item .metric-label {
+    min-height: 2.7em !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-width: 170px !important;
   }
 
   .format-showcase-grid {
@@ -1272,40 +1502,71 @@ button {
     gap: 1rem !important;
   }
 
+  /* Spotlight Card Footer Mobile */
+  .spotlight-card-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+    text-align: center !important;
+  }
+
+  .spotlight-card-footer .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
   /* Radar Item Mobile Adjustments */
   .radar-item {
-    flex-wrap: wrap;
-    gap: 0.85rem;
-    padding: 1rem 1.15rem;
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 0.85rem 1rem !important;
+    padding: 1.15rem !important;
+    align-items: center !important;
   }
 
   .radar-item-date {
-    min-width: 58px;
-    padding: 0.45rem 0.5rem;
-    flex-shrink: 0;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    min-width: 60px !important;
+    padding: 0.5rem 0.6rem !important;
+    flex-shrink: 0 !important;
   }
 
   .radar-item-day {
-    font-size: 0.65rem;
-    white-space: nowrap;
+    font-size: 0.68rem !important;
+    white-space: nowrap !important;
   }
 
   .radar-item-num {
-    font-size: 1.15rem;
+    font-size: 1.2rem !important;
   }
 
   .radar-item-info {
-    min-width: 0;
-    flex: 1 1 180px;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    min-width: 0 !important;
   }
 
   .radar-item-title {
-    font-size: 1rem;
+    font-size: 1.05rem !important;
+    margin-bottom: 0.2rem !important;
   }
 
   .radar-item-meta {
-    font-size: 0.78rem;
-    gap: 0.4rem;
+    font-size: 0.82rem !important;
+    gap: 0.35rem 0.5rem !important;
+    flex-wrap: wrap !important;
+    line-height: 1.4 !important;
+  }
+
+  .radar-item .btn {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    justify-content: center !important;
+    margin-top: 0.25rem !important;
+    padding: 0.65rem 1rem !important;
+    font-size: 0.88rem !important;
   }
 
   /* Footer Mobile */
@@ -1537,9 +1798,27 @@ button {
   }
 
   .emcee-strip-item {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    padding: 1.5rem 1.25rem !important;
+    gap: 0.85rem !important;
+  }
+
+  .emcee-strip-avatar {
+    margin: 0 auto !important;
+  }
+
+  .emcee-strip-info {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .emcee-strip-item .category-pill {
+    align-self: center !important;
+    margin: 0.35rem auto 0 !important;
+    display: inline-flex !important;
   }
 
   .arena-cta-master-box {
@@ -1601,8 +1880,9 @@ button {
   .events-metric-banner {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.25rem 0.85rem !important;
+    gap: 1.5rem 0.85rem !important;
     padding: 1.5rem 1rem !important;
+    align-items: start !important;
   }
 
   .events-metric-banner .metric-divider {
@@ -1610,17 +1890,32 @@ button {
   }
 
   .event-metric-item {
-    text-align: center;
-    padding: 0.25rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    padding: 0.25rem !important;
   }
 
   .event-metric-item .metric-num {
-    font-size: clamp(1.5rem, 4vw, 1.9rem);
+    font-size: clamp(1.45rem, 4.5vw, 1.85rem) !important;
+    min-height: 2.2rem !important;
+    margin-bottom: 0.2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .event-metric-item .metric-label {
-    font-size: 0.72rem;
-    line-height: 1.35;
+    font-size: 0.72rem !important;
+    line-height: 1.35 !important;
+    min-height: 2.7em !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    max-width: 150px !important;
   }
 
   .format-tabs-strip {
@@ -2028,6 +2323,42 @@ button {
     padding: 0.3rem 0.6rem !important;
   }
 
+  /* Leaderboard row compact mobile polish */
+  .leaderboard-row {
+    padding: 0.7rem 0.75rem !important;
+    gap: 0.6rem !important;
+  }
+
+  .leaderboard-team-main {
+    gap: 0.65rem !important;
+  }
+
+  .leaderboard-rank {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .leaderboard-team-name {
+    font-size: 0.88rem !important;
+  }
+
+  .leaderboard-team-meta {
+    font-size: 0.72rem !important;
+  }
+
+  .leaderboard-prize-badge .prize-amount {
+    font-size: 0.88rem !important;
+  }
+
+  .comp-bottom-stat {
+    padding: 0.85rem 1rem !important;
+  }
+
+  .comp-stat-val {
+    font-size: 1.05rem !important;
+  }
+
   /* Fix results breakdown items alignment on very small screens */
   .breakdown-item {
     flex-direction: column !important;
@@ -2194,11 +2525,15 @@ button {
 
   .quick-pin-mini-form {
     flex-direction: column !important;
+    gap: 0.75rem !important;
   }
 
+  .quick-pin-mini-form input,
   .quick-pin-mini-form .btn {
     width: 100% !important;
-}
+    height: 48px !important;
+    min-height: 48px !important;
+  }
 }
 
 /* ==========================================================================
@@ -2438,6 +2773,43 @@ button {
     max-width: 100% !important;
   }
 
+  /* Full-Screen Hero Sections on Phablet / Mobile (<= 768px) */
+  .hero-section,
+  .hero-festival-center {
+    min-height: calc(100vh - var(--header-height, 68px));
+    min-height: calc(100dvh - var(--header-height, 68px));
+    padding: clamp(1.75rem, 3.5vh, 2.5rem) 0;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 6.5vw, 2.35rem);
+  }
+
+  .hero-title-centered {
+    font-size: clamp(1.85rem, 6.5vw, 2.35rem);
+  }
+
+  .hero-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .hero-stats-banner {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem 1rem !important;
+    max-width: 460px;
+    padding: 1.25rem !important;
+  }
+
+  .quiz-screen-body {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    padding: 1.25rem !important;
+  }
+
   /* Universal Form & Dropdown Mobile Responsiveness */
   .form-row-2,
   .form-grid-2,
@@ -2460,6 +2832,17 @@ button {
   .form-control,
   .form-select,
   select,
+  .custom-date-popup {
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 0.95rem 0.75rem !important;
+  }
+
+  .cdp-day-btn {
+    font-size: 0.82rem !important;
+  }
+
   input[type="date"] {
     width: 100% !important;
     max-width: 100% !important;
@@ -2499,6 +2882,97 @@ button {
 }
 
 @media (max-width: 480px) {
+  /* Full-Screen Hero Sections on Mobile (<= 480px) */
+  .hero-section,
+  .hero-festival-center {
+    min-height: calc(100vh - var(--header-height, 68px));
+    min-height: calc(100dvh - var(--header-height, 68px));
+    padding: 1.5rem 0 !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.65rem, 7.5vw, 2.05rem) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .hero-title-centered {
+    font-size: clamp(1.65rem, 7.5vw, 2.05rem) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .hero-subtitle,
+  .hero-subtitle-centered {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .hero-actions,
+  .hero-actions-centered {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.65rem !important;
+    margin-bottom: 1.35rem !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions-centered .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    padding-top: 0.95rem !important;
+    width: 100% !important;
+  }
+
+  .hero-stat-number {
+    font-size: 1.35rem !important;
+  }
+
+  .hero-stat-label {
+    font-size: 0.72rem !important;
+  }
+
+  .hero-stats-banner {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.95rem 0.65rem !important;
+    padding: 1rem 0.85rem !important;
+    width: 100% !important;
+  }
+
+  .stat-cell-num {
+    font-size: 1.45rem !important;
+  }
+
+  .stat-cell-label {
+    font-size: 0.7rem !important;
+  }
+
+  .quiz-screen-body {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+
+  .quiz-main-question {
+    font-size: 1.05rem !important;
+  }
+
+  .quiz-bee-img {
+    height: 110px !important;
+  }
+
+  .quiz-option-pill {
+    padding: 0.45rem 0.65rem !important;
+    font-size: 0.8125rem !important;
+  }
+
   .contact-form-pane,
   .contact-info-pane,
   .quote-builder-box,
@@ -2530,6 +3004,27 @@ button {
 }
 
 @media (max-width: 375px) {
+  .hero-title,
+  .hero-title-centered {
+    font-size: clamp(1.45rem, 7vw, 1.75rem) !important;
+  }
+
+  .hero-stat-number {
+    font-size: 1.25rem !important;
+  }
+
+  .hero-stat-label {
+    font-size: 0.68rem !important;
+  }
+
+  .stat-cell-num {
+    font-size: 1.35rem !important;
+  }
+
+  .stat-cell-label {
+    font-size: 0.68rem !important;
+  }
+
   .contact-form-pane,
   .contact-info-pane,
   .quote-builder-box,
@@ -2539,10 +3034,15 @@ button {
   }
 
   .form-field input,
-  .form-field select,
   .form-field textarea,
-  .custom-select-trigger,
   input[type="date"] {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .form-field select,
+  .custom-select-trigger {
     padding-left: 0.85rem !important;
     padding-right: 2.4rem !important;
     font-size: 0.875rem !important;
@@ -2560,9 +3060,70 @@ button {
     white-space: normal !important;
     word-break: break-word !important;
   }
+
+  .radar-item {
+    padding: 0.95rem 0.85rem !important;
+    gap: 0.65rem 0.75rem !important;
+  }
+
+  .radar-item-date {
+    min-width: 52px !important;
+    padding: 0.4rem 0.35rem !important;
+  }
+
+  .radar-item-num {
+    font-size: 1.05rem !important;
+  }
+
+  .radar-item-title {
+    font-size: 0.95rem !important;
+  }
+
+  .radar-item-meta {
+    font-size: 0.75rem !important;
+  }
 }
 
 @media (max-width: 320px) {
+  .hero-section,
+  .hero-festival-center {
+    min-height: auto !important;
+    padding: 1.15rem 0 !important;
+  }
+
+  .hero-title,
+  .hero-title-centered {
+    font-size: 1.35rem !important;
+    word-break: break-word !important;
+  }
+
+  .hero-subtitle,
+  .hero-subtitle-centered {
+    font-size: 0.825rem !important;
+    margin-bottom: 0.95rem !important;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+    text-align: center !important;
+  }
+
+  .hero-stats-banner {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    padding: 0.85rem 0.6rem !important;
+  }
+
+  .quiz-screen-body {
+    padding: 0.75rem !important;
+  }
+
+  .quiz-option-pill {
+    padding: 0.38rem 0.5rem !important;
+    font-size: 0.78rem !important;
+  }
+
   .contact-form-pane,
   .contact-info-pane,
   .quote-builder-box,
@@ -2576,10 +3137,15 @@ button {
   }
 
   .form-field input,
-  .form-field select,
   .form-field textarea,
-  .custom-select-trigger,
   input[type="date"] {
+    padding: 0.65rem 0.65rem !important;
+    font-size: 0.8125rem !important;
+    min-height: 44px !important;
+  }
+
+  .form-field select,
+  .custom-select-trigger {
     padding: 0.65rem 0.65rem !important;
     padding-right: 2.2rem !important;
     font-size: 0.8125rem !important;
@@ -2593,6 +3159,22 @@ button {
 }
 
 @media (max-width: 200px) {
+  .hero-title,
+  .hero-title-centered {
+    font-size: 1.15rem !important;
+    word-break: break-word !important;
+  }
+
+  .hero-subtitle,
+  .hero-subtitle-centered {
+    font-size: 0.75rem !important;
+  }
+
+  .quiz-option-pill {
+    padding: 0.35rem 0.45rem !important;
+    font-size: 0.72rem !important;
+  }
+
   .container,
   .contact-form-pane,
   .contact-info-pane,
@@ -2604,11 +3186,17 @@ button {
   }
 
   .form-field input,
-  .form-field select,
   .form-field textarea,
-  .custom-select-trigger,
   input[type="date"] {
-    padding: 0.5rem !important;
+    padding: 0.5rem 0.5rem !important;
+    font-size: 0.75rem !important;
+    min-height: 40px !important;
+  }
+
+  .form-field select,
+  .custom-select-trigger {
+    padding: 0.5rem 0.5rem !important;
+    padding-right: 1.8rem !important;
     font-size: 0.75rem !important;
     min-height: 40px !important;
   }
@@ -2616,6 +3204,14 @@ button {
   .custom-select-option {
     padding: 5px 6px !important;
     font-size: 0.75rem !important;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero-section,
+  .hero-festival-center {
+    min-height: auto !important;
+    padding: 1.5rem 0 !important;
   }
 }
 

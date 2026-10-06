@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initRadarCountdown();
   initCustomSelectDropdowns();
+  initCustomDatePickers();
 });
 
 /* --------------------------------------------------------------------------
@@ -1886,6 +1887,319 @@ function initCustomSelectDropdowns() {
         w.classList.remove('open');
         const t = w.querySelector('.custom-select-trigger');
         if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   Custom Responsive Brainwave Datepicker Engine
+   Replaces native browser datepicker with a gorgeous, 100% theme-matching,
+   fully responsive custom calendar popup that stays inside viewport bounds.
+   -------------------------------------------------------------------------- */
+function initCustomDatePickers() {
+  const dateInputs = document.querySelectorAll('input[type="date"], input.custom-date-picker');
+  if (!dateInputs.length) return;
+
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+
+  dateInputs.forEach(input => {
+    // Avoid double initialization
+    if (input.dataset.cdpInitialized) return;
+    input.dataset.cdpInitialized = 'true';
+
+    // Current view state
+    let today = new Date();
+    let selectedDate = null;
+    if (input.value) {
+      const parts = input.value.split('-');
+      if (parts.length === 3) {
+        selectedDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+      }
+    }
+
+    let viewYear = selectedDate ? selectedDate.getFullYear() : today.getFullYear();
+    let viewMonth = selectedDate ? selectedDate.getMonth() : today.getMonth();
+
+    // Create custom wrapper
+    const wrapper = document.createElement('div');
+    wrapper.className = 'custom-date-wrapper';
+
+    // Insert wrapper before input
+    input.parentNode.insertBefore(wrapper, input);
+
+    // Hide native input visually but keep in DOM for forms
+    input.style.display = 'none';
+    wrapper.appendChild(input);
+
+    // Visible trigger container
+    const triggerWrap = document.createElement('div');
+    triggerWrap.className = 'custom-date-trigger-wrap';
+
+    const displayInput = document.createElement('input');
+    displayInput.type = 'text';
+    displayInput.className = 'custom-date-display-input';
+    displayInput.readOnly = true;
+    displayInput.placeholder = input.placeholder || 'Select event date...';
+    displayInput.setAttribute('aria-label', input.getAttribute('aria-label') || 'Event Date');
+    displayInput.setAttribute('autocomplete', 'off');
+
+    function updateDisplay() {
+      if (input.value) {
+        const parts = input.value.split('-');
+        if (parts.length === 3) {
+          const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+          displayInput.value = `${monthNames[d.getMonth()].substring(0, 3)} ${d.getDate()}, ${d.getFullYear()}`;
+          return;
+        }
+      }
+      displayInput.value = '';
+    }
+    updateDisplay();
+
+    // Calendar Icon
+    const calIcon = document.createElement('div');
+    calIcon.className = 'custom-date-calendar-icon';
+    calIcon.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+      <line x1="16" y1="2" x2="16" y2="6"></line>
+      <line x1="8" y1="2" x2="8" y2="6"></line>
+      <line x1="3" y1="10" x2="21" y2="10"></line>
+    </svg>`;
+
+    triggerWrap.appendChild(displayInput);
+    triggerWrap.appendChild(calIcon);
+    wrapper.appendChild(triggerWrap);
+
+    // Popup container
+    const popup = document.createElement('div');
+    popup.className = 'custom-date-popup';
+    wrapper.appendChild(popup);
+
+    function renderCalendar() {
+      popup.innerHTML = '';
+
+      // 1. Header
+      const header = document.createElement('div');
+      header.className = 'cdp-header';
+
+      const prevBtn = document.createElement('button');
+      prevBtn.type = 'button';
+      prevBtn.className = 'cdp-nav-btn cdp-prev-btn';
+      prevBtn.setAttribute('aria-label', 'Previous month');
+      prevBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>`;
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        viewMonth--;
+        if (viewMonth < 0) {
+          viewMonth = 11;
+          viewYear--;
+        }
+        renderCalendar();
+      });
+
+      const titleWrap = document.createElement('div');
+      titleWrap.className = 'cdp-title-wrap';
+      titleWrap.textContent = `${monthNames[viewMonth]} ${viewYear}`;
+
+      const nextBtn = document.createElement('button');
+      nextBtn.type = 'button';
+      nextBtn.className = 'cdp-nav-btn cdp-next-btn';
+      nextBtn.setAttribute('aria-label', 'Next month');
+      nextBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        viewMonth++;
+        if (viewMonth > 11) {
+          viewMonth = 0;
+          viewYear++;
+        }
+        renderCalendar();
+      });
+
+      header.appendChild(prevBtn);
+      header.appendChild(titleWrap);
+      header.appendChild(nextBtn);
+      popup.appendChild(header);
+
+      // 2. Weekday labels
+      const weekdays = document.createElement('div');
+      weekdays.className = 'cdp-weekdays';
+      ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].forEach(d => {
+        const dSpan = document.createElement('span');
+        dSpan.textContent = d;
+        weekdays.appendChild(dSpan);
+      });
+      popup.appendChild(weekdays);
+
+      // 3. Days Grid
+      const daysGrid = document.createElement('div');
+      daysGrid.className = 'cdp-days-grid';
+
+      const firstDayIndex = new Date(viewYear, viewMonth, 1).getDay();
+      const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      const daysInPrevMonth = new Date(viewYear, viewMonth, 0).getDate();
+
+      // Prev month filler days
+      for (let i = firstDayIndex - 1; i >= 0; i--) {
+        const dayBtn = document.createElement('button');
+        dayBtn.type = 'button';
+        dayBtn.className = 'cdp-day-btn cdp-day-other';
+        dayBtn.textContent = daysInPrevMonth - i;
+        const prevM = viewMonth === 0 ? 11 : viewMonth - 1;
+        const prevY = viewMonth === 0 ? viewYear - 1 : viewYear;
+        const dayNum = daysInPrevMonth - i;
+        dayBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectDate(prevY, prevM, dayNum);
+        });
+        daysGrid.appendChild(dayBtn);
+      }
+
+      // Current month days
+      for (let i = 1; i <= daysInMonth; i++) {
+        const dayBtn = document.createElement('button');
+        dayBtn.type = 'button';
+        dayBtn.className = 'cdp-day-btn';
+        dayBtn.textContent = i;
+
+        // Check if today
+        if (
+          viewYear === today.getFullYear() &&
+          viewMonth === today.getMonth() &&
+          i === today.getDate()
+        ) {
+          dayBtn.classList.add('cdp-day-today');
+        }
+
+        // Check if selected
+        if (
+          selectedDate &&
+          viewYear === selectedDate.getFullYear() &&
+          viewMonth === selectedDate.getMonth() &&
+          i === selectedDate.getDate()
+        ) {
+          dayBtn.classList.add('cdp-day-selected');
+        }
+
+        const currentDayNum = i;
+        dayBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectDate(viewYear, viewMonth, currentDayNum);
+        });
+
+        daysGrid.appendChild(dayBtn);
+      }
+
+      // Next month filler days
+      const totalRendered = firstDayIndex + daysInMonth;
+      const nextMonthFiller = totalRendered % 7 === 0 ? 0 : 7 - (totalRendered % 7);
+      for (let i = 1; i <= nextMonthFiller; i++) {
+        const dayBtn = document.createElement('button');
+        dayBtn.type = 'button';
+        dayBtn.className = 'cdp-day-btn cdp-day-other';
+        dayBtn.textContent = i;
+        const nextM = viewMonth === 11 ? 0 : viewMonth + 1;
+        const nextY = viewMonth === 11 ? viewYear + 1 : viewYear;
+        const nextD = i;
+        dayBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectDate(nextY, nextM, nextD);
+        });
+        daysGrid.appendChild(dayBtn);
+      }
+
+      popup.appendChild(daysGrid);
+
+      // 4. Footer Actions
+      const footer = document.createElement('div');
+      footer.className = 'cdp-footer';
+
+      const clearBtn = document.createElement('button');
+      clearBtn.type = 'button';
+      clearBtn.className = 'cdp-action-btn cdp-btn-clear';
+      clearBtn.textContent = 'Clear';
+      clearBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        input.value = '';
+        selectedDate = null;
+        updateDisplay();
+        wrapper.classList.remove('open');
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+
+      const todayBtn = document.createElement('button');
+      todayBtn.type = 'button';
+      todayBtn.className = 'cdp-action-btn cdp-btn-today';
+      todayBtn.textContent = 'Today';
+      todayBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectDate(today.getFullYear(), today.getMonth(), today.getDate());
+      });
+
+      footer.appendChild(clearBtn);
+      footer.appendChild(todayBtn);
+      popup.appendChild(footer);
+    }
+
+    function selectDate(y, m, d) {
+      selectedDate = new Date(y, m, d);
+      const mm = String(m + 1).padStart(2, '0');
+      const dd = String(d).padStart(2, '0');
+      input.value = `${y}-${mm}-${dd}`;
+      updateDisplay();
+      wrapper.classList.remove('open');
+      input.dispatchEvent(new Event('change', { bubbles: true }));
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+
+    // Open/Close toggle
+    displayInput.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = wrapper.classList.contains('open');
+
+      document.querySelectorAll('.custom-date-wrapper.open').forEach(w => {
+        if (w !== wrapper) w.classList.remove('open');
+      });
+
+      if (isOpen) {
+        wrapper.classList.remove('open');
+      } else {
+        if (input.value) {
+          const parts = input.value.split('-');
+          if (parts.length === 3) {
+            selectedDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+            viewYear = selectedDate.getFullYear();
+            viewMonth = selectedDate.getMonth();
+          }
+        }
+        renderCalendar();
+        wrapper.classList.add('open');
+      }
+    });
+
+    input.addEventListener('change', () => {
+      updateDisplay();
+    });
+  });
+
+  // Global close listener
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.custom-date-wrapper')) {
+      document.querySelectorAll('.custom-date-wrapper.open').forEach(w => {
+        w.classList.remove('open');
+      });
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.custom-date-wrapper.open').forEach(w => {
+        w.classList.remove('open');
       });
     }
   });
