@@ -2503,6 +2503,15 @@ button {
   .calc-big-num {
     font-size: 2.4rem !important;
   }
+
+  .contact-trust-card {
+    padding: 1rem 1rem !important;
+    margin-top: 1.25rem !important;
+  }
+
+  .trust-perk-item {
+    font-size: 0.8rem !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
