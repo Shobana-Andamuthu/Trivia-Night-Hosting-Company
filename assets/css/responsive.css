@@ -366,6 +366,18 @@ button {
     gap: 1.5rem !important;
   }
 
+  .contact-form-master-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+    max-width: 100% !important;
+  }
+
+  .contact-form-pane,
+  .contact-info-pane {
+    padding: 2.5rem 2rem !important;
+    width: 100% !important;
+  }
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
@@ -1167,13 +1179,14 @@ button {
   }
 
   .host-metric-banner {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    padding: 1.75rem 1.25rem !important;
   }
 
-  .host-metric-banner .metric-divider:nth-child(4) {
-    display: none;
+  .host-metric-banner .metric-divider {
+    display: none !important;
   }
 
   .comparison-cards-grid {
@@ -1237,13 +1250,14 @@ button {
   }
 
   .about-metric-banner {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    padding: 1.75rem 1.25rem !important;
   }
 
-  .about-metric-banner .metric-divider:nth-child(4) {
-    display: none;
+  .about-metric-banner .metric-divider {
+    display: none !important;
   }
 
   .philosophy-bento-grid {
@@ -1315,8 +1329,32 @@ button {
   }
 
   .contact-form-master-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+    max-width: 100% !important;
+  }
+
+  .contact-form-pane,
+  .contact-info-pane {
+    padding: 2.25rem 1.75rem !important;
+    width: 100% !important;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .form-row-2 .form-field label {
+    min-height: auto !important;
+    display: block !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .partner-form-grid,
+  .quote-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
   }
 
   .studios-grid {
