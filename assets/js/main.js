@@ -673,7 +673,7 @@ function initInteractiveElements() {
 }
 
 /* --------------------------------------------------------------------------
-   9. Schedule Page Interactive System (Filtering, Day Tabs, RSVP Modal)
+   9. Schedule Page Interactive System (Filtering, Dynamic Day Counts, RSVP Modal)
    -------------------------------------------------------------------------- */
 function initScheduleInteractions() {
   const dayBtns = document.querySelectorAll('.day-strip-btn');
@@ -682,12 +682,34 @@ function initScheduleInteractions() {
   const formatSelect = document.getElementById('formatFilterSelect');
   const prizeSelect = document.getElementById('prizeFilterSelect');
   const resetBtn = document.getElementById('resetFiltersBtn');
+  const resetScheduleDayBtn = document.getElementById('resetScheduleDayFilterBtn');
   const scheduleCards = document.querySelectorAll('.schedule-card');
   const countLabel = document.getElementById('activeGamesCount');
+  const emptyState = document.getElementById('scheduleEmptyState');
 
-  if (!scheduleCards.length) return;
+  if (!scheduleCards.length && !dayBtns.length) return;
 
   let currentDay = 'all';
+
+  // Automatically update day badge counts based on actual card elements in the DOM
+  function updateDynamicDayCounts() {
+    const counts = { all: scheduleCards.length };
+    scheduleCards.forEach(card => {
+      const day = (card.getAttribute('data-day') || '').toLowerCase().trim();
+      if (day) {
+        counts[day] = (counts[day] || 0) + 1;
+      }
+    });
+
+    dayBtns.forEach(btn => {
+      const day = (btn.getAttribute('data-day') || '').toLowerCase().trim();
+      const badge = btn.querySelector('.day-count-badge');
+      if (badge) {
+        const count = counts[day] !== undefined ? counts[day] : 0;
+        badge.textContent = `${count} Game${count === 1 ? '' : 's'}`;
+      }
+    });
+  }
 
   function applyFilters() {
     let visibleCount = 0;
@@ -697,20 +719,24 @@ function initScheduleInteractions() {
     const selectedPrize = prizeSelect ? prizeSelect.value : 'all';
 
     scheduleCards.forEach(card => {
-      const cardDay = card.getAttribute('data-day');
+      const cardDay = (card.getAttribute('data-day') || '').toLowerCase().trim();
       const cardCity = card.getAttribute('data-city');
       const cardFormat = card.getAttribute('data-format');
       const cardPrize = card.getAttribute('data-prize');
       const cardText = card.textContent.toLowerCase();
 
       const matchDay = (currentDay === 'all' || cardDay === currentDay);
-      const matchCity = (selectedCity === 'all' || cardCity === selectedCity);
-      const matchFormat = (selectedFormat === 'all' || cardFormat === selectedFormat);
-      const matchPrize = (selectedPrize === 'all' || cardPrize === selectedPrize);
+      const matchCity = (!cardCity || selectedCity === 'all' || cardCity === selectedCity);
+      const matchFormat = (!cardFormat || selectedFormat === 'all' || cardFormat === selectedFormat);
+      const matchPrize = (!cardPrize || selectedPrize === 'all' || cardPrize === selectedPrize);
       const matchQuery = (query === '' || cardText.includes(query));
 
       if (matchDay && matchCity && matchFormat && matchPrize && matchQuery) {
         card.style.display = 'grid';
+        card.style.animation = 'none';
+        // Trigger reflow to restart smooth fade-in
+        void card.offsetHeight;
+        card.style.animation = 'fadeInUp 0.35s ease forwards';
         visibleCount++;
       } else {
         card.style.display = 'none';
@@ -718,19 +744,60 @@ function initScheduleInteractions() {
     });
 
     if (countLabel) {
-      countLabel.textContent = `Showing ${visibleCount} Featured Venue${visibleCount === 1 ? '' : 's'}`;
+      if (currentDay === 'all') {
+        countLabel.textContent = `Showing ${visibleCount} Featured Venue${visibleCount === 1 ? '' : 's'}`;
+      } else {
+        const dayNames = {
+          mon: 'Monday', tue: 'Tuesday', wed: 'Wednesday', thu: 'Thursday',
+          fri: 'Friday', sat: 'Saturday', sun: 'Sunday'
+        };
+        const dayName = dayNames[currentDay] || currentDay.toUpperCase();
+        countLabel.textContent = `Showing ${visibleCount} ${dayName} Venue${visibleCount === 1 ? '' : 's'}`;
+      }
+    }
+
+    if (emptyState) {
+      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
     }
   }
+
+  // Initial calculation of badges
+  updateDynamicDayCounts();
 
   // Day Tab Click Handlers
   dayBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      dayBtns.forEach(b => b.classList.remove('active'));
+      dayBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       btn.classList.add('active');
-      currentDay = btn.getAttribute('data-day');
+      btn.setAttribute('aria-selected', 'true');
+      currentDay = (btn.getAttribute('data-day') || 'all').toLowerCase().trim();
       applyFilters();
     });
   });
+
+  // Reset to All Button in Empty State
+  if (resetScheduleDayBtn) {
+    resetScheduleDayBtn.addEventListener('click', () => {
+      dayBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      const allBtn = document.querySelector('.day-strip-btn[data-day="all"]');
+      if (allBtn) {
+        allBtn.classList.add('active');
+        allBtn.setAttribute('aria-selected', 'true');
+      }
+      currentDay = 'all';
+      if (searchInput) searchInput.value = '';
+      if (citySelect) citySelect.value = 'all';
+      if (formatSelect) formatSelect.value = 'all';
+      if (prizeSelect) prizeSelect.value = 'all';
+      applyFilters();
+    });
+  }
 
   // Dropdowns & Search Input Handlers
   if (searchInput) searchInput.addEventListener('input', applyFilters);
@@ -744,9 +811,15 @@ function initScheduleInteractions() {
       if (citySelect) citySelect.value = 'all';
       if (formatSelect) formatSelect.value = 'all';
       if (prizeSelect) prizeSelect.value = 'all';
-      dayBtns.forEach(b => b.classList.remove('active'));
+      dayBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       const allBtn = document.querySelector('.day-strip-btn[data-day="all"]');
-      if (allBtn) allBtn.classList.add('active');
+      if (allBtn) {
+        allBtn.classList.add('active');
+        allBtn.setAttribute('aria-selected', 'true');
+      }
       currentDay = 'all';
       applyFilters();
     });

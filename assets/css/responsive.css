@@ -1690,15 +1690,26 @@ button {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     justify-content: flex-start !important;
-    padding-bottom: 0.65rem !important;
-    gap: 0.5rem !important;
+    padding: 0.25rem 0.25rem 0.75rem 0.25rem !important;
+    gap: 0.55rem !important;
     scrollbar-width: thin !important;
+    scrollbar-color: rgba(217, 70, 239, 0.4) transparent !important;
+    touch-action: pan-x !important;
+  }
+
+  .week-days-strip::-webkit-scrollbar {
+    height: 4px !important;
+  }
+
+  .week-days-strip::-webkit-scrollbar-thumb {
+    background: rgba(217, 70, 239, 0.4) !important;
+    border-radius: 4px !important;
   }
 
   .day-strip-btn {
-    flex: 0 0 96px !important;
-    min-width: 96px !important;
-    padding: 0.65rem 0.4rem !important;
+    flex: 0 0 94px !important;
+    min-width: 94px !important;
+    padding: 0.65rem 0.35rem !important;
   }
 
   /* Home 2 Mobile Sections */

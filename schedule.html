@@ -312,167 +312,58 @@
           </div>
           <span class="live-games-indicator">
             <span class="pulse-dot"></span>
-            <span id="activeGamesCount">Showing 6 Featured Venues</span>
+            <span id="activeGamesCount">Showing 14 Featured Venues</span>
           </span>
         </div>
 
         <!-- 7-Day Interactive Horizontal Date Ribbon Strip (Positioned Above Cards for Direct Filtering) -->
         <div class="week-days-strip reveal-on-scroll" role="tablist" aria-label="Select Day of Week" style="margin: 1.75rem 0 2.25rem 0;">
-          <button type="button" class="day-strip-btn active" data-day="all">
+          <button type="button" class="day-strip-btn active" data-day="all" aria-selected="true">
             <span class="day-abbr">ALL</span>
             <span class="day-label">Full Week</span>
-            <span class="day-count-badge">58 Games</span>
-          </button>
-          <button type="button" class="day-strip-btn" data-day="mon">
-            <span class="day-abbr">MON</span>
-            <span class="day-label">Monday</span>
-            <span class="day-count-badge">6 Games</span>
-          </button>
-          <button type="button" class="day-strip-btn" data-day="tue">
-            <span class="day-abbr">TUE</span>
-            <span class="day-label">Tuesday</span>
             <span class="day-count-badge">14 Games</span>
           </button>
-          <button type="button" class="day-strip-btn" data-day="wed">
+          <button type="button" class="day-strip-btn" data-day="mon" aria-selected="false">
+            <span class="day-abbr">MON</span>
+            <span class="day-label">Monday</span>
+            <span class="day-count-badge">2 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="tue" aria-selected="false">
+            <span class="day-abbr">TUE</span>
+            <span class="day-label">Tuesday</span>
+            <span class="day-count-badge">2 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="wed" aria-selected="false">
             <span class="day-abbr">WED</span>
             <span class="day-label">Wednesday</span>
-            <span class="day-count-badge">16 Games</span>
+            <span class="day-count-badge">2 Games</span>
           </button>
-          <button type="button" class="day-strip-btn" data-day="thu">
+          <button type="button" class="day-strip-btn" data-day="thu" aria-selected="false">
             <span class="day-abbr">THU</span>
             <span class="day-label">Thursday</span>
-            <span class="day-count-badge">12 Games</span>
+            <span class="day-count-badge">2 Games</span>
           </button>
-          <button type="button" class="day-strip-btn" data-day="fri">
+          <button type="button" class="day-strip-btn" data-day="fri" aria-selected="false">
             <span class="day-abbr">FRI</span>
             <span class="day-label">Friday</span>
-            <span class="day-count-badge">4 Games</span>
+            <span class="day-count-badge">2 Games</span>
           </button>
-          <button type="button" class="day-strip-btn" data-day="sat">
+          <button type="button" class="day-strip-btn" data-day="sat" aria-selected="false">
             <span class="day-abbr">SAT</span>
             <span class="day-label">Saturday</span>
-            <span class="day-count-badge">6 Games</span>
+            <span class="day-count-badge">2 Games</span>
+          </button>
+          <button type="button" class="day-strip-btn" data-day="sun" aria-selected="false">
+            <span class="day-abbr">SUN</span>
+            <span class="day-label">Sunday</span>
+            <span class="day-count-badge">2 Games</span>
           </button>
         </div>
 
         <!-- Schedule Cards List -->
         <div class="schedule-items-list" id="scheduleCardsList">
           
-          <!-- Card 1: Pinthouse Brewing (Tue - Austin) -->
-          <div class="schedule-card reveal-on-scroll" data-day="tue" data-city="austin" data-format="classic" data-prize="cash">
-            <div class="schedule-card-time">
-              <span class="sc-day">TUESDAY</span>
-              <span class="sc-hour">7:00 PM</span>
-              <span class="sc-duration">2 Hours &bull; 4 Rounds</span>
-            </div>
-            
-            <div class="schedule-card-info">
-              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
-                <span class="category-pill pill-magenta">CLASSIC PUB TRIVIA</span>
-                <span class="category-pill pill-mint">COMPETITIVE</span>
-              </div>
-              <h3 class="sc-venue-title">Pinthouse Brewing Taproom</h3>
-              <p class="sc-venue-loc">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span>South Lamar &bull; Austin, TX</span>
-              </p>
-              <div class="sc-emcee-tag">Host: <strong>Dave "Lightning" Miller</strong> (4.98 ★)</div>
-            </div>
-
-            <div class="schedule-card-prizes">
-              <span class="sc-prize-title">PRIZES TONIGHT</span>
-              <strong class="sc-prize-highlight">$300 Cash + $100 Tab</strong>
-              <span class="sc-prize-sub">Top 3 Teams Awarded</span>
-            </div>
-
-            <div class="schedule-card-capacity">
-              <div class="sc-cap-bar">
-                <div class="sc-cap-fill" style="width: 85%;"></div>
-              </div>
-              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">85% Full</strong> &bull; 4 Tables Left</span>
-              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Pinthouse Brewing" data-city="Austin, TX" data-time="Tuesday 7:00 PM">
-                <span>Reserve Free Table</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 2: Great Divide Brewery (Wed - Denver) -->
-          <div class="schedule-card reveal-on-scroll" data-day="wed" data-city="denver" data-format="music" data-prize="tab">
-            <div class="schedule-card-time">
-              <span class="sc-day">WEDNESDAY</span>
-              <span class="sc-hour">7:30 PM</span>
-              <span class="sc-duration">2 Hours &bull; Audio Stings</span>
-            </div>
-            
-            <div class="schedule-card-info">
-              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
-                <span class="category-pill pill-cyan">MUSIC BINGO &amp; AUDIO</span>
-                <span class="category-pill pill-mint">CASUAL FUN</span>
-              </div>
-              <h3 class="sc-venue-title">Great Divide Barrel Bar</h3>
-              <p class="sc-venue-loc">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span>RiNo Art District &bull; Denver, CO</span>
-              </p>
-              <div class="sc-emcee-tag">Host: <strong>Sarah "Static" Liu</strong> (4.99 ★)</div>
-            </div>
-
-            <div class="schedule-card-prizes">
-              <span class="sc-prize-title">PRIZES TONIGHT</span>
-              <strong class="sc-prize-highlight">$150 Barrel Tab + Swag</strong>
-              <span class="sc-prize-sub">Free Pitchers for Bonus Rounds</span>
-            </div>
-
-            <div class="schedule-card-capacity">
-              <div class="sc-cap-bar">
-                <div class="sc-cap-fill" style="width: 60%;"></div>
-              </div>
-              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">60% Full</strong> &bull; 9 Tables Left</span>
-              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Great Divide Barrel Bar" data-city="Denver, CO" data-time="Wednesday 7:30 PM">
-                <span>Reserve Free Table</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 3: Fremont Brewing (Thu - Seattle) -->
-          <div class="schedule-card reveal-on-scroll" data-day="thu" data-city="seattle" data-format="theme" data-prize="cash">
-            <div class="schedule-card-time">
-              <span class="sc-day">THURSDAY</span>
-              <span class="sc-hour">7:00 PM</span>
-              <span class="sc-duration">2.5 Hours &bull; Cosplay Night</span>
-            </div>
-            
-            <div class="schedule-card-info">
-              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
-                <span class="category-pill pill-coral">90S MTV NOSTALGIA SPECIAL</span>
-                <span class="category-pill pill-magenta">MASTERS BRACKET</span>
-              </div>
-              <h3 class="sc-venue-title">Fremont Urban Beer Garden</h3>
-              <p class="sc-venue-loc">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span>Fremont Canal &bull; Seattle, WA</span>
-              </p>
-              <div class="sc-emcee-tag">Host: <strong>Marcus "The King" King</strong> (4.97 ★)</div>
-            </div>
-
-            <div class="schedule-card-prizes">
-              <span class="sc-prize-title">PRIZES TONIGHT</span>
-              <strong class="sc-prize-highlight">$500 Cash + $200 Tab</strong>
-              <span class="sc-prize-sub">+$50 Best 90s Costume Award</span>
-            </div>
-
-            <div class="schedule-card-capacity">
-              <div class="sc-cap-bar">
-                <div class="sc-cap-fill" style="width: 92%;"></div>
-              </div>
-              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">92% Full</strong> &bull; 2 Tables Left</span>
-              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Fremont Urban Beer Garden" data-city="Seattle, WA" data-time="Thursday 7:00 PM">
-                <span>Reserve Free Table</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 4: Yee-Haw Brewing (Mon - Nashville) -->
+          <!-- Card 1: Monday - Yee-Haw Downtown Taproom (Nashville) -->
           <div class="schedule-card reveal-on-scroll" data-day="mon" data-city="nashville" data-format="classic" data-prize="tab">
             <div class="schedule-card-time">
               <span class="sc-day">MONDAY</span>
@@ -510,7 +401,349 @@
             </div>
           </div>
 
-          <!-- Card 5: Meanwhile Brewing (Sat - Austin) -->
+          <!-- Card 2: Monday - St. Elmo Brewing (Austin) -->
+          <div class="schedule-card reveal-on-scroll" data-day="mon" data-city="austin" data-format="classic" data-prize="tab">
+            <div class="schedule-card-time">
+              <span class="sc-day">MONDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; Hophead Specials</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-cyan">HOPHEAD TRIVIA &amp; TACOS</span>
+                <span class="category-pill pill-mint">WEEKLY LEAGUE</span>
+              </div>
+              <h3 class="sc-venue-title">St. Elmo Brewing South Yard</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>South Congress &bull; Austin, TX</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Alex "The Anchor" Reed</strong> (4.95 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$150 Cash + $75 Taproom Tab</strong>
+              <span class="sc-prize-sub">Sours Flight Included for Bonus</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 70%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">70% Full</strong> &bull; 7 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="St. Elmo Brewing South Yard" data-city="Austin, TX" data-time="Monday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Tuesday - Pinthouse Brewing (Austin) -->
+          <div class="schedule-card reveal-on-scroll" data-day="tue" data-city="austin" data-format="classic" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">TUESDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; 4 Rounds</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-magenta">CLASSIC PUB TRIVIA</span>
+                <span class="category-pill pill-mint">COMPETITIVE</span>
+              </div>
+              <h3 class="sc-venue-title">Pinthouse Brewing Taproom</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>South Lamar &bull; Austin, TX</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Dave "Lightning" Miller</strong> (4.98 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$300 Cash + $100 Tab</strong>
+              <span class="sc-prize-sub">Top 3 Teams Awarded</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 85%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">85% Full</strong> &bull; 4 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Pinthouse Brewing" data-city="Austin, TX" data-time="Tuesday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Tuesday - Ratio Beerworks (Denver) -->
+          <div class="schedule-card reveal-on-scroll" data-day="tue" data-city="denver" data-format="theme" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">TUESDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; Trivia Deck</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-coral">MARVEL VS DC CINEMATIC SPECIAL</span>
+                <span class="category-pill pill-mint">COMPETITIVE</span>
+              </div>
+              <h3 class="sc-venue-title">Ratio Beerworks Overland</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Overland Park &bull; Denver, CO</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Sarah "Static" Liu</strong> (4.99 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$400 Cash + Comic Swag</strong>
+              <span class="sc-prize-sub">Infinity Stone Flight Included</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 78%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">78% Full</strong> &bull; 6 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Ratio Beerworks Overland" data-city="Denver, CO" data-time="Tuesday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Wednesday - Great Divide Brewery (Denver) -->
+          <div class="schedule-card reveal-on-scroll" data-day="wed" data-city="denver" data-format="music" data-prize="tab">
+            <div class="schedule-card-time">
+              <span class="sc-day">WEDNESDAY</span>
+              <span class="sc-hour">7:30 PM</span>
+              <span class="sc-duration">2 Hours &bull; Audio Stings</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-cyan">MUSIC BINGO &amp; AUDIO</span>
+                <span class="category-pill pill-mint">CASUAL FUN</span>
+              </div>
+              <h3 class="sc-venue-title">Great Divide Barrel Bar</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>RiNo Art District &bull; Denver, CO</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Sarah "Static" Liu</strong> (4.99 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$150 Barrel Tab + Swag</strong>
+              <span class="sc-prize-sub">Free Pitchers for Bonus Rounds</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 60%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">60% Full</strong> &bull; 9 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Great Divide Barrel Bar" data-city="Denver, CO" data-time="Wednesday 7:30 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: Wednesday - Optimism Brewing (Seattle) -->
+          <div class="schedule-card reveal-on-scroll" data-day="wed" data-city="seattle" data-format="classic" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">WEDNESDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; Beer Hall Clash</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-magenta">POP CULTURE &amp; VISUAL CLUES</span>
+                <span class="category-pill pill-yellow">INTERMEDIATE</span>
+              </div>
+              <h3 class="sc-venue-title">Optimism Capitol Hill Beer Hall</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Capitol Hill &bull; Seattle, WA</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Marcus "The King" King</strong> (4.97 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$250 Cash + Growler Fills</strong>
+              <span class="sc-prize-sub">Bonus Giant Jenga Tiebreaker Round</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 80%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">80% Full</strong> &bull; 5 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Optimism Capitol Hill Beer Hall" data-city="Seattle, WA" data-time="Wednesday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7: Thursday - Fremont Brewing (Seattle) -->
+          <div class="schedule-card reveal-on-scroll" data-day="thu" data-city="seattle" data-format="theme" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">THURSDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2.5 Hours &bull; Cosplay Night</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-coral">90S MTV NOSTALGIA SPECIAL</span>
+                <span class="category-pill pill-magenta">MASTERS BRACKET</span>
+              </div>
+              <h3 class="sc-venue-title">Fremont Urban Beer Garden</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Fremont Canal &bull; Seattle, WA</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Marcus "The King" King</strong> (4.97 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$500 Cash + $200 Tab</strong>
+              <span class="sc-prize-sub">+$50 Best 90s Costume Award</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 92%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">92% Full</strong> &bull; 2 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Fremont Urban Beer Garden" data-city="Seattle, WA" data-time="Thursday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 8: Thursday - Jackalope Brewing (Nashville) -->
+          <div class="schedule-card reveal-on-scroll" data-day="thu" data-city="nashville" data-format="classic" data-prize="tab">
+            <div class="schedule-card-time">
+              <span class="sc-day">THURSDAY</span>
+              <span class="sc-hour">7:30 PM</span>
+              <span class="sc-duration">2 Hours &bull; Film Buffs &amp; Lore</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-yellow">CRAFT BREWS &amp; FILM BUFFS</span>
+                <span class="category-pill pill-cyan">PUB TRIVIA</span>
+              </div>
+              <h3 class="sc-venue-title">Jackalope Brewing The Ranch</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>The Gulch &bull; Nashville, TN</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Sam "The Professor" Vance</strong> (4.96 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$200 Bar Tab + Trophy Pint</strong>
+              <span class="sc-prize-sub">Free Warm Bavarian Pretzel Round</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 68%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">68% Full</strong> &bull; 8 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Jackalope Brewing The Ranch" data-city="Nashville, TN" data-time="Thursday 7:30 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 9: Friday - ABGB Austin (Austin) -->
+          <div class="schedule-card reveal-on-scroll" data-day="fri" data-city="austin" data-format="classic" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">FRIDAY</span>
+              <span class="sc-hour">6:30 PM</span>
+              <span class="sc-duration">2 Hours &bull; Weekend Kickoff</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-magenta">SPEED TRIVIA &amp; PIZZA CLASH</span>
+                <span class="category-pill pill-coral">PARTY VIBE</span>
+              </div>
+              <h3 class="sc-venue-title">The ABGB Main Stage</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>South Lamar &bull; Austin, TX</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Dave "Lightning" Miller</strong> (4.98 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$350 Cash + Pizza Feast Tab</strong>
+              <span class="sc-prize-sub">Live Horn Decider Round for Top 2</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 88%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">88% Full</strong> &bull; 3 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="The ABGB Main Stage" data-city="Austin, TX" data-time="Friday 6:30 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 10: Friday - Denver Beer Co. (Denver) -->
+          <div class="schedule-card reveal-on-scroll" data-day="fri" data-city="denver" data-format="buzzer" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">FRIDAY</span>
+              <span class="sc-hour">7:00 PM</span>
+              <span class="sc-duration">2.5 Hours &bull; Soundbite Buzzer</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-yellow">BUZZER BATTLE &amp; SOUNDBITES</span>
+                <span class="category-pill pill-mint">CASUAL COMPETITIVE</span>
+              </div>
+              <h3 class="sc-venue-title">Denver Beer Co. Platte Street</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>LoHi / Platte &bull; Denver, CO</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Sarah "Static" Liu</strong> (4.99 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$300 Cash + Beer Flight Pass</strong>
+              <span class="sc-prize-sub">Pretzel Tower Award for Spirit</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 90%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-coral);">90% Full</strong> &bull; 2 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Denver Beer Co. Platte Street" data-city="Denver, CO" data-time="Friday 7:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 11: Saturday - Meanwhile Brewing (Austin) -->
           <div class="schedule-card reveal-on-scroll" data-day="sat" data-city="austin" data-format="buzzer" data-prize="jackpot">
             <div class="schedule-card-time">
               <span class="sc-day">SATURDAY</span>
@@ -548,42 +781,130 @@
             </div>
           </div>
 
-          <!-- Card 6: Ratio Beerworks (Tue - Denver) -->
-          <div class="schedule-card reveal-on-scroll" data-day="tue" data-city="denver" data-format="theme" data-prize="cash">
+          <!-- Card 12: Saturday - Flying Bike Brewery (Seattle) -->
+          <div class="schedule-card reveal-on-scroll" data-day="sat" data-city="seattle" data-format="classic" data-prize="cash">
             <div class="schedule-card-time">
-              <span class="sc-day">TUESDAY</span>
-              <span class="sc-hour">7:00 PM</span>
-              <span class="sc-duration">2 Hours &bull; Trivia Deck</span>
+              <span class="sc-day">SATURDAY</span>
+              <span class="sc-hour">6:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; Member Cup</span>
             </div>
             
             <div class="schedule-card-info">
               <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
-                <span class="category-pill pill-coral">MARVEL VS DC CINEMATIC SPECIAL</span>
-                <span class="category-pill pill-mint">COMPETITIVE</span>
+                <span class="category-pill pill-cyan">SATURDAY SHOWDOWN</span>
+                <span class="category-pill pill-mint">CHAMPIONSHIP SERIES</span>
               </div>
-              <h3 class="sc-venue-title">Ratio Beerworks Overland</h3>
+              <h3 class="sc-venue-title">Flying Bike Cooperative Brewery</h3>
               <p class="sc-venue-loc">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span>Overland Park &bull; Denver, CO</span>
+                <span>Greenwood &bull; Seattle, WA</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Marcus "The King" King</strong> (4.97 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TONIGHT</span>
+              <strong class="sc-prize-highlight">$400 Cash + Member Trophy</strong>
+              <span class="sc-prize-sub">Free Tasting Tokens for Top 5</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 75%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">75% Full</strong> &bull; 6 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Flying Bike Cooperative Brewery" data-city="Seattle, WA" data-time="Saturday 6:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 13: Sunday - Live Oak Brewing (Austin) -->
+          <div class="schedule-card reveal-on-scroll" data-day="sun" data-city="austin" data-format="classic" data-prize="cash">
+            <div class="schedule-card-time">
+              <span class="sc-day">SUNDAY</span>
+              <span class="sc-hour">2:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; Outdoor Biergarten</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-yellow">SUNDAY FUNDAY BRUNCH QUIZ</span>
+                <span class="category-pill pill-mint">FAMILY &amp; DOG FRIENDLY</span>
+              </div>
+              <h3 class="sc-venue-title">Live Oak Brewing Biergarten</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Del Valle &bull; Austin, TX</span>
+              </p>
+              <div class="sc-emcee-tag">Host: <strong>Alex "The Anchor" Reed</strong> (4.95 ★)</div>
+            </div>
+
+            <div class="schedule-card-prizes">
+              <span class="sc-prize-title">PRIZES TODAY</span>
+              <strong class="sc-prize-highlight">$200 Cash + Brunch Tab</strong>
+              <span class="sc-prize-sub">Smoked BBQ Platter Voucher</span>
+            </div>
+
+            <div class="schedule-card-capacity">
+              <div class="sc-cap-bar">
+                <div class="sc-cap-fill" style="width: 65%;"></div>
+              </div>
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">65% Full</strong> &bull; 10 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Live Oak Brewing Biergarten" data-city="Austin, TX" data-time="Sunday 2:00 PM">
+                <span>Reserve Free Table</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 14: Sunday - Our Mutual Friend Brewing (Denver) -->
+          <div class="schedule-card reveal-on-scroll" data-day="sun" data-city="denver" data-format="music" data-prize="tab">
+            <div class="schedule-card-time">
+              <span class="sc-day">SUNDAY</span>
+              <span class="sc-hour">4:00 PM</span>
+              <span class="sc-duration">2 Hours &bull; RiNo Patio Session</span>
+            </div>
+            
+            <div class="schedule-card-info">
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem;">
+                <span class="category-pill pill-cyan">SUNDAY CHILLOUT &amp; VISUAL QUIZ</span>
+                <span class="category-pill pill-mint">CASUAL FUN</span>
+              </div>
+              <h3 class="sc-venue-title">Our Mutual Friend Brewing</h3>
+              <p class="sc-venue-loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>RiNo Arts District &bull; Denver, CO</span>
               </p>
               <div class="sc-emcee-tag">Host: <strong>Sarah "Static" Liu</strong> (4.99 ★)</div>
             </div>
 
             <div class="schedule-card-prizes">
-              <span class="sc-prize-title">PRIZES TONIGHT</span>
-              <strong class="sc-prize-highlight">$400 Cash + Comic Swag</strong>
-              <span class="sc-prize-sub">Infinity Stone Flight Included</span>
+              <span class="sc-prize-title">PRIZES TODAY</span>
+              <strong class="sc-prize-highlight">$150 Bar Tab + Vinyl Records</strong>
+              <span class="sc-prize-sub">Food Truck 20% Discount Token</span>
             </div>
 
             <div class="schedule-card-capacity">
               <div class="sc-cap-bar">
-                <div class="sc-cap-fill" style="width: 78%;"></div>
+                <div class="sc-cap-fill" style="width: 70%;"></div>
               </div>
-              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">78% Full</strong> &bull; 6 Tables Left</span>
-              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Ratio Beerworks Overland" data-city="Denver, CO" data-time="Tuesday 7:00 PM">
+              <span class="sc-cap-label"><strong style="color:var(--brand-cyan);">70% Full</strong> &bull; 8 Tables Left</span>
+              <button type="button" class="btn btn-primary btn-sm glow-btn rsvp-trigger-btn" data-venue="Our Mutual Friend Brewing" data-city="Denver, CO" data-time="Sunday 4:00 PM">
                 <span>Reserve Free Table</span>
               </button>
             </div>
+          </div>
+
+          <!-- Empty State (Hidden by default, shown if no games match filter) -->
+          <div id="scheduleEmptyState" style="display:none; text-align:center; padding:3rem 1.5rem; background:rgba(255,255,255,0.03); border:1.5px dashed rgba(217,70,239,0.3); border-radius:var(--radius-xl);">
+            <div style="font-size:3rem; margin-bottom:0.75rem;">📅</div>
+            <h3 style="font-size:1.35rem; font-weight:900; margin-bottom:0.5rem; color:#FFFFFF;">No Trivia Games Found</h3>
+            <p style="color:var(--text-secondary); max-width:450px; margin:0 auto 1.5rem auto; font-size:0.95rem;">
+              There are no trivia nights scheduled for this specific day or filter. Check our full week schedule or explore partner venues.
+            </p>
+            <button type="button" class="btn btn-primary glow-btn" id="resetScheduleDayFilterBtn">
+              <span>View All 14 Weekly Games</span>
+            </button>
           </div>
 
         </div>
