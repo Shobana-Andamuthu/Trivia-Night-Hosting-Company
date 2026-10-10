@@ -779,7 +779,7 @@ p {
   transform: translateY(-1px);
 }
 
-#navLoginBtn {
+#navPrimaryCta {
   height: 38px;
   min-height: 38px;
   padding: 0 1.15rem;
@@ -801,18 +801,18 @@ p {
   white-space: nowrap;
 }
 
-#navLoginBtn:hover {
+#navPrimaryCta:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(217, 70, 239, 0.55);
   color: #FFFFFF;
 }
 
-#navLoginBtn span {
+#navPrimaryCta span {
   display: inline-block;
   line-height: 1;
 }
 
-#navLoginBtn svg {
+#navPrimaryCta svg {
   width: 15px;
   height: 15px;
   flex-shrink: 0;
@@ -10967,6 +10967,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover,
   box-shadow: 0 10px 30px rgba(76, 45, 116, 0.08);
 }
 
+[data-theme="light"] .about-metric-item .metric-label {
+  color: #4C2D74;
+}
+
 [data-theme="light"] .pillar-card:hover,
 [data-theme="light"] .timeline-step-card:hover,
 [data-theme="light"] .writer-step-item:hover,
@@ -14623,4 +14627,3 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover,
 [data-theme="light"] .trust-perk-item strong {
   color: #1A0B2E;
 }
-

@@ -163,7 +163,7 @@ button {
     border-radius: var(--radius-full);
   }
 
-  #navLoginBtn {
+  #navPrimaryCta {
     height: 36px;
     min-height: 36px;
     padding: 0 0.95rem;
@@ -346,9 +346,6 @@ button {
   }
 
   .nav-menu,
-  #navLoginBtn,
-  .navbar-actions #navLoginBtn,
-  .navbar-actions .btn-primary,
   .navbar-actions .btn-accent {
     display: none !important;
   }
@@ -1481,7 +1478,7 @@ button {
     border-radius: var(--radius-full);
   }
 
-  #navLoginBtn {
+  #navPrimaryCta {
     height: 36px;
     min-height: 36px;
     padding: 0 0.95rem;
@@ -2534,7 +2531,7 @@ button {
     min-height: 34px;
   }
 
-  #navLoginBtn {
+  #navPrimaryCta {
     height: 34px;
     min-height: 34px;
     padding: 0 0.85rem;
@@ -3353,4 +3350,198 @@ button {
   }
 }
 
+/* --------------------------------------------------------------------------
+   Final Layout Polish
+   -------------------------------------------------------------------------- */
+.brand-logo {
+  gap: 0.75rem;
+}
 
+.brand-logo-badge {
+  width: 46px;
+  height: 46px;
+}
+
+.brand-logo-text .brand-title {
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
+}
+
+.brand-logo-text .brand-tagline {
+  font-size: 0.62rem;
+  letter-spacing: 0.17em;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.15fr);
+  align-items: center;
+}
+
+.hero-content,
+.hero-showcase-stage {
+  min-width: 0;
+  align-self: center;
+}
+
+.hero-actions {
+  align-items: center;
+}
+
+.theme-special-card,
+.special-card-body {
+  min-width: 0;
+}
+
+.special-card-title,
+.special-card-desc {
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.special-card-footer {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.about-highlight-pill {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  padding-inline: 2rem;
+}
+
+.about-highlight-pill > svg {
+  position: absolute;
+  left: 0.8rem;
+}
+
+.about-highlight-pill > span {
+  flex: 1;
+  text-align: center;
+}
+
+[data-theme="light"] .about-float-badge span {
+  color: #4C2D74;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .brand-logo-badge {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-logo-text .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .brand-logo-text .brand-tagline {
+    font-size: 0.55rem;
+  }
+
+  .studios-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .studio-card {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #navPrimaryCta {
+    display: none;
+  }
+
+  .brand-logo-badge {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-logo-text .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .brand-logo-text .brand-tagline {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo-badge {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-logo-text .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-logo-text .brand-tagline {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .champions-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .champions-trophy-card,
+  .leaderboard-card {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .leaderboard-card {
+    padding: 1rem 0.75rem;
+  }
+
+  .leaderboard-card > div:first-child {
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+
+  .leaderboard-card > div:first-child h4 {
+    min-width: 0;
+    font-size: 1rem !important;
+  }
+
+  .leaderboard-card > div:first-child > span {
+    max-width: 92px;
+    text-align: right;
+    line-height: 1.3;
+  }
+
+  .leaderboard-row {
+    min-width: 0;
+    gap: 0.45rem;
+    padding: 0.65rem 0.55rem;
+  }
+
+  .leaderboard-team-main {
+    min-width: 0;
+    gap: 0.45rem;
+  }
+
+  .leaderboard-team-details {
+    min-width: 0;
+  }
+
+  .leaderboard-team-name,
+  .leaderboard-team-meta {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
+  }
+
+  .leaderboard-prize-badge {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    white-space: nowrap;
+  }
+}
