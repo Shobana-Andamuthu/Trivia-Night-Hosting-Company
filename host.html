@@ -25,11 +25,12 @@
         <div class="preloader-pulse-glow"></div>
         <svg class="preloader-svg" width="54" height="54" viewBox="0 0 40 40" fill="none"
           xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)"
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#bwBgGrad)" stroke="url(#bwBorderGrad)"
             stroke-width="2" />
-          <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0"
-            stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-          <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)" />
+          <path d="M6.5 20C9 20 10.5 14 13 14C15.5 14 16.5 26 19 26C21.5 26 22.5 14 25 14C27.5 14 28.5 26 31 26C32.5 26 33 20 34 20"
+            stroke="#00F5D4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" mask="url(#bwBoltMask)" />
+          <polygon points="22.5 6 15 19 20.8 19 18.5 34 26.5 17 21 17 23.5 6" fill="url(#bwBoltGrad)" />
+          <polygon points="22 8.5 16.5 18 20.2 18 19 28.5 24 17.5 21.2 17.5 22.8 8.5" fill="#FFFFFF" opacity="0.32" />
         </svg>
       </div>
       <div class="preloader-text-wrap">
@@ -42,19 +43,39 @@
     </div>
   </div>
 
-  <!-- Shared Global SVG Gradients for Brand Identity -->
+  <!-- Shared Global SVG Gradients & Negative-Space Mask for Brand Identity -->
   <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
     <defs>
-      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#D946EF" />
-        <stop offset="50%" stop-color="#A855F7" />
-        <stop offset="100%" stop-color="#9333EA" />
+      <linearGradient id="bwBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2A85" />
+        <stop offset="45%" stop-color="#9333EA" />
+        <stop offset="100%" stop-color="#00F5D4" />
       </linearGradient>
-      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <linearGradient id="bwBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#240D42" />
+        <stop offset="100%" stop-color="#0D031F" />
+      </linearGradient>
+      <linearGradient id="bwBoltGrad" x1="0%" y1="0%" x2="40%" y2="100%">
         <stop offset="0%" stop-color="#FF2E93" />
-        <stop offset="50%" stop-color="#D946EF" />
-        <stop offset="100%" stop-color="#8B5CF6" />
+        <stop offset="50%" stop-color="#FB7185" />
+        <stop offset="100%" stop-color="#A855F7" />
       </linearGradient>
+      <!-- Aliases for backward compatibility -->
+      <linearGradient id="bwGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF2A85" />
+        <stop offset="45%" stop-color="#9333EA" />
+        <stop offset="100%" stop-color="#00F5D4" />
+      </linearGradient>
+      <linearGradient id="bwGradBolt" x1="0%" y1="0%" x2="40%" y2="100%">
+        <stop offset="0%" stop-color="#FF2E93" />
+        <stop offset="50%" stop-color="#FB7185" />
+        <stop offset="100%" stop-color="#A855F7" />
+      </linearGradient>
+      <!-- Negative Space Cutout Mask to eliminate messy wave/bolt overlap -->
+      <mask id="bwBoltMask">
+        <rect width="40" height="40" fill="#FFFFFF" />
+        <polygon points="22.5 6 15 19 20.8 19 18.5 34 26.5 17 21 17 23.5 6" fill="#000000" stroke="#000000" stroke-width="4.5" stroke-linejoin="round" />
+      </mask>
     </defs>
   </svg>
 
@@ -66,13 +87,14 @@
         <!-- Redesigned Attractive Brand Logo (Brainwave + Quiz Lightning) -->
         <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
           <div class="brand-logo-badge">
-            <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none"
+            <svg class="brand-logo-svg" width="38" height="38" viewBox="0 0 40 40" fill="none"
               xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)"
+              <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#bwBgGrad)" stroke="url(#bwBorderGrad)"
                 stroke-width="1.8" />
-              <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0"
-                stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-              <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)" />
+              <path d="M6.5 20C9 20 10.5 14 13 14C15.5 14 16.5 26 19 26C21.5 26 22.5 14 25 14C27.5 14 28.5 26 31 26C32.5 26 33 20 34 20"
+                stroke="#00F5D4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" mask="url(#bwBoltMask)" />
+              <polygon points="22.5 6 15 19 20.8 19 18.5 34 26.5 17 21 17 23.5 6" fill="url(#bwBoltGrad)" />
+              <polygon points="22 8.5 16.5 18 20.2 18 19 28.5 24 17.5 21.2 17.5 22.8 8.5" fill="#FFFFFF" opacity="0.32" />
             </svg>
           </div>
           <div class="brand-logo-text">
@@ -194,11 +216,12 @@
         <div class="brand-logo-badge">
           <svg class="brand-logo-svg" width="34" height="34" viewBox="0 0 40 40" fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)"
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#bwBgGrad)" stroke="url(#bwBorderGrad)"
               stroke-width="1.8" />
-            <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0"
-              stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-            <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)" />
+            <path d="M6.5 20C9 20 10.5 14 13 14C15.5 14 16.5 26 19 26C21.5 26 22.5 14 25 14C27.5 14 28.5 26 31 26C32.5 26 33 20 34 20"
+              stroke="#00F5D4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" mask="url(#bwBoltMask)" />
+            <polygon points="22.5 6 15 19 20.8 19 18.5 34 26.5 17 21 17 23.5 6" fill="url(#bwBoltGrad)" />
+            <polygon points="22 8.5 16.5 18 20.2 18 19 28.5 24 17.5 21.2 17.5 22.8 8.5" fill="#FFFFFF" opacity="0.32" />
           </svg>
         </div>
         <div class="brand-logo-text">
@@ -1185,13 +1208,14 @@
         <div class="footer-col-brand">
           <a href="index.html" class="brand-logo" aria-label="Brainwave Trivia Home">
             <div class="brand-logo-badge">
-              <svg class="brand-logo-svg" width="36" height="36" viewBox="0 0 40 40" fill="none"
+              <svg class="brand-logo-svg" width="38" height="38" viewBox="0 0 40 40" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="36" height="36" rx="10" fill="#1A0B2E" stroke="url(#bwGradPrimary)"
+                <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#bwBgGrad)" stroke="url(#bwBorderGrad)"
                   stroke-width="1.8" />
-                <path d="M8 20C11 20 12 14 15 14C18 14 17 26 20 26C23 26 24 16 27 16C29 16 30 20 32 20" stroke="#06D6A0"
-                  stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-                <polygon points="21 6 16 19 21 19 19 32 28 16 22 16 25 6" fill="url(#bwGradBolt)" />
+                <path d="M6.5 20C9 20 10.5 14 13 14C15.5 14 16.5 26 19 26C21.5 26 22.5 14 25 14C27.5 14 28.5 26 31 26C32.5 26 33 20 34 20"
+                  stroke="#00F5D4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" mask="url(#bwBoltMask)" />
+                <polygon points="22.5 6 15 19 20.8 19 18.5 34 26.5 17 21 17 23.5 6" fill="url(#bwBoltGrad)" />
+                <polygon points="22 8.5 16.5 18 20.2 18 19 28.5 24 17.5 21.2 17.5 22.8 8.5" fill="#FFFFFF" opacity="0.32" />
               </svg>
             </div>
             <div class="brand-logo-text">

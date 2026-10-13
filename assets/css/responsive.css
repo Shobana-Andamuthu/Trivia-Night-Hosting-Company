@@ -122,8 +122,8 @@ button {
   }
 
   .hero-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1.08fr 1fr;
+    gap: 2.25rem;
     align-items: center;
   }
 
@@ -3387,42 +3387,88 @@ button {
   align-items: center;
 }
 
+@media (min-width: 641px) {
+  .hero-actions {
+    flex-wrap: nowrap;
+  }
+  .hero-actions .btn {
+    white-space: nowrap;
+  }
+}
+
+.hero-actions .btn.btn-lg {
+  padding: 0.85rem 1.65rem;
+  font-size: 0.975rem;
+}
+
 .theme-special-card,
 .special-card-body {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.special-card-title,
+.special-card-title {
+  overflow-wrap: anywhere;
+  text-align: left;
+  min-height: 2.6em;
+  line-height: 1.3;
+}
+
 .special-card-desc {
   overflow-wrap: anywhere;
+  text-align: left;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+}
+
+.special-perks-list {
+  margin-top: auto;
+  min-height: 124px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.special-perks-list span {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   text-align: left;
 }
 
 .special-card-footer {
   flex-wrap: wrap;
   gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .about-highlight-pill {
-  position: relative;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  padding-inline: 2rem;
+  padding: 0.45rem 1.25rem;
 }
 
-.about-highlight-pill > svg {
-  position: absolute;
-  left: 0.8rem;
-}
-
-.about-highlight-pill > span {
-  flex: 1;
+.about-highlight-pill span {
   text-align: center;
+  display: inline-block;
+  width: 100%;
 }
 
 [data-theme="light"] .about-float-badge span {
-  color: #4C2D74;
-  font-weight: 600;
+  color: #4C2D74 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+[data-theme="light"] .about-metric-item .metric-label,
+[data-theme="light"] .about-metric-banner .metric-label,
+[data-theme="light"] .metric-label {
+  color: #1A0B2E !important;
+  font-weight: 800 !important;
+  opacity: 1 !important;
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
