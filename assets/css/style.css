@@ -10251,16 +10251,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover,
   left: 1rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(15, 5, 29, 0.85);
+  gap: 0.45rem;
+  background: rgba(15, 5, 29, 0.88);
   border: 1px solid rgba(217, 70, 239, 0.4);
   border-radius: var(--radius-full);
-  padding: 0.4rem 0.9rem;
-  font-size: 0.7rem;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.68rem;
   font-weight: 800;
   color: #FFFFFF;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   backdrop-filter: blur(10px);
+  white-space: nowrap;
+  z-index: 2;
 }
 
 .about-float-badge {
